@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asesoría académica en Países Bajos | VR Academic</title>
+  <meta name="description" content="Asesoría académica personalizada para estudiar en los Países Bajos. Universidades, solicitudes, becas y vida en el extranjero.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=EB+Garamond:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav fade-in">
+  <span class="logo">VR Academic</span>
+  <div class="nav-right">
+    <div class="language-selector">
+      <a href="index.html" class="lang active">ES</a><span>|</span>
+      <a href="en.html" class="lang">EN</a><span>|</span>
+      <a href="ca.html" class="lang">CA</a>
+    </div>
+    <a href="#contact" class="nav-btn">Contacto</a>
+  </div>
+</nav>
+
+<header class="hero fade-in">
+  <h1>Asesoría académica<br>para estudiar en Europa</h1>
+  <p>Acompañamos a estudiantes internacionales con especialización en los Países Bajos.</p>
+</header>
+
+<section class="section light fade-in" id="about">
+  <h2>Sobre nosotros</h2>
+  <p>Somos VR Academic, un equipo dedicado a ayudar a los estudiantes a tomar decisiones informadas sobre estudiar en el extranjero. Nuestra misión es guiarte en aplicaciones, becas y la vida en los Países Bajos de forma clara y segura.</p>
+  <p>Nos centramos en soporte personalizado porque cada estudiante tiene un camino único. Nuestra experiencia con universidades neerlandesas asegura que encuentres la mejor opción para tus objetivos.</p>
+</section>
+
+<section class="section fade-in">
+  <h2>Nuestros servicios</h2>
+  <div class="cards">
+    <div class="card fade-in"><h3>Solicitudes universitarias</h3><p>Acompañamiento completo durante el proceso de application.</p></div>
+    <div class="card fade-in"><h3>Universidad ideal</h3><p>Análisis personalizado de tu perfil académico.</p></div>
+    <div class="card fade-in"><h3>Asesoría personalizada</h3><p>Sesiones individuales adaptadas a tus objetivos.</p></div>
+    <div class="card fade-in"><h3>Becas</h3><p>Identificación y solicitud de oportunidades de financiación.</p></div>
+    <div class="card fade-in"><h3>Vivir en el extranjero</h3><p>Trámites administrativos y apoyo inicial.</p></div>
+  </div>
+</section>
+
+<section class="section light fade-in">
+  <h2>Especializados en Países Bajos</h2>
+  <p>Trabajamos principalmente con universidades neerlandesas, reconocidas por su calidad académica y enfoque internacional.</p>
+  <p>Ciudades clave: Ámsterdam, Utrecht, Groningen, Leiden, Eindhoven, Róterdam.</p>
+  <p>Universidades destacadas: University of Amsterdam, Utrecht University, Leiden University, TU Delft, Eindhoven University of Technology.</p>
+
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1564874.606190559!2d4.895168!3d52.212991" width="100%" height="350" style="border:0; border-radius:16px; margin-top:2rem;" loading="lazy"></iframe>
+</section>
+
+<section class="section fade-in">
+  <h2>Testimonios</h2>
+  <div class="cards">
+    <div class="card fade-in"><p>“Gracias a VR Academic encontré una universidad que realmente encajaba conmigo.”</p><strong>— Estudiante de Psicología, Utrecht</strong></div>
+    <div class="card fade-in"><p>“El proceso fue claro, acompañado y sin estrés. 100% recomendable.”</p><strong>— Estudiante internacional, Groningen</strong></div>
+  </div>
+</section>
+
+<section class="section light fade-in" id="contact">
+  <h2>Contacto</h2>
+  <p>Cuéntanos tu situación y te responderemos lo antes posible.</p>
+
+  <form action="https://formspree.io/f/XXXXYYYY" method="POST" class="contact-form">
+    <input type="text" name="name" placeholder="Nombre completo" required>
+    <input type="email" name="email" placeholder="Correo electrónico" required>
+    <textarea name="message" placeholder="Tu mensaje" required></textarea>
+    <button type="submit" class="nav-btn">Enviar</button>
+  </form>
+</section>
+
+<footer class="footer fade-in">
+  <p>© 2026 VR Academic Consulting</p>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => { if(entry.isIntersecting){ entry.target.classList.add("fade-in-visible"); }});
+  }, { threshold: 0.1 });
+  document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
+});
+</script>
+
+</body>
+</html>
