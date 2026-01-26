@@ -131,3 +131,76 @@ a {
 .lang-switch a:hover {
   color: white;
 }
+
+/* NETHERLANDS SECTION */
+.netherlands {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.netherlands-text p {
+  margin-bottom: 1rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.netherlands-map iframe {
+  width: 100%;
+  height: 300px;
+  border: 0;
+  border-radius: 16px;
+}
+
+/* TESTIMONIALS */
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.testimonial {
+  background: white;
+  border: 1px solid #e5e7eb;
+  padding: 2rem;
+  border-radius: 16px;
+}
+
+.testimonial p {
+  font-family: "EB Garamond", serif;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.testimonial span {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.language-selector {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+}
+
+.language-selector span {
+  opacity: 0.4;
+}
+
+.language-selector .lang {
+  color: rgba(255,255,255,0.6);
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+
+.language-selector .lang:hover {
+  color: white;
+}
+
+.language-selector .active {
+  color: white;
+  font-weight: 600;
+}
