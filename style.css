@@ -204,3 +204,51 @@ a {
   color: white;
   font-weight: 600;
 }
+
+/* ===== Fonts Globals ===== */
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #1a1a1a;
+  margin: 0; 
+  padding: 0;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+}
+
+/* ===== Headings ===== */
+h1, h2, h3 {
+  font-family: 'EB Garamond', serif;
+  margin: 0 0 1rem 0;
+}
+
+h1 { font-size: 2.5rem; line-height: 1.2; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.3rem; }
+
+/* ===== Nav ===== */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #1a1a1a;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav .logo {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.nav .nav-btn {
+  background-color: #ff6b6b;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+ 
+
