@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Academic Consulting for the Netherlands | VR Academic</title>
+<meta name="description" content="Personalized academic consulting to study in the Netherlands. University selection, applications, scholarships, and relocation support.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=EB+Garamond:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav fade-in">
+  <span class="logo">VR Academic</span>
+  <div class="nav-right">
+    <div class="language-selector">
+      <a href="index.html" class="lang">ES</a><span>|</span>
+      <a href="en.html" class="lang active">EN</a><span>|</span>
+      <a href="ca.html" class="lang">CA</a>
+    </div>
+    <a href="#contact" class="nav-btn">Contact</a>
+  </div>
+</nav>
+
+<header class="hero fade-in">
+  <h1>Academic consulting<br>for studying in Europe</h1>
+  <p>We support international students in making informed academic decisions with a focus on the Netherlands.</p>
+</header>
+
+<section class="section light fade-in" id="about">
+  <h2>About Us</h2>
+  <p>We are VR Academic, a team dedicated to helping students make informed decisions about studying abroad. Our mission is to guide you through applications, scholarships, and life in the Netherlands smoothly and confidently.</p>
+  <p>We focus on personalized support because every student’s path is unique. Our experience with Dutch universities ensures you choose the best fit for your goals.</p>
+</section>
+
+<section class="section fade-in">
+  <h2>Our Services</h2>
+  <div class="cards">
+    <div class="card fade-in"><h3>University Applications</h3><p>Guidance throughout the entire application process.</p></div>
+    <div class="card fade-in"><h3>Finding the Right University</h3><p>Analyze your academic profile and goals.</p></div>
+    <div class="card fade-in"><h3>Personalized Advising</h3><p>One-on-one sessions adapted to your personal situation.</p></div>
+    <div class="card fade-in"><h3>Scholarships & Funding</h3><p>Identification and application support for scholarships.</p></div>
+    <div class="card fade-in"><h3>Relocation Support</h3><p>Residence, health insurance and essential steps for living abroad.</p></div>
+  </div>
+</section>
+
+<section class="section light fade-in">
+  <h2>Focused on the Netherlands</h2>
+  <p>We specialize in Dutch universities, internationally recognized for academic quality and innovative teaching.</p>
+  <p>Key cities: Amsterdam, Utrecht, Groningen, Leiden, Eindhoven, Rotterdam.</p>
+  <p>Leading universities: University of Amsterdam, Utrecht University, Leiden University, TU Delft, Eindhoven University of Technology.</p>
+
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1564874.606190559!2d4.895168!3d52.212991" width="100%" height="350" style="border:0; border-radius:16px; margin-top:2rem;" loading="lazy"></iframe>
+</section>
+
+<section class="section fade-in">
+  <h2>Testimonials</h2>
+  <div class="cards">
+    <div class="card fade-in"><p>“VR Academic helped me find a university that truly matched my profile.”</p><strong>— Psychology student, Utrecht</strong></div>
+    <div class="card fade-in"><p>“Clear guidance, professional support and zero stress.”</p><strong>— International student, Groningen</strong></div>
+  </div>
+</section>
+
+<section class="section light fade-in" id="contact">
+  <h2>Contact</h2>
+  <p>Tell us about your academic plans and we’ll get back to you.</p>
+  <form action="https://formspree.io/f/XXXXYYYY" method="POST" class="contact-form">
+    <input type="text" name="name" placeholder="Full name" required>
+    <input type="email" name="email" placeholder="Email address" required>
+    <textarea name="message" placeholder="Your message" required></textarea>
+    <button type="submit" class="nav-btn">Send message</button>
+  </form>
+</section>
+
+<footer class="footer fade-in">
+  <p>© 2026 VR Academic Consulting</p>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if(entry.isIntersecting){ entry.target.classList.add("fade-in-visible"); }}); }, { threshold: 0.1 });
+  document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
+});
+</script>
+
+</body>
+</html>
