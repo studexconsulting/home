@@ -116,3 +116,18 @@ a {
   color: var(--text-light);
   font-size: 0.9rem;
 }
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.lang-switch a {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.7);
+}
+
+.lang-switch a:hover {
+  color: white;
+}
