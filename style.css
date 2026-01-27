@@ -1029,3 +1029,393 @@ svg[style*="width"] {
 .fade-in-visible {
   opacity: 1;
 }
+
+
+/* ===== CORRECCIONES Y MEJORAS ===== */
+
+/* 1. FIX: Botón contacto no superpuesto */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav .nav-btn {
+  margin-left: 0;
+  white-space: nowrap;
+}
+
+/* 2. Botones atractivos (reemplazan enlaces azules) */
+.service-btn {
+  display: inline-block;
+  background: var(--primary-red);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--radius-xl);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  transition: var(--transition-medium);
+  border: 2px solid transparent;
+}
+
+.service-btn:hover {
+  background: white;
+  color: var(--primary-red);
+  border-color: var(--primary-red);
+  transform: translateY(-2px);
+}
+
+.destinos-btn, .blog-btn {
+  display: inline-block;
+  background: transparent;
+  color: var(--primary-red);
+  padding: 0.8rem 1.5rem;
+  border-radius: var(--radius-xl);
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 1rem;
+  border: 2px solid var(--primary-red);
+  transition: var(--transition-medium);
+}
+
+.destinos-btn:hover, .blog-btn:hover {
+  background: var(--primary-red);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.blog-link-btn {
+  display: inline-block;
+  background: var(--light-gray);
+  color: var(--dark);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-xl);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  transition: var(--transition-medium);
+}
+
+.blog-link-btn:hover {
+  background: var(--primary-red);
+  color: white;
+}
+
+/* 3. Grid de ciudades holandesas */
+.cities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.city-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  border-left: 4px solid var(--primary-red);
+  transition: var(--transition-medium);
+  box-shadow: var(--shadow-sm);
+}
+
+.city-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.city-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--primary-red);
+  margin-bottom: 0.5rem;
+}
+
+.city-card p {
+  font-size: 0.9rem;
+  color: var(--dark-light);
+  margin-bottom: 0;
+}
+
+/* 4. Aviso de no asociación */
+.disclaimer-box {
+  background: #FFF5F5;
+  border-left: 4px solid var(--primary-red);
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.disclaimer-box i {
+  color: var(--primary-red);
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.disclaimer-box p {
+  margin-bottom: 0;
+  color: var(--dark);
+}
+
+/* 5. Botones de redes sociales */
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem 1.8rem;
+  border-radius: var(--radius-xl);
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition-medium);
+  box-shadow: var(--shadow-sm);
+}
+
+.tiktok-btn {
+  background: black;
+  color: white;
+}
+
+.instagram-btn {
+  background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+  color: white;
+}
+
+.whatsapp-btn {
+  background: #25D366;
+  color: white;
+}
+
+.social-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+/* 6. Botones de contacto mejorados */
+.contact-buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0 3rem;
+}
+
+.contact-method-btn {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  color: var(--dark);
+  background: white;
+  border: 2px solid var(--medium-gray);
+  transition: var(--transition-medium);
+  cursor: pointer;
+}
+
+.contact-method-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary-red);
+}
+
+.whatsapp-contact-btn:hover {
+  border-color: #25D366;
+}
+
+.contact-method-btn i {
+  font-size: 2rem;
+  color: var(--primary-red);
+}
+
+.whatsapp-contact-btn i {
+  color: #25D366;
+}
+
+.contact-method-btn h3 {
+  margin-bottom: 0.3rem;
+  color: var(--dark);
+}
+
+.contact-method-btn p {
+  margin-bottom: 0.3rem;
+  font-size: 0.9rem;
+  color: var(--dark-light);
+}
+
+.btn-subtext {
+  font-size: 0.8rem;
+  color: var(--primary-red);
+  font-weight: 500;
+}
+
+/* 7. Checkbox privacidad */
+.privacy-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin: 1rem 0;
+}
+
+.privacy-checkbox input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--primary-red);
+}
+
+.privacy-checkbox label {
+  font-size: 0.9rem;
+  color: var(--dark-light);
+}
+
+.privacy-checkbox a {
+  color: var(--primary-red);
+  text-decoration: none;
+}
+
+.privacy-checkbox a:hover {
+  text-decoration: underline;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 1.2rem;
+  background: var(--red-gradient);
+  color: white;
+  border: none;
+  border-radius: var(--radius-xl);
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-medium);
+}
+
+.submit-btn:hover {
+  background: var(--red-gradient-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* 8. Leyenda infografía */
+.infografia-legend {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--dark-light);
+}
+
+.legend-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.legend-dot.research {
+  background: #D32F2F;
+}
+
+.legend-dot.applied {
+  background: #EF5350;
+}
+
+.legend-dot.institute {
+  background: #FFCDD2;
+}
+
+/* 9. Footer legal */
+.footer-section h4 {
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.footer-section a {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 0.5rem;
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+.footer-section a:hover {
+  color: white;
+}
+
+.footer-disclaimer {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+/* 10. Responsive fixes */
+@media (max-width: 768px) {
+  .nav-right {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .nav-actions {
+    order: 2;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .nav .nav-btn {
+    order: 3;
+  }
+  
+  .cities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .social-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .social-btn {
+    width: 100%;
+    max-width: 250px;
+    justify-content: center;
+  }
+  
+  .contact-buttons {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .cities-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .main-menu {
+    display: none;
+  }
+  
+  .nav .logo-text {
+    font-size: 1.5rem;
+  }
+}
