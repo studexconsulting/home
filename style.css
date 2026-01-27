@@ -1,212 +1,216 @@
-/* ===== Root Variables ===== */
+/* ===== CSS RESET & GLOBAL VARIABLES ===== */
 :root {
-  --primary: #4361ee;
-  --primary-dark: #3a56d4;
-  --secondary: #7209b7;
-  --accent: #f72585;
-  --dark: #1a1a2e;
-  --light: #f8f9fa;
-  --gray: #6c757d;
-  --gray-light: #e9ecef;
-  --gradient-primary: linear-gradient(135deg, #4361ee 0%, #7209b7 100%);
-  --gradient-dark: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-  --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
-  --shadow-md: 0 8px 30px rgba(0,0,0,0.12);
-  --shadow-lg: 0 15px 50px rgba(0,0,0,0.15);
-  --radius-sm: 12px;
-  --radius-md: 20px;
-  --radius-lg: 32px;
-  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  /* Red-based color palette */
+  --primary-red: #D32F2F;
+  --primary-red-dark: #B71C1C;
+  --primary-red-light: #EF5350;
+  --primary-red-soft: #FFCDD2;
+  
+  /* Neutral colors */
+  --dark: #212121;
+  --dark-light: #424242;
+  --light: #FFFFFF;
+  --light-gray: #F5F5F5;
+  --medium-gray: #E0E0E0;
+  --border-gray: #BDBDBD;
+  
+  /* Background gradients */
+  --bg-gradient: linear-gradient(135deg, #FFF5F5 0%, #FFFFFF 100%);
+  --red-gradient: linear-gradient(135deg, #D32F2F 0%, #B71C1C 100%);
+  --red-gradient-hover: linear-gradient(135deg, #EF5350 0%, #D32F2F 100%);
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(211, 47, 47, 0.08);
+  --shadow-md: 0 4px 20px rgba(211, 47, 47, 0.12);
+  --shadow-lg: 0 8px 40px rgba(211, 47, 47, 0.15);
+  
+  /* Border radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 40px;
+  
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-medium: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* ===== Base Styles ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* ===== TYPOGRAPHY - Poppins Variants ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
 body {
   font-family: 'Poppins', sans-serif;
+  font-weight: 400;
   color: var(--dark);
-  background: linear-gradient(135deg, #f5f7fa 0%, #f8f9fa 100%);
-  line-height: 1.7;
+  background: var(--bg-gradient);
+  line-height: 1.6;
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
-body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: 
-    radial-gradient(circle at 20% 80%, rgba(67, 97, 238, 0.05) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(114, 9, 183, 0.05) 0%, transparent 50%);
-  pointer-events: none;
-  z-index: -1;
-}
+/* Poppins weight classes */
+.poppins-light { font-weight: 300; }
+.poppins-regular { font-weight: 400; }
+.poppins-medium { font-weight: 500; }
+.poppins-semibold { font-weight: 600; }
+.poppins-bold { font-weight: 700; }
+.poppins-extrabold { font-weight: 800; }
 
-/* ===== Typography ===== */
-h1, h2, h3, h4 {
-  font-family: 'EB Garamond', serif;
+/* Headings with Poppins */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
-  line-height: 1.2;
-  background: var(--gradient-primary);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--dark);
+  line-height: 1.3;
   margin-bottom: 1.5rem;
 }
 
-h1 { 
-  font-size: clamp(2.5rem, 5vw, 4rem);
+h1 {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 800;
+  background: var(--red-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   letter-spacing: -0.5px;
 }
 
-h2 { 
-  font-size: clamp(2rem, 4vw, 3rem);
-  margin-bottom: 2rem;
+h2 {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 700;
   position: relative;
+  display: inline-block;
+  margin-bottom: 2.5rem;
 }
 
 h2::after {
   content: '';
   position: absolute;
-  bottom: -10px;
+  bottom: -8px;
   left: 0;
   width: 60px;
   height: 4px;
-  background: var(--gradient-primary);
+  background: var(--red-gradient);
   border-radius: 2px;
 }
 
-h3 { 
-  font-size: clamp(1.5rem, 3vw, 2rem);
-  margin-bottom: 1rem;
+h3 {
+  font-size: clamp(1.5rem, 3vw, 1.8rem);
+  font-weight: 600;
+  color: var(--primary-red-dark);
 }
 
 p {
-  color: var(--gray);
   font-size: 1.1rem;
+  color: var(--dark-light);
   margin-bottom: 1.5rem;
+  font-weight: 400;
 }
 
-/* ===== Navigation ===== */
+/* ===== LAYOUT & CONTAINERS ===== */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ===== NAVIGATION ===== */
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 5%;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
+  padding: 1.2rem 5%;
+  background: var(--light);
   position: sticky;
   top: 0;
   z-index: 1000;
-  border-bottom: 1px solid rgba(0,0,0,0.05);
-  animation: slideDown 0.5s ease-out;
-}
-
-@keyframes slideDown {
-  from {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+  box-shadow: var(--shadow-sm);
+  border-bottom: 2px solid var(--primary-red-soft);
 }
 
 .nav .logo {
-  font-weight: 800;
   font-size: 1.8rem;
-  letter-spacing: -0.5px;
-  background: var(--gradient-primary);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  font-weight: 800;
+  color: var(--primary-red);
+  text-decoration: none;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
 
 .nav .logo::before {
-  content: '✦';
-  font-size: 1.5rem;
-  background: var(--gradient-primary);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  content: '•';
+  color: var(--primary-red);
+  font-size: 2rem;
 }
 
-.nav .nav-btn {
-  background: var(--gradient-primary);
-  color: white;
-  padding: 0.8rem 2rem;
-  border-radius: 50px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: var(--transition);
-  border: 2px solid transparent;
-  position: relative;
-  overflow: hidden;
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 }
 
-.nav .nav-btn::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-  transition: 0.5s;
-}
-
-.nav .nav-btn:hover::before {
-  left: 100%;
-}
-
-.nav .nav-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
-  border-color: var(--primary-dark);
-}
-
-/* ===== Language Selector ===== */
+/* Language Selector */
 .language-selector {
   display: flex;
-  gap: 1rem;
-  align-items: center;
+  gap: 0.8rem;
+  background: var(--light-gray);
+  padding: 0.4rem;
+  border-radius: var(--radius-md);
 }
 
 .language-selector .lang {
-  color: var(--gray);
-  text-decoration: none;
-  font-weight: 500;
-  padding: 0.5rem 1rem;
+  padding: 0.4rem 1rem;
   border-radius: var(--radius-sm);
-  transition: var(--transition);
+  text-decoration: none;
+  color: var(--dark-light);
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: var(--transition-fast);
 }
 
 .language-selector .lang:hover {
-  background: var(--gray-light);
+  background: var(--medium-gray);
 }
 
 .language-selector .active {
-  background: var(--gradient-primary);
-  color: white;
+  background: var(--primary-red);
+  color: var(--light);
   font-weight: 600;
 }
 
-/* ===== Hero Section ===== */
+/* Contact Button */
+.nav .nav-btn {
+  padding: 0.7rem 1.8rem;
+  background: var(--red-gradient);
+  color: var(--light);
+  border: none;
+  border-radius: var(--radius-xl);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: var(--transition-medium);
+  white-space: nowrap;
+}
+
+.nav .nav-btn:hover {
+  background: var(--red-gradient-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* ===== HERO SECTION ===== */
 .hero {
+  padding: 8rem 5% 6rem;
   text-align: center;
-  padding: 8rem 2rem;
-  background: var(--gradient-dark);
-  color: white;
   position: relative;
   overflow: hidden;
 }
@@ -217,94 +221,97 @@ p {
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0;
-  background: 
-    radial-gradient(circle at 30% 30%, rgba(67, 97, 238, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 70% 70%, rgba(114, 9, 183, 0.1) 0%, transparent 50%);
-}
-
-.hero h1, .hero p {
-  color: white;
-  -webkit-text-fill-color: white;
-  position: relative;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(211, 47, 47, 0.05) 0%, transparent 50%);
+  z-index: -1;
 }
 
 .hero h1 {
-  background: none;
-  font-size: clamp(3rem, 6vw, 5rem);
   margin-bottom: 1.5rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero p {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   max-width: 700px;
-  margin: 0 auto 2rem;
-  opacity: 0.9;
+  margin: 0 auto 3rem;
+  color: var(--dark-light);
+  font-weight: 400;
 }
 
-.hero .cta-button {
-  display: inline-block;
-  background: var(--gradient-primary);
-  color: white;
-  padding: 1rem 3rem;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1.1rem;
-  transition: var(--transition);
-  border: 2px solid rgba(255,255,255,0.2);
-  margin-top: 2rem;
-}
-
-.hero .cta-button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 20px 40px rgba(67, 97, 238, 0.3);
-  border-color: white;
-}
-
-/* ===== Sections ===== */
+/* ===== SECTIONS ===== */
 .section {
   padding: 6rem 5%;
   position: relative;
 }
 
 .section.light {
-  background: white;
+  background: var(--light);
   border-radius: var(--radius-lg);
   margin: 2rem auto;
   max-width: 1200px;
-  box-shadow: var(--shadow-md);
-  position: relative;
-  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--primary-red-soft);
 }
 
-.section.light::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
+/* ===== SVG IMAGE FIX ===== */
+.svg-container {
   width: 100%;
-  height: 5px;
-  background: var(--gradient-primary);
+  max-width: 100%;
+  overflow: visible !important; /* Force visibility */
+  margin: 2rem 0;
 }
 
-/* ===== Cards ===== */
+.svg-wrapper {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px; /* Minimum height */
+  overflow: visible !important;
+}
+
+.svg-wrapper svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  overflow: visible !important;
+}
+
+/* For SVG inside sections */
+.section .svg-wrapper {
+  padding: 2rem 0;
+  margin: 2rem -5%;
+  width: calc(100% + 10%);
+  overflow: visible;
+}
+
+/* For SVG in cards */
+.card .svg-wrapper {
+  max-height: 200px;
+  overflow: visible;
+  margin: 1rem 0;
+}
+
+/* ===== CARDS ===== */
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2.5rem;
+  gap: 2rem;
   margin-top: 3rem;
 }
 
 .card {
-  background: white;
-  border-radius: var(--radius-md);
+  background: var(--light);
+  border-radius: var(--radius-lg);
   padding: 2.5rem;
-  box-shadow: var(--shadow-md);
-  transition: var(--transition);
+  border: 2px solid var(--medium-gray);
+  transition: var(--transition-medium);
   position: relative;
   overflow: hidden;
-  border: 1px solid rgba(0,0,0,0.05);
 }
 
 .card::before {
@@ -314,7 +321,7 @@ p {
   left: 0;
   width: 100%;
   height: 4px;
-  background: var(--gradient-primary);
+  background: var(--red-gradient);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.4s ease;
@@ -325,24 +332,30 @@ p {
 }
 
 .card:hover {
-  transform: translateY(-10px);
-  box-shadow: var(--shadow-lg);
+  transform: translateY(-5px);
+  border-color: var(--primary-red);
+  box-shadow: var(--shadow-md);
 }
 
 .card-icon {
   width: 60px;
   height: 60px;
-  background: var(--gradient-primary);
-  border-radius: 16px;
+  background: var(--red-gradient);
+  border-radius: var(--radius-md);
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 1.5rem;
-  color: white;
+  color: var(--light);
   font-size: 1.5rem;
 }
 
-/* ===== Forms ===== */
+.card h3 {
+  margin-bottom: 1rem;
+  color: var(--primary-red-dark);
+}
+
+/* ===== FORMS ===== */
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -353,309 +366,257 @@ p {
 
 .form-group {
   position: relative;
+  margin-bottom: 0.5rem;
 }
 
 .contact-form input,
 .contact-form textarea {
   width: 100%;
-  padding: 1.2rem 1.5rem;
-  border-radius: var(--radius-sm);
-  border: 2px solid var(--gray-light);
-  font-size: 1rem;
+  padding: 1.2rem;
+  border: 2px solid var(--border-gray);
+  border-radius: var(--radius-md);
   font-family: 'Poppins', sans-serif;
-  transition: var(--transition);
-  background: white;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--dark);
+  background: var(--light);
+  transition: var(--transition-fast);
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
   outline: none;
-  border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.1);
+  border-color: var(--primary-red);
+  box-shadow: 0 0 0 3px rgba(211, 47, 47, 0.1);
 }
 
 .contact-form label {
   position: absolute;
+  left: 1rem;
   top: 1.2rem;
-  left: 1.5rem;
-  color: var(--gray);
-  transition: var(--transition);
+  color: var(--dark-light);
+  font-size: 1rem;
+  font-weight: 400;
+  transition: var(--transition-fast);
   pointer-events: none;
+  background: var(--light);
+  padding: 0 0.5rem;
 }
 
 .contact-form input:focus + label,
 .contact-form input:not(:placeholder-shown) + label,
 .contact-form textarea:focus + label,
 .contact-form textarea:not(:placeholder-shown) + label {
-  top: -10px;
-  left: 0.8rem;
+  top: -0.6rem;
   font-size: 0.85rem;
-  color: var(--primary);
-  background: white;
-  padding: 0 0.5rem;
+  color: var(--primary-red);
+  font-weight: 500;
 }
 
 .contact-form button {
-  background: var(--gradient-primary);
-  color: white;
-  padding: 1.2rem 2.5rem;
+  padding: 1.2rem 3rem;
+  background: var(--red-gradient);
+  color: var(--light);
   border: none;
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-xl);
   font-size: 1.1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: var(--transition);
+  transition: var(--transition-medium);
   align-self: flex-start;
+  margin-top: 1rem;
 }
 
 .contact-form button:hover {
+  background: var(--red-gradient-hover);
   transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(67, 97, 238, 0.3);
+  box-shadow: var(--shadow-md);
 }
 
-/* ===== Footer ===== */
+/* ===== FOOTER ===== */
 .footer {
-  text-align: center;
-  padding: 4rem 2rem;
-  background: var(--gradient-dark);
-  color: white;
-  position: relative;
-  overflow: hidden;
-}
-
-.footer::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle at center, rgba(255,255,255,0.05) 0%, transparent 70%);
+  background: var(--dark);
+  color: var(--light);
+  padding: 4rem 5% 2rem;
+  margin-top: 4rem;
 }
 
 .footer-content {
-  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 3rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
+.footer-logo {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--light);
+  margin-bottom: 1rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.footer-links a {
+  color: var(--light);
+  text-decoration: none;
+  font-weight: 400;
+  transition: var(--transition-fast);
+}
+
+.footer-links a:hover {
+  color: var(--primary-red-light);
+}
+
 .social-links {
   display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  margin: 2rem 0;
+  gap: 1rem;
+  margin-top: 2rem;
 }
 
 .social-links a {
-  width: 45px;
-  height: 45px;
-  background: rgba(255,255,255,0.1);
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: var(--light);
   text-decoration: none;
-  transition: var(--transition);
+  transition: var(--transition-fast);
 }
 
 .social-links a:hover {
-  background: var(--primary);
-  transform: translateY(-3px);
+  background: var(--primary-red);
+  transform: translateY(-2px);
 }
 
-/* ===== Animations ===== */
-.fade-in {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+.copyright {
+  text-align: center;
+  padding-top: 2rem;
+  margin-top: 3rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--medium-gray);
+  font-size: 0.9rem;
 }
 
-.fade-in-visible {
-  opacity: 1;
-  transform: translateY(0);
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 15px;
+  }
+  
+  .hero,
+  .section {
+    padding: 4rem 15px;
+  }
+  
+  .cards {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
 }
 
-/* Scroll progress indicator */
-.scroll-progress {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 0%;
-  height: 3px;
-  background: var(--gradient-primary);
-  z-index: 1001;
-  transition: width 0.1s ease;
-}
-
-/* ===== Responsive Design ===== */
 @media (max-width: 768px) {
   .nav {
-    padding: 1rem;
     flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  .nav-right {
+    order: 3;
+    width: 100%;
+    justify-content: space-between;
     gap: 1rem;
   }
   
-  .hero {
-    padding: 5rem 1.5rem;
+  .hero h1 {
+    font-size: 2.2rem;
   }
   
-  .section {
-    padding: 4rem 1.5rem;
+  .hero p {
+    font-size: 1.1rem;
+  }
+  
+  .cards {
+    grid-template-columns: 1fr;
   }
   
   .section.light {
     margin: 1rem;
   }
   
-  .cards {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+  .footer-content {
+    flex-direction: column;
+    gap: 2rem;
   }
   
-  .language-selector {
-    order: 3;
-    width: 100%;
-    justify-content: center;
-    margin-top: 1rem;
+  .footer-links {
+    flex-direction: column;
+    gap: 1rem;
   }
 }
 
 @media (max-width: 480px) {
   h1 {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
   
   h2 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
   
-  .hero h1 {
-    font-size: 2.5rem;
+  h3 {
+    font-size: 1.3rem;
   }
   
+  .nav-btn,
   .contact-form button {
-    width: 100%;
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
   }
-/* === Sección que ocupa todo el ancho === */
-.section-fullwidth {
-  width: 100vw;          /* toda la ventana */
-  padding: 2rem 1rem;    /* margenes superior/inferior y laterales pequeños */
-  box-sizing: border-box; /* asegura que padding no aumente ancho */
-  background-color: #fdfdfd; /* opcional, fondo claro */
-}
-
-/* === Contenedor de la infografía === */
-.infografia {
-  text-align: center;
-  margin: 0 auto;        /* centrado horizontal */
-  width: 100%;
-  max-width: 1600px;     /* opcional, para no explotar en pantallas enormes */
-  /* avoid applying overflow:hidden here so svg isn't clipped */
-  overflow: hidden;       /* original: we'll override for wider display below */
-}
-
-/* ===== INFOGRAFÍA: make it wider and avoid clipping ===== */
-/* Override the section.light overflow for infografía so the SVG can extend past the section padding */
-.section.light .infografia {
-  overflow: visible;               /* allow the SVG to be visible outside the rounded container */
-  width: calc(100% + 6rem);        /* extend beyond section's horizontal padding */
-  margin: 0 -3rem;                 /* negative margins to let it reach the viewport edges */
-  max-width: none;                 /* don't cap to 1600px here */
-  padding: 1rem 3rem;              /* give some inner spacing so content isn't flush */
-  box-sizing: border-box;
-}
-
-/* Ensure the SVG scales nicely and is not clipped */
-.infografia img,
-.infografia svg {
-  width: 100%;
-  height: auto;
-  max-width: none;
-  display: block;
-  margin: 0 auto;
-}
-
-/* Put the wide behaviour only on larger screens; smaller screens keep normal flow */
-@media (max-width: 1024px) {
-  .section.light .infografia {
-    width: 100%;
-    margin: 0;
-    padding: 0 1rem;
+  
+  .card {
+    padding: 2rem;
+  }
+  
+  .language-selector {
+    gap: 0.4rem;
+  }
+  
+  .language-selector .lang {
+    padding: 0.3rem 0.8rem;
+    font-size: 0.85rem;
   }
 }
 
-/* Smallest screens: ensure the image fits and nothing overflows horizontally */
-@media (max-width: 480px) {
-  .section.light .infografia {
-    padding: 0 0.5rem;
+/* ===== UTILITY CLASSES ===== */
+.text-center { text-align: center; }
+.text-red { color: var(--primary-red); }
+.bg-red { background: var(--primary-red-soft); }
+.mt-2 { margin-top: 2rem; }
+.mb-2 { margin-bottom: 2rem; }
+.p-3 { padding: 3rem; }
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
-/* Make the infographic always fit the section */
-.infografia {
-  width: 100%;
-  max-width: 100%;
-  padding: 0;            /* optional: control spacing here */
-  box-sizing: border-box;
-  text-align: center;
-  overflow: visible;     /* keep visible if svg uses internal overflow, but not required */
-}
 
-.infografia img,
-.infografia svg {
-  display: block;
-  width: 100%;           /* fit to the infografia container */
-  max-width: 100%;
-  height: auto;
-  object-fit: contain;   /* helpful for raster images */
-  margin: 0 auto;
-}
-
-/* Make .section.light full-width and remove visible borders/shadow */
-.section.light {
-  background: transparent;   /* no visible panel */
-  border-radius: 0;          /* remove rounded corners */
-  margin: 0;                 /* span the full page width */
-  max-width: none;           /* don't constrain width */
-  box-shadow: none;          /* remove shadow */
-  padding: 6rem 5%;          /* keep original vertical spacing, adjust horizontal padding as needed */
-  position: relative;
-  overflow: visible;         /* allow infographic to be visible without clipping */
-}
-
-/* If you keep the decorative top bar, make it span full width without rounding */
-.section.light::before {
-  left: 0;
-  width: 100%;
-  border-radius: 0;
-}
-
-/* Infografía: full width, scale to container and avoid clipping */
-.infografia {
-  width: 100%;
-  max-width: none;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-align: center;
-  overflow: visible;
-}
-
-/* Ensure the SVG or image always fits */
-.infografia img,
-.infografia svg {
-  display: block;
-  width: 100%;
-  max-width: none;
-  height: auto;
-  margin: 0 auto;
-}
-
-/* Optional: if you want the infographic to visually reach the viewport edges,
-   use this helper class on the immediate wrapper (use only if you want "edge-to-edge" artwork) */
-.infografia.full-bleed {
-  width: 100vw;
-  margin-left: calc(50% - 50vw); /* centers the 100vw block within the page */
-  margin-right: calc(50% - 50vw);
-  box-sizing: border-box;
+.fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
 }
