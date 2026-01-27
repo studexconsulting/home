@@ -610,3 +610,52 @@ p {
   object-fit: contain;   /* helpful for raster images */
   margin: 0 auto;
 }
+
+/* Make .section.light full-width and remove visible borders/shadow */
+.section.light {
+  background: transparent;   /* no visible panel */
+  border-radius: 0;          /* remove rounded corners */
+  margin: 0;                 /* span the full page width */
+  max-width: none;           /* don't constrain width */
+  box-shadow: none;          /* remove shadow */
+  padding: 6rem 5%;          /* keep original vertical spacing, adjust horizontal padding as needed */
+  position: relative;
+  overflow: visible;         /* allow infographic to be visible without clipping */
+}
+
+/* If you keep the decorative top bar, make it span full width without rounding */
+.section.light::before {
+  left: 0;
+  width: 100%;
+  border-radius: 0;
+}
+
+/* Infografía: full width, scale to container and avoid clipping */
+.infografia {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+  overflow: visible;
+}
+
+/* Ensure the SVG or image always fits */
+.infografia img,
+.infografia svg {
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* Optional: if you want the infographic to visually reach the viewport edges,
+   use this helper class on the immediate wrapper (use only if you want "edge-to-edge" artwork) */
+.infografia.full-bleed {
+  width: 100vw;
+  margin-left: calc(50% - 50vw); /* centers the 100vw block within the page */
+  margin-right: calc(50% - 50vw);
+  box-sizing: border-box;
+}
