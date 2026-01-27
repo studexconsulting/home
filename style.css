@@ -635,3 +635,44 @@ p {
 .fade-in {
   animation: fadeIn 0.6s ease-out forwards;
 }
+
+/* ===== FIX FOR IMAGE/SVG OVERFLOW - ADD THIS AT THE END ===== */
+
+/* This will fix any image or SVG that's too large */
+img, svg {
+  max-width: 100% !important;
+  height: auto !important;
+  display: block;
+}
+
+/* Specifically fix images inside sections */
+.section img,
+.section svg,
+.section.light img,
+.section.light svg {
+  width: 100% !important;
+  max-height: 400px !important;
+  object-fit: contain !important;
+  border-radius: 12px;
+  border: 2px solid #D32F2F;
+  margin: 20px auto;
+  padding: 10px;
+  background: white;
+  box-shadow: 0 4px 20px rgba(211, 47, 47, 0.12);
+}
+
+/* Force all images to stay inside their containers */
+* {
+  box-sizing: border-box;
+}
+
+/* If you have a specific image class, add it here */
+.image-container,
+.image-wrapper,
+.figure {
+  width: 100% !important;
+  overflow: hidden !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
