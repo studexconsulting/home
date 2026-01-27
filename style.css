@@ -538,41 +538,37 @@ p {
     width: 100%;
   }
 }
-
-/* === Contenidor de la infografia === */
 .infografia {
   text-align: center;
-  margin-top: 2rem;
-  overflow: hidden; /* evita que el zoom sobresurti */
+  margin: 2rem auto; /* marges superiors i inferiors */
+  max-width: 1200px;  /* amplada màxima perquè no quedi massa gran en pantalles grans */
+  width: 95%;          /* ocupa pràcticament tota l’amplada del container */
 }
 
-/* === SVG o imatge dins la infografia === */
 .infografia img,
 .infografia svg {
-  width: 100%;
-  max-width: 800px; /* ajusta segons el disseny */
-  height: auto;
-  border-radius: 16px;
+  width: 100%;          /* ocupa tot el container */
+  height: auto;         /* respecta proporcions */
+  border-radius: 16px;  /* optional, si vols cantons arrodonits */
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.5s ease;
   
-  /* === Animació === */
-  opacity: 0;          /* comença invisible */
-  transform: translateY(30px) scale(1); /* lleuger moviment inicial cap avall */
-  animation: fadeInUp 1s ease forwards; /* animació */
-  transition: transform 0.5s ease;      /* per al hover */
+  /* animació fade-in */
+  opacity: 0;
+  transform: translateY(30px) scale(1);
+  animation: fadeInUp 1s ease forwards;
 }
 
-/* === Hover zoom === */
+/* Hover zoom */
 .infografia img:hover,
 .infografia svg:hover {
-  transform: scale(1.05); /* zoom suau al passar el ratolí */
+  transform: scale(1.05);
 }
 
-/* === Keyframes per fade-in + moviment === */
+/* Keyframes fade-in + pujada */
 @keyframes fadeInUp {
   to {
     opacity: 1;
     transform: translateY(0) scale(1);
   }
 }
-
