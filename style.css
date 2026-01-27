@@ -537,43 +537,23 @@ p {
   .contact-form button {
     width: 100%;
   }
+/* === Sección que ocupa todo el ancho === */
+.section-fullwidth {
+  width: 100vw;          /* toda la ventana */
+  padding: 2rem 1rem;    /* margenes superior/inferior y laterales pequeños */
+  box-sizing: border-box; /* asegura que padding no aumente ancho */
+  background-color: #fdfdfd; /* opcional, fondo claro */
+}
+
+/* === Contenedor de la infografía === */
 .infografia {
   text-align: center;
-  margin: 2rem auto;
+  margin: 0 auto;        /* centrado horizontal */
   width: 100%;
-  max-width: 1400px; /* ajustable según pantalla */
-  overflow: hidden;  /* evita que el zoom sobresalga */
+  max-width: 1600px;     /* opcional, para no explotar en pantallas enormes */
+  overflow: hidden;       /* evita que el zoom sobresalga */
 }
 
-.infografia img {
-  width: 100%;        /* ocupa todo el contenedor */
-  height: auto;       /* mantiene proporciones */
-  display: block;     /* elimina espacio en blanco */
-  object-fit: contain;/* nunca se corta la imagen */
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-
-  /* animación fade-in y leve subida */
-  opacity: 0;
-  transform: translateY(30px) scale(1);
-  animation: fadeInUp 1s ease forwards;
-
-  /* transición para hover zoom */
-  transition: transform 0.5s ease;
-}
-
-/* Hover zoom */
-.infografia img:hover {
-  transform: scale(1.05);
-}
-
-/* Keyframes fade-in + subida */
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
 
 
 
