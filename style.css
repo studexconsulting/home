@@ -537,13 +537,7 @@ p {
   .contact-form button {
     width: 100%;
   }
-}
-.infografia {
-  text-align: center;
-  margin: 2rem auto; /* marges superiors i inferiors */
-  max-width: 1200px;  /* amplada màxima perquè no quedi massa gran en pantalles grans */
-  width: 95%;          /* ocupa pràcticament tota l’amplada del container */
-}
+
 
 .infografia img,
 .infografia svg {
