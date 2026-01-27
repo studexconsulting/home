@@ -537,47 +537,43 @@ p {
   .contact-form button {
     width: 100%;
   }
-
-/* === Contenidor de la infografia === */
 .infografia {
   text-align: center;
-  margin: 2rem auto;    /* marges superiors i inferiors */
-  width: 100%;          /* ocupa tota l'amplada disponible */
-  max-width: 1400px;    /* ajusta segons el disseny i pantalla */
-  overflow: hidden;     /* evita que el zoom sobresurti */
+  margin: 2rem auto;
+  width: 100%;
+  max-width: 1400px; /* ajustable según pantalla */
+  overflow: hidden;  /* evita que el zoom sobresalga */
 }
 
-/* === Imatge o SVG dins el container === */
-.infografia img,
-.infografia svg {
-  width: 100%;           /* ocupa tot el container */
-  height: auto;          /* respecta proporcions */
-  display: block;        /* elimina espai blanc sota la imatge */
-  object-fit: contain;   /* mai talla l’SVG o imatge */
-  border-radius: 16px;   /* opcional: cantons arrodonits */
+.infografia img {
+  width: 100%;        /* ocupa todo el contenedor */
+  height: auto;       /* mantiene proporciones */
+  display: block;     /* elimina espacio en blanco */
+  object-fit: contain;/* nunca se corta la imagen */
+  border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 
-  /* === Animació fade-in amb moviment lleuger === */
+  /* animación fade-in y leve subida */
   opacity: 0;
   transform: translateY(30px) scale(1);
   animation: fadeInUp 1s ease forwards;
 
-  /* === Transició per hover zoom === */
+  /* transición para hover zoom */
   transition: transform 0.5s ease;
 }
 
-/* === Hover zoom suau === */
-.infografia img:hover,
-.infografia svg:hover {
+/* Hover zoom */
+.infografia img:hover {
   transform: scale(1.05);
 }
 
-/* === Keyframes per fade-in + lleuger moviment cap amunt === */
+/* Keyframes fade-in + subida */
 @keyframes fadeInUp {
   to {
     opacity: 1;
     transform: translateY(0) scale(1);
   }
 }
+
 
 
