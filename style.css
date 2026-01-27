@@ -469,8 +469,44 @@ svg[style*="width"] {
   }
 }
 
+
+/* Logo styles - add to your existing CSS */
+.nav .logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.nav .logo-img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+.nav .logo-text {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #D32F2F;
+  white-space: nowrap;
+}
+
+/* Make the logo responsive on mobile */
+@media (max-width: 768px) {
+  .nav .logo-text {
+    font-size: 1.5rem;
+  }
+  
+  .nav .logo-img {
+    height: 32px;
+  }
+}
+
 /* ===== UTILITY CLASSES ===== */
 .text-center { text-align: center; }
 .text-red { color: var(--primary-red); }
 .mt-2 { margin-top: 2rem; }
 .mb-2 { margin-bottom: 2rem; }
+
+
+
