@@ -551,25 +551,43 @@ p {
   margin: 0 auto;        /* centrado horizontal */
   width: 100%;
   max-width: 1600px;     /* opcional, para no explotar en pantallas enormes */
-  overflow: hidden;       /* evita que el zoom sobresalga */
+  /* avoid applying overflow:hidden here so svg isn't clipped */
+  overflow: hidden;       /* original: we'll override for wider display below */
 }
+
+/* ===== INFOGRAFÍA: make it wider and avoid clipping ===== */
+/* Override the section.light overflow for infografía so the SVG can extend past the section padding */
 .section.light .infografia {
-  overflow: visible;
-  width: calc(100% + 6rem);
-  margin: 0 -3rem;
-  max-width: none;
-  padding: 1rem 3rem;
+  overflow: visible;               /* allow the SVG to be visible outside the rounded container */
+  width: calc(100% + 6rem);        /* extend beyond section's horizontal padding */
+  margin: 0 -3rem;                 /* negative margins to let it reach the viewport edges */
+  max-width: none;                 /* don't cap to 1600px here */
+  padding: 1rem 3rem;              /* give some inner spacing so content isn't flush */
   box-sizing: border-box;
 }
-.infografia img, .infografia svg {
+
+/* Ensure the SVG scales nicely and is not clipped */
+.infografia img,
+.infografia svg {
   width: 100%;
   height: auto;
   max-width: none;
   display: block;
+  margin: 0 auto;
 }
+
+/* Put the wide behaviour only on larger screens; smaller screens keep normal flow */
 @media (max-width: 1024px) {
-  .section.light .infografia { width: 100%; margin: 0; padding: 0 1rem; }
+  .section.light .infografia {
+    width: 100%;
+    margin: 0;
+    padding: 0 1rem;
+  }
 }
 
-
-
+/* Smallest screens: ensure the image fits and nothing overflows horizontally */
+@media (max-width: 480px) {
+  .section.light .infografia {
+    padding: 0 0.5rem;
+  }
+}
