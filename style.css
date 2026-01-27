@@ -591,3 +591,22 @@ p {
     padding: 0 0.5rem;
   }
 }
+/* Make the infographic always fit the section */
+.infografia {
+  width: 100%;
+  max-width: 100%;
+  padding: 0;            /* optional: control spacing here */
+  box-sizing: border-box;
+  text-align: center;
+  overflow: visible;     /* keep visible if svg uses internal overflow, but not required */
+}
+
+.infografia img,
+.infografia svg {
+  display: block;
+  width: 100%;           /* fit to the infografia container */
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;   /* helpful for raster images */
+  margin: 0 auto;
+}
