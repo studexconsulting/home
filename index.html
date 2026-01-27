@@ -3,87 +3,340 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Asesoría académica en Países Bajos | VR Academic</title>
+  <title>Asesoría académica en Países Bajos | Studex Consulting</title>
   <meta name="description" content="Asesoría académica personalizada para estudiar en los Países Bajos. Universidades, solicitudes, becas y vida en el extranjero.">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=EB+Garamond:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- Navegación principal -->
 <nav class="nav fade-in">
-  <a href="/" class="logo" aria-label="VR Academic home">
-    <!-- relative path, width/height to avoid layout shift, lazy loading -->
-    <img src="assets/ITER.png" alt="ITER logo" class="logo-img" width="160" height="40" loading="lazy">
+  <a href="/" class="logo" aria-label="Studex Consulting home">
+    <img src="assets/ITER.png" alt="Studex Consulting logo" class="logo-img" width="160" height="40" loading="lazy">
+    <span class="logo-text">Studex Consulting</span>
   </a>
+  
   <div class="nav-right">
-    <div class="language-selector" role="navigation" aria-label="language selector">
-      <a href="index.html" class="lang active">ES</a><span>|</span>
-      <a href="en.html" class="lang">EN</a><span>|</span>
-      <a href="ca.html" class="lang">CA</a>
+    <!-- Menú principal -->
+    <div class="main-menu">
+      <a href="/" class="menu-link active">Inicio</a>
+      <a href="destinos.html" class="menu-link">Destinos</a>
+      <a href="blog.html" class="menu-link">Blog</a>
+      <a href="#contact" class="menu-link">Contacto</a>
     </div>
-    <a href="#contact" class="nav-btn">Contacto</a>
+    
+    <div class="nav-actions">
+      <div class="language-selector" role="navigation" aria-label="language selector">
+        <a href="index.html" class="lang active">ES</a><span>|</span>
+        <a href="en.html" class="lang">EN</a><span>|</span>
+        <a href="ca.html" class="lang">CA</a>
+      </div>
+      <a href="#contact" class="nav-btn">Contacto</a>
+    </div>
   </div>
 </nav>
 
 <header class="hero fade-in">
   <h1>Asesoría académica<br>para estudiar en Europa</h1>
   <p>Acompañamos a estudiantes internacionales con especialización en los Países Bajos.</p>
+  <a href="#contact" class="cta-button">Solicitar Asesoría Gratuita</a>
 </header>
 
-<section class="section light fade-in" id="about">
-  <h2>Sobre nosotros</h2>
-  <p>Somos VR Academic, un equipo dedicado a ayudar a los estudiantes a tomar decisiones informadas sobre estudiar en el extranjero. Nuestra misión es guiarte en aplicaciones, becas y la vida en los Países Bajos de forma clara y segura.</p>
-  <p>Nos centramos en soporte personalizado porque cada estudiante tiene un camino único. Nuestra experiencia con universidades neerlandesas asegura que encuentres la mejor opción para tus objetivos.</p>
+<!-- Sección Destinos (resumen) -->
+<section class="section fade-in" id="destinos">
+  <div class="section-header">
+    <h2>Nuestros Destinos</h2>
+    <p>Explora los países donde tenemos experiencia y conexiones universitarias.</p>
+    <a href="destinos.html" class="section-link">Ver todos los destinos →</a>
+  </div>
+  
+  <div class="cards">
+    <div class="card fade-in">
+      <div class="flag-icon">🇳🇱</div>
+      <h3>Países Bajos</h3>
+      <p>Especialización completa en universidades neerlandesas. Más de 50 universidades asociadas.</p>
+      <a href="destinos.html#paises-bajos" class="card-link">Ver universidades</a>
+    </div>
+    
+    <div class="card fade-in">
+      <div class="flag-icon">🇪🇸</div>
+      <h3>España</h3>
+      <p>Programas en español e inglés en las mejores universidades públicas y privadas.</p>
+      <a href="destinos.html#espana" class="card-link">Ver programas</a>
+    </div>
+    
+    <div class="card fade-in">
+      <div class="flag-icon">🇩🇪</div>
+      <h3>Alemania</h3>
+      <p>Educación de calidad con bajos costos. Especialistas en estudios de ingeniería.</p>
+      <a href="destinos.html#alemania" class="card-link">Explorar opciones</a>
+    </div>
+  </div>
 </section>
 
+<!-- Sección Sobre Nosotros -->
+<section class="section light fade-in" id="about">
+  <h2>Sobre Studex Consulting</h2>
+  <p>Somos <strong>Studex Consulting</strong>, un equipo dedicado a ayudar a los estudiantes a tomar decisiones informadas sobre estudiar en el extranjero. Nuestra misión es guiarte en aplicaciones, becas y la vida en Europa de forma clara y segura.</p>
+  <p>Nos centramos en soporte personalizado porque cada estudiante tiene un camino único. Nuestra experiencia con universidades europeas asegura que encuentres la mejor opción para tus objetivos.</p>
+  
+  <div class="stats-container fade-in">
+    <div class="stat">
+      <h3>+500</h3>
+      <p>Estudiantes asesorados</p>
+    </div>
+    <div class="stat">
+      <h3>+50</h3>
+      <p>Universidades asociadas</p>
+    </div>
+    <div class="stat">
+      <h3>95%</h3>
+      <p>Tasa de aceptación</p>
+    </div>
+    <div class="stat">
+      <h3>+€2M</h3>
+      <p>En becas obtenidas</p>
+    </div>
+  </div>
+</section>
+
+<!-- Sección Servicios -->
 <section class="section fade-in">
   <h2>Nuestros servicios</h2>
   <div class="cards">
-    <div class="card fade-in"><h3>Solicitudes universitarias</h3><p>Acompañamiento completo durante todo el proceso.</p></div>
-    <div class="card fade-in"><h3>Universidad ideal</h3><p>Análisis personalizado de tu perfil académico.</p></div>
-    <div class="card fade-in"><h3>Asesoría personalizada</h3><p>Sesiones individuales adaptadas a tus objetivos.</p></div>
-    <div class="card fade-in"><h3>Becas</h3><p>Identificación y solicitud de oportunidades de financiación.</p></div>
-    <div class="card fade-in"><h3>Vivir en el extranjero</h3><p>Trámites administrativos y apoyo inicial.</p></div>
+    <div class="card fade-in">
+      <div class="card-icon">🎓</div>
+      <h3>Solicitudes universitarias</h3>
+      <p>Acompañamiento completo durante todo el proceso de aplicación.</p>
+    </div>
+    <div class="card fade-in">
+      <div class="card-icon">🔍</div>
+      <h3>Universidad ideal</h3>
+      <p>Análisis personalizado de tu perfil académico y profesional.</p>
+    </div>
+    <div class="card fade-in">
+      <div class="card-icon">💼</div>
+      <h3>Asesoría personalizada</h3>
+      <p>Sesiones individuales adaptadas a tus objetivos específicos.</p>
+    </div>
+    <div class="card fade-in">
+      <div class="card-icon">💰</div>
+      <h3>Becas y financiación</h3>
+      <p>Identificación y solicitud de oportunidades de financiación.</p>
+    </div>
+    <div class="card fade-in">
+      <div class="card-icon">🏠</div>
+      <h3>Vivir en el extranjero</h3>
+      <p>Trámites administrativos y apoyo inicial en el nuevo país.</p>
+    </div>
+    <div class="card fade-in">
+      <div class="card-icon">📝</div>
+      <h3>Preparación de documentos</h3>
+      <p>Revisión y mejora de cartas de motivación y CVs.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Sección Blog (resumen) -->
+<section class="section light fade-in" id="blog-preview">
+  <div class="section-header">
+    <h2>Últimos del Blog</h2>
+    <p>Consejos, experiencias y noticias sobre estudiar en el extranjero.</p>
+    <a href="blog.html" class="section-link">Ver todo el blog →</a>
   </div>
   
-<section class="section light fade-in">
+  <div class="cards">
+    <div class="card blog-card fade-in">
+      <div class="blog-category">Guía</div>
+      <h3>Cómo preparar una carta de motivación ganadora</h3>
+      <p>Aprende los secretos para destacar entre miles de aplicaciones.</p>
+      <a href="blog.html#carta-motivacion" class="read-more">Leer más</a>
+    </div>
+    
+    <div class="card blog-card fade-in">
+      <div class="blog-category">Experiencia</div>
+      <h3>Vida estudiantil en Ámsterdam: Lo que nadie te cuenta</h3>
+      <p>Testimonio real de un estudiante internacional en los Países Bajos.</p>
+      <a href="blog.html#vida-amsterdam" class="read-more">Leer más</a>
+    </div>
+    
+    <div class="card blog-card fade-in">
+      <div class="blog-category">Becas</div>
+      <h3>Becas disponibles para 2024 en universidades europeas</h3>
+      <p>Lista actualizada de oportunidades de financiación.</p>
+      <a href="blog.html#becas-2024" class="read-more">Leer más</a>
+    </div>
+  </div>
+</section>
+
+<!-- Sección Especialización Países Bajos -->
+<section class="section fade-in">
   <h2>Especializados en Países Bajos</h2>
   <p>Trabajamos principalmente con universidades neerlandesas, reconocidas por su calidad académica y enfoque internacional.</p>
 
-  <!-- Infografía gran -->
+  <div class="university-grid fade-in">
+    <div class="university-card">
+      <h4>University of Amsterdam</h4>
+      <p>Especializados en humanidades y ciencias sociales. Top 100 mundial.</p>
+    </div>
+    <div class="university-card">
+      <h4>Leiden University</h4>
+      <p>Líderes en Derecho, Psicología y Relaciones Internacionales. Top 17 del Mundo en Política según QS Ranking.</p>
+    </div>
+    <div class="university-card">
+      <h4>Erasmus University Rotterdam</h4>
+      <p>Excelencia en negocios, economía y medicina. Una de las mejores de Europa.</p>
+    </div>
+    <div class="university-card">
+      <h4>Delft University of Technology</h4>
+      <p>#1 en ingeniería y tecnología en los Países Bajos. Referencia mundial.</p>
+    </div>
+  </div>
+  
+  <!-- Infografía -->
   <div class="infografia fade-in">
     <img src="assets/mapa_es.svg" alt="Infografía sobre universidades en Países Bajos">
   </div>
 </section>
 
+<!-- Sección Redes Sociales -->
+<section class="section light fade-in" id="social">
+  <h2>Síguenos en redes sociales</h2>
+  <p>Consejos diarios, testimonios y actualizaciones sobre estudiar en el extranjero.</p>
+  
+  <div class="social-grid">
+    <a href="https://tiktok.com/@studexconsulting" target="_blank" class="social-card tiktok">
+      <i class="fab fa-tiktok"></i>
+      <h3>TikTok</h3>
+      <p>Consejos rápidos y experiencias estudiantiles</p>
+      <span class="social-handle">@studexconsulting</span>
+    </a>
+    
+    <a href="https://instagram.com/studexconsulting" target="_blank" class="social-card instagram">
+      <i class="fab fa-instagram"></i>
+      <h3>Instagram</h3>
+      <p>Fotos, stories y eventos exclusivos</p>
+      <span class="social-handle">@studexconsulting</span>
+    </a>
+    
+    <a href="https://linkedin.com/company/studexconsulting" target="_blank" class="social-card linkedin">
+      <i class="fab fa-linkedin"></i>
+      <h3>LinkedIn</h3>
+      <p>Consejos profesionales y networking</p>
+      <span class="social-handle">Studex Consulting</span>
+    </a>
+    
+    <a href="https://youtube.com/@studexconsulting" target="_blank" class="social-card youtube">
+      <i class="fab fa-youtube"></i>
+      <h3>YouTube</h3>
+      <p>Guías completas y entrevistas</p>
+      <span class="social-handle">Studex Consulting</span>
+    </a>
+  </div>
+</section>
 
-
-
-<section class="section light fade-in" id="contact">
+<!-- Sección Contacto -->
+<section class="section fade-in" id="contact">
   <h2>Contacto</h2>
   <p>Cuéntanos tu situación y te responderemos lo antes posible.</p>
+  
+  <div class="contact-options">
+    <div class="contact-method whatsapp-contact">
+      <i class="fab fa-whatsapp"></i>
+      <h3>WhatsApp Business</h3>
+      <p>Respuesta inmediata para consultas urgentes</p>
+      <a href="https://wa.me/34123456789?text=Hola%20Studex%20Consulting,%20quiero%20información%20sobre%20estudiar%20en%20el%20extranjero" 
+         target="_blank" class="whatsapp-btn">
+        <i class="fab fa-whatsapp"></i> Contáctanos por WhatsApp
+      </a>
+      <p class="contact-note">Reemplaza el número con tu WhatsApp Business real</p>
+    </div>
+    
+    <div class="contact-method">
+      <i class="fas fa-envelope"></i>
+      <h3>Correo electrónico</h3>
+      <p>info@studexconsulting.com</p>
+    </div>
+  </div>
 
   <form action="https://formspree.io/f/XXXXYYYY" method="POST" class="contact-form">
     <input type="text" name="name" placeholder="Nombre completo" required>
     <input type="email" name="email" placeholder="Correo electrónico" required>
-    <textarea name="message" placeholder="Tu mensaje" required></textarea>
-    <button type="submit" class="nav-btn">Enviar</button>
+    <select name="destination" required>
+      <option value="" disabled selected>Destino de interés</option>
+      <option value="paises-bajos">Países Bajos</option>
+      <option value="espana">España</option>
+      <option value="alemania">Alemania</option>
+      <option value="otros">Otros países</option>
+    </select>
+    <textarea name="message" placeholder="Tu mensaje y situación actual" rows="5" required></textarea>
+    <button type="submit" class="nav-btn">Enviar solicitud</button>
   </form>
 </section>
 
+<!-- Footer -->
 <footer class="footer fade-in">
-  <p>© 2026 VR Academic Consulting</p>
+  <div class="footer-content">
+    <div class="footer-section">
+      <div class="footer-logo">Studex Consulting</div>
+      <p>Asesoría académica especializada en estudios en el extranjero.</p>
+    </div>
+    
+    <div class="footer-section">
+      <h4>Enlaces rápidos</h4>
+      <a href="/">Inicio</a>
+      <a href="destinos.html">Destinos</a>
+      <a href="blog.html">Blog</a>
+      <a href="#contact">Contacto</a>
+    </div>
+    
+    <div class="footer-section">
+      <h4>Servicios</h4>
+      <a href="#services">Asesoría universitaria</a>
+      <a href="#services">Becas y financiación</a>
+      <a href="#services">Preparación de documentos</a>
+      <a href="#services">Soporte post-aceptación</a>
+    </div>
+    
+    <div class="footer-section">
+      <h4>Contacto</h4>
+      <p>info@studexconsulting.com</p>
+      <div class="footer-social">
+        <a href="https://tiktok.com/@studexconsulting" target="_blank"><i class="fab fa-tiktok"></i></a>
+        <a href="https://instagram.com/studexconsulting" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://linkedin.com/company/studexconsulting" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://wa.me/34123456789" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer-bottom">
+    <p>© 2024 Studex Consulting. Todos los derechos reservados.</p>
+  </div>
 </footer>
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => { if(entry.isIntersecting){ entry.target.classList.add("fade-in-visible"); }});
+    entries.forEach(entry => { 
+      if(entry.isIntersecting){ 
+        entry.target.classList.add("fade-in-visible"); 
+      }
+    });
   }, { threshold: 0.1 });
+  
   document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
+  
+  // Actualizar enlace de WhatsApp con número real
+  const whatsappBtn = document.querySelector('.whatsapp-btn');
+  if(whatsappBtn) {
+    // Reemplaza con tu número real (formato: 34123456789 sin + ni espacios)
+    whatsappBtn.href = whatsappBtn.href.replace('34123456789', 'TU_NUMERO_REAL');
+  }
 });
 </script>
 
