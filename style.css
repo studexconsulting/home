@@ -1,3 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  /* ... your variables ... */
+}
+
+/* include pseudo elements for box-sizing */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* ===== CSS RESET & GLOBAL VARIABLES ===== */
 :root {
   /* Red-based color palette */
