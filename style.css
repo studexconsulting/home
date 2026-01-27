@@ -538,31 +538,43 @@ p {
     width: 100%;
   }
 
+/* Contenidor de la infografia */
+.infografia {
+  text-align: center;
+  margin: 2rem auto;   /* marges superiors i inferiors */
+  max-width: 1200px;   /* amplada màxima per pantalles grans */
+  width: 95%;          /* ocupa gairebé tota l'amplada */
+  overflow: hidden;    /* evita que el zoom sobresurti */
+}
 
+/* Imatge o SVG dins el container */
 .infografia img,
 .infografia svg {
   width: 100%;          /* ocupa tot el container */
   height: auto;         /* respecta proporcions */
-  border-radius: 16px;  /* optional, si vols cantons arrodonits */
+  border-radius: 16px;  /* optional, arrodonim cantons */
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: transform 0.5s ease;
-  
-  /* animació fade-in */
+
+  /* animació fade-in amb pujada */
   opacity: 0;
   transform: translateY(30px) scale(1);
   animation: fadeInUp 1s ease forwards;
+
+  /* transició per hover */
+  transition: transform 0.5s ease;
 }
 
-/* Hover zoom */
+/* Hover zoom suau */
 .infografia img:hover,
 .infografia svg:hover {
   transform: scale(1.05);
 }
 
-/* Keyframes fade-in + pujada */
+/* Keyframes per fade-in + pujada */
 @keyframes fadeInUp {
   to {
     opacity: 1;
     transform: translateY(0) scale(1);
   }
 }
+
