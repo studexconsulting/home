@@ -553,7 +553,23 @@ p {
   max-width: 1600px;     /* opcional, para no explotar en pantallas enormes */
   overflow: hidden;       /* evita que el zoom sobresalga */
 }
-
+.section.light .infografia {
+  overflow: visible;
+  width: calc(100% + 6rem);
+  margin: 0 -3rem;
+  max-width: none;
+  padding: 1rem 3rem;
+  box-sizing: border-box;
+}
+.infografia img, .infografia svg {
+  width: 100%;
+  height: auto;
+  max-width: none;
+  display: block;
+}
+@media (max-width: 1024px) {
+  .section.light .infografia { width: 100%; margin: 0; padding: 0 1rem; }
+}
 
 
 
