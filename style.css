@@ -67,6 +67,7 @@ body {
 .poppins-bold { font-weight: 700; }
 .poppins-extrabold { font-weight: 800; }
 
+
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Poppins', sans-serif;
@@ -125,6 +126,8 @@ img, svg, picture, video {
   display: block;
 }
 
+
+
 /* Force ALL images to stay inside containers */
 img[style*="width"],
 svg[style*="width"] {
@@ -161,6 +164,121 @@ svg[style*="width"] {
   z-index: 1000;
   box-shadow: var(--shadow-sm);
   border-bottom: 2px solid var(--primary-red-soft);
+}
+
+/* ===== BIGGER HEADER & LOGO ===== */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 5%; /* Increased from 1.2rem */
+  background: var(--light);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: var(--shadow-sm);
+  border-bottom: 3px solid var(--primary-red-soft); /* Thicker border */
+  min-height: 80px; /* Fixed minimum height */
+}
+
+/* Make the logo bigger and more prominent */
+.nav .logo {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Increased from 12px */
+  text-decoration: none;
+  transition: var(--transition-medium);
+}
+
+.nav .logo:hover {
+  transform: scale(1.02);
+}
+
+.nav .logo-img {
+  height: 60px !important; /* Bigger! Was 40px */
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.nav .logo-text {
+  font-size: 2.2rem !important; /* Bigger! Was 1.8rem */
+  font-weight: 800;
+  color: var(--primary-red);
+  white-space: nowrap;
+  letter-spacing: -0.5px;
+}
+
+/* Make language selector and button larger too */
+.language-selector {
+  display: flex;
+  gap: 0.8rem;
+  background: var(--light-gray);
+  padding: 0.5rem; /* Slightly more padding */
+  border-radius: var(--radius-md);
+}
+
+.language-selector .lang {
+  padding: 0.5rem 1.2rem; /* Larger padding */
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  color: var(--dark-light);
+  font-weight: 500;
+  font-size: 1rem; /* Larger font */
+  transition: var(--transition-fast);
+}
+
+.nav .nav-btn {
+  padding: 0.9rem 2.2rem; /* Larger padding */
+  background: var(--red-gradient);
+  color: var(--light);
+  border: none;
+  border-radius: var(--radius-xl);
+  font-weight: 600;
+  font-size: 1.1rem; /* Larger font */
+  text-decoration: none;
+  transition: var(--transition-medium);
+  white-space: nowrap;
+}
+
+/* Adjust for mobile */
+@media (max-width: 768px) {
+  .nav {
+    min-height: 70px;
+    padding: 1rem;
+  }
+  
+  .nav .logo-img {
+    height: 50px !important;
+  }
+  
+  .nav .logo-text {
+    font-size: 1.8rem !important;
+  }
+  
+  .language-selector .lang {
+    padding: 0.4rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .nav .nav-btn {
+    padding: 0.7rem 1.8rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav .logo-img {
+    height: 40px !important;
+  }
+  
+  .nav .logo-text {
+    font-size: 1.5rem !important;
+  }
+  
+  .nav .logo {
+    gap: 8px;
+  }
 }
 
 /* Custom logo from /assets/ITER.png */
