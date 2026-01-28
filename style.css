@@ -1,5 +1,5 @@
 /* ===== GITHUB PAGES CSS ===== */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Libre+Baskerville:wght@400;700&display=swap');
 
 :root {
   /* Red-based color palette */
@@ -36,6 +36,10 @@
   --transition-fast: 0.2s ease;
   --transition-medium: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Font families */
+  --font-heading: 'Libre Baskerville', serif;
+  --font-body: 'Inter', sans-serif;
 }
 
 /* Include pseudo elements for box-sizing */
@@ -49,7 +53,7 @@
 
 /* ===== BASE STYLES ===== */
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--font-body);
   font-weight: 400;
   color: var(--dark);
   background: var(--bg-gradient);
@@ -59,18 +63,20 @@ body {
   min-height: 100vh;
 }
 
-/* Poppins weight classes */
-.poppins-light { font-weight: 300; }
-.poppins-regular { font-weight: 400; }
-.poppins-medium { font-weight: 500; }
-.poppins-semibold { font-weight: 600; }
-.poppins-bold { font-weight: 700; }
-.poppins-extrabold { font-weight: 800; }
+/* Font weight utility classes */
+.inter-light { font-weight: 300; }
+.inter-regular { font-weight: 400; }
+.inter-medium { font-weight: 500; }
+.inter-semibold { font-weight: 600; }
+.inter-bold { font-weight: 700; }
+.inter-extrabold { font-weight: 800; }
 
+.libre-regular { font-weight: 400; }
+.libre-bold { font-weight: 700; }
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--font-heading);
   font-weight: 700;
   color: var(--dark);
   line-height: 1.3;
@@ -79,7 +85,6 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: clamp(2.5rem, 5vw, 3.5rem);
-  font-weight: 800;
   background: var(--red-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -89,7 +94,6 @@ h1 {
 
 h2 {
   font-size: clamp(2rem, 4vw, 2.5rem);
-  font-weight: 700;
   position: relative;
   display: inline-block;
   margin-bottom: 2.5rem;
@@ -108,7 +112,6 @@ h2::after {
 
 h3 {
   font-size: clamp(1.5rem, 3vw, 1.8rem);
-  font-weight: 600;
   color: var(--primary-red-dark);
 }
 
@@ -116,6 +119,104 @@ p {
   font-size: 1.1rem;
   color: var(--dark-light);
   margin-bottom: 1.5rem;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+/* Navigation con nuevas fuentes */
+.nav {
+  font-family: var(--font-body);
+}
+
+.nav .logo-text {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: -0.5px;
+}
+
+.nav .nav-btn {
+  font-family: var(--font-body);
+  font-weight: 600;
+}
+
+/* Language selector */
+.language-selector .lang {
+  font-family: var(--font-body);
+  font-weight: 500;
+}
+
+/* Hero section */
+.hero h1 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+
+.hero p {
+  font-family: var(--font-body);
+  font-weight: 400;
+}
+
+/* Cards */
+.card h3 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+
+.card p {
+  font-family: var(--font-body);
+  font-weight: 400;
+}
+
+/* Buttons */
+.service-btn, .destinos-btn, .blog-btn, .blog-link-btn,
+.social-btn, .contact-method-btn, .submit-btn, .cta-button {
+  font-family: var(--font-body);
+  font-weight: 600;
+}
+
+/* Forms */
+.contact-form input,
+.contact-form textarea,
+.contact-form select,
+.contact-form button {
+  font-family: var(--font-body);
+}
+
+/* Footer */
+.footer {
+  font-family: var(--font-body);
+}
+
+.footer-logo {
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+
+.footer-section h4 {
+  font-family: var(--font-body);
+  font-weight: 600;
+}
+
+/* City cards */
+.city-name {
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+
+/* Blog categories */
+.blog-category {
+  font-family: var(--font-body);
+  font-weight: 600;
+}
+
+/* Disclaimer box */
+.disclaimer-box {
+  font-family: var(--font-body);
+}
+
+.disclaimer-box i + p {
+  font-family: var(--font-body);
   font-weight: 400;
 }
 
