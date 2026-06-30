@@ -337,3 +337,134 @@ p{color:var(--ink-soft);}
   .city-grid{grid-template-columns:1fr 1fr;}
   .footer-grid{grid-template-columns:1fr;}
 }
+/* ============================================================
+   ITERACIÓN 2 — ajustes de contenido y nuevos componentes
+   ============================================================ */
+
+/* ----- about: badge eslogan + foto real ----- */
+.about-copy h2{margin-bottom:1rem;}
+.slogan-badge{
+  display:inline-block;
+  font-family:'Fraunces',serif;
+  font-style:italic;
+  font-weight:500;
+  font-size:1.05rem;
+  color:var(--teal-400);
+  background:var(--blue-100);
+  padding:.5rem 1.1rem;
+  border-radius:var(--radius-pill);
+  margin-bottom:1.6rem;
+}
+.about-art{
+  aspect-ratio:4/3;border-radius:var(--radius-l);
+  overflow:hidden;box-shadow:var(--shadow-m);position:relative;
+}
+.about-art img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease);}
+.about-art:hover img{transform:scale(1.05);}
+
+/* ----- benefit banner ----- */
+.benefit-banner{
+  display:flex;align-items:center;justify-content:space-between;gap:2rem;
+  background:linear-gradient(120deg,var(--blue-900),var(--blue-700));
+  color:var(--white);border-radius:var(--radius-l);
+  padding:2.4rem 2.8rem;margin-bottom:3rem;
+  box-shadow:var(--shadow-m);
+}
+.benefit-banner-text h3{color:var(--white);font-size:1.4rem;margin-bottom:.7rem;}
+.benefit-banner-text p{color:rgba(255,255,255,.85);font-size:.98rem;margin:0;max-width:560px;}
+.benefit-banner-text strong{color:var(--white);}
+.benefit-figure{
+  flex-shrink:0;text-align:center;
+  border-left:1px solid rgba(255,255,255,.2);padding-left:2rem;
+}
+.benefit-amount{
+  display:block;font-family:'Fraunces',serif;font-size:2.6rem;font-weight:600;
+  color:var(--white);line-height:1;
+}
+.benefit-period{font-size:.78rem;color:rgba(255,255,255,.7);}
+
+@media (max-width:768px){
+  .benefit-banner{flex-direction:column;text-align:center;padding:2rem;}
+  .benefit-figure{border-left:none;border-top:1px solid rgba(255,255,255,.2);padding-left:0;padding-top:1.2rem;width:100%;}
+}
+
+/* ----- vivir en holanda ----- */
+.life-section{background:var(--blue-50);}
+.life-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:4rem;align-items:center;}
+.life-art{aspect-ratio:4/3;border-radius:var(--radius-l);overflow:hidden;box-shadow:var(--shadow-m);}
+.life-art img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease);}
+.life-art:hover img{transform:scale(1.05);}
+.life-copy p{font-size:1.04rem;margin-bottom:1.4rem;}
+.life-list{list-style:none;margin:0 0 1.8rem;display:flex;flex-direction:column;gap:.9rem;}
+.life-list li{display:flex;align-items:center;gap:.8rem;font-size:.96rem;color:var(--ink);}
+.life-list i{
+  width:34px;height:34px;border-radius:50%;background:var(--white);
+  display:flex;align-items:center;justify-content:center;color:var(--blue-700);
+  box-shadow:var(--shadow-s);flex-shrink:0;
+}
+@media (max-width:980px){.life-grid{grid-template-columns:1fr;gap:2.5rem;}}
+
+/* ----- tiktok embeds ----- */
+.tiktok-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:1.6rem;max-width:1020px;margin:0 auto 2.6rem;
+}
+
+/* ============================================================
+   TRANSICIONES Y EFECTOS MEJORADOS
+   ============================================================ */
+
+:root{ --ease-soft: cubic-bezier(.22,1,.36,1); }
+
+.reveal{transition:opacity .8s var(--ease-soft), transform .8s var(--ease-soft);}
+
+/* staggered children inside revealed grids */
+.cards .card, .city-grid .city, .testi-grid .testi, .blog-grid .blog-card{
+  opacity:0;transform:translateY(18px);
+  transition:opacity .6s var(--ease-soft), transform .6s var(--ease-soft), box-shadow .3s var(--ease), border-color .3s var(--ease);
+}
+.reveal.in .card, .reveal.in .city, .reveal.in .testi, .reveal.in .blog-card{
+  opacity:1;transform:translateY(0);
+}
+.cards .card:nth-child(1), .city-grid .city:nth-child(1), .testi-grid .testi:nth-child(1), .blog-grid .blog-card:nth-child(1){transition-delay:.04s;}
+.cards .card:nth-child(2), .city-grid .city:nth-child(2), .testi-grid .testi:nth-child(2), .blog-grid .blog-card:nth-child(2){transition-delay:.10s;}
+.cards .card:nth-child(3), .city-grid .city:nth-child(3), .testi-grid .testi:nth-child(3), .blog-grid .blog-card:nth-child(3){transition-delay:.16s;}
+.cards .card:nth-child(4), .city-grid .city:nth-child(4){transition-delay:.22s;}
+.cards .card:nth-child(5), .city-grid .city:nth-child(5){transition-delay:.28s;}
+.cards .card:nth-child(6), .city-grid .city:nth-child(6){transition-delay:.34s;}
+.city-grid .city:nth-child(7){transition-delay:.40s;}
+.city-grid .city:nth-child(8){transition-delay:.46s;}
+
+/* nicer card hover: soft lift + subtle scale instead of flat translateY */
+.card:hover, .blog-card:hover{
+  transform:translateY(-8px) scale(1.012);
+}
+.city:hover{transform:translateY(-5px) scale(1.01);}
+
+/* button micro-interaction: shine sweep */
+.btn{position:relative;overflow:hidden;}
+.btn::after{
+  content:'';position:absolute;top:0;left:-60%;width:50%;height:100%;
+  background:linear-gradient(120deg, transparent, rgba(255,255,255,.35), transparent);
+  transform:skewX(-20deg);
+  transition:left .6s var(--ease-soft);
+}
+.btn:hover::after{left:130%;}
+
+/* nav link underline grows from center */
+.menu-link::before{
+  content:'';position:absolute;left:50%;right:50%;bottom:-4px;height:2px;
+  background:var(--teal-400);transition:left .3s var(--ease-soft), right .3s var(--ease-soft);
+}
+.menu-link:hover::before{left:0;right:0;}
+.menu-link.active::after{display:none;}
+.menu-link.active::before{left:0;right:0;background:var(--teal-400);}
+
+/* faq icon smoother spin + question hover tint */
+.faq-q{transition:color .25s var(--ease);}
+.faq-q:hover{color:var(--blue-700);}
+
+/* stat-free hero: smoother CTA entrance handled by .reveal already */
+
+/* social pill + tiktok blockquote entrance reuses .reveal stagger via parent */
+.social-row{transition:opacity .6s var(--ease-soft);}
