@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Destinos | Studex Consulting</title>
-<meta name="description" content="Conoce las mejores universidades de los Países Bajos: Amsterdam, Delft, Rotterdam, Leiden, Utrecht, Groningen, Maastricht. Studex te ayuda a elegir la tuya.">
+<meta name="description" content="Conoce las mejores universidades de los Países Bajos: Amsterdam, Delft, Rotterdam, Leiden, Utrecht, Groningen, Maastricht y La Haya. Studex te ayuda a elegir la tuya.">
 <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
 <link rel="icon" href="assets/favicon_io/favicon.ico">
 <meta name="theme-color" content="#0D2440">
@@ -31,7 +31,6 @@
 .page-hero h1 { color: var(--white); font-size: clamp(2.4rem, 5vw, 3.8rem); margin-bottom: 1rem; }
 .page-hero h1 em { color: var(--teal); }
 .page-hero p { color: rgba(255,255,255,.75); font-size: 1.1rem; max-width: 540px; margin: 0 auto; }
-
 .filters {
   display: flex; gap: .7rem; justify-content: center; flex-wrap: wrap;
   padding: 2.5rem 5% 0;
@@ -45,7 +44,6 @@
 .filter-btn:hover, .filter-btn.active {
   background: var(--navy); color: var(--white); border-color: var(--navy);
 }
-
 .uni-full-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
@@ -67,6 +65,7 @@
 .uni-card-photo img {
   width: 100%; height: 100%; object-fit: cover;
   transition: transform .6s var(--spring);
+  display: block;
 }
 .uni-full-card:hover .uni-card-photo img { transform: scale(1.07); }
 .uni-card-type {
@@ -88,20 +87,27 @@
   padding: .2rem .7rem; border-radius: var(--r-p); margin-bottom: .8rem;
   font-family: 'Inter', sans-serif;
 }
-.uni-card-body p { font-size: .93rem; margin-bottom: 1.3rem; }
-.uni-tags { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 1.4rem; }
+.uni-card-body p { font-size: .93rem; margin-bottom: 1.1rem; }
+.uni-tags { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 1.1rem; }
 .uni-tag {
   font-size: .74rem; font-weight: 600; color: var(--muted);
   background: var(--off); padding: .3rem .75rem; border-radius: var(--r-p);
   border: 1px solid var(--line);
 }
+.uni-vibe {
+  display: flex; align-items: flex-start; gap: .55rem;
+  font-size: .85rem; color: var(--muted); line-height: 1.45;
+  background: var(--off); border: 1px solid var(--line);
+  border-radius: var(--r-p); padding: .7rem .85rem;
+  margin-bottom: 1.3rem;
+}
+.uni-vibe i { color: var(--teal); margin-top: .15rem; }
 .uni-card-cta {
   display: inline-flex; align-items: center; gap: .45rem;
   font-size: .88rem; font-weight: 600; color: var(--cobalt);
   transition: gap .2s;
 }
 .uni-full-card:hover .uni-card-cta { gap: .7rem; }
-
 .compare-strip {
   background: var(--night); border-radius: var(--r-l);
   padding: 2.5rem; margin-top: 4rem;
@@ -110,20 +116,25 @@
 }
 .compare-strip h3 { color: var(--white); font-size: 1.4rem; }
 .compare-strip p { color: rgba(255,255,255,.65); margin-top: .4rem; }
-
 @media (max-width: 640px) {
   .uni-full-grid { grid-template-columns: 1fr; }
 }
+
+/* ---- logo fix: bigger mark, no wordmark ---- */
+.logo-name { display: none; }
+.logo-img {
+  height: 54px;
+  width: auto;
+  display: block;
+}
+.logo { display: flex; align-items: center; }
 </style>
 </head>
 <body>
-
 <div class="scroll-bar" id="scrollBar"></div>
-
 <nav class="nav" id="nav">
   <a href="index.html" class="logo">
-    <img src="assets/ITER.png" alt="Studex" class="logo-img" loading="lazy">
-    <span class="logo-name">Studex</span>
+    <img src="assets/ITER2.png" alt="Studex" class="logo-img" loading="lazy">
   </a>
   <div class="nav-center">
     <a href="index.html" class="nl">Inicio</a>
@@ -140,7 +151,6 @@
     <button class="hamburger" id="hamburger" aria-label="Menú"><i class="fas fa-bars"></i></button>
   </div>
 </nav>
-
 <div class="mobile-menu" id="mobileMenu">
   <a href="index.html">Inicio</a>
   <a href="destinos.html">Destinos</a>
@@ -152,16 +162,14 @@
     <a href="ca-destinos.html">CA</a>
   </div>
 </div>
-
 <!-- PAGE HERO -->
 <header class="page-hero">
   <div class="page-hero-inner">
     <span class="tag light up">Dónde estudiar</span>
     <h1 class="up">Las universidades<br>que <em>te esperan.</em></h1>
-    <p class="up">Todo lo que necesitas saber sobre las principales universidades de los Países Bajos, para que puedas elegir con criterio.</p>
+    <p class="up">Todo lo que necesitas saber sobre las principales universidades de los Países Bajos —de investigación y de ciencias aplicadas—, para que puedas elegir con criterio.</p>
   </div>
 </header>
-
 <!-- FILTERS -->
 <div class="filters reveal">
   <button class="filter-btn active" data-filter="all">Todas</button>
@@ -174,8 +182,8 @@
   <button class="filter-btn" data-filter="utrecht">Utrecht</button>
   <button class="filter-btn" data-filter="groningen">Groningen</button>
   <button class="filter-btn" data-filter="maastricht">Maastricht</button>
+  <button class="filter-btn" data-filter="denhaag">La Haya</button>
 </div>
-
 <!-- UNIVERSITIES GRID -->
 <section class="section">
   <div class="container">
@@ -184,7 +192,7 @@
       <!-- UvA -->
       <div class="uni-full-card" data-city="amsterdam" data-type="investigacion">
         <div class="uni-card-photo">
-          <img src="https://images.unsplash.com/photo-1512470604168-cb6b5f897773?w=700&q=80&fm=jpg&fit=crop" alt="Ámsterdam" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1754835143820-bcf20e2e1a35?w=700&q=80&fm=jpg&fit=crop" alt="Canales del centro de Ámsterdam" loading="lazy">
           <span class="uni-card-type">Investigación</span>
         </div>
         <div class="uni-card-body">
@@ -199,6 +207,7 @@
             <span class="uni-tag">Economía</span>
             <span class="uni-tag">Ciencias</span>
           </div>
+          <div class="uni-vibe"><i class="fas fa-city"></i><span>Vida social a tope todo el año: la ciudad nunca se para, hay eventos, festivales y una comunidad internacional enorme. Ideal si quieres estar en el centro de todo.</span></div>
           <a href="index.html#contact" class="uni-card-cta">Asesorarme sobre la UvA <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
@@ -206,7 +215,7 @@
       <!-- VU -->
       <div class="uni-full-card" data-city="amsterdam" data-type="investigacion">
         <div class="uni-card-photo">
-          <img src="https://images.unsplash.com/photo-1576924542622-772281b13aa0?w=700&q=80&fm=jpg&fit=crop" alt="Ámsterdam VU" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1742054294211-4036a4bfa4ef?w=700&q=80&fm=jpg&fit=crop" alt="Casas de canal en Ámsterdam" loading="lazy">
           <span class="uni-card-type">Investigación</span>
         </div>
         <div class="uni-card-body">
@@ -220,6 +229,7 @@
             <span class="uni-tag">Medicina</span>
             <span class="uni-tag">Filosofía</span>
           </div>
+          <div class="uni-vibe"><i class="fas fa-city"></i><span>Campus propio junto al distrito de negocios Zuidas, pero a 15 min en bici del ambiente de canales y terrazas del centro. Vibra más tranquila que la UvA, igual de internacional.</span></div>
           <a href="index.html#contact" class="uni-card-cta">Asesorarme sobre la VU <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
@@ -227,7 +237,7 @@
       <!-- TU Delft -->
       <div class="uni-full-card" data-city="delft" data-type="investigacion" style="border-color:var(--teal)">
         <div class="uni-card-photo">
-          <img src="https://images.unsplash.com/photo-1611095973763-414019e72400?w=700&q=80&fm=jpg&fit=crop" alt="TU Delft" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1692897011326-5dfe88c1c373?w=700&q=80&fm=jpg&fit=crop" alt="Campus de TU Delft" loading="lazy">
           <span class="uni-card-type">Investigación · Técnica</span>
         </div>
         <div class="uni-card-body">
@@ -242,6 +252,7 @@
             <span class="uni-tag">Aeroespacial</span>
             <span class="uni-tag">Informática</span>
           </div>
+          <div class="uni-vibe"><i class="fas fa-city"></i><span>Ciudad pequeña, tranquila y con más bicis que gente. La vida social gira en torno al campus: asociaciones de estudiantes muy activas y un ambiente relajado a 15 min de Ámsterdam y Rotterdam en tren.</span></div>
           <a href="index.html#contact" class="uni-card-cta">Asesorarme sobre TU Delft <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
@@ -249,7 +260,7 @@
       <!-- Erasmus -->
       <div class="uni-full-card" data-city="rotterdam" data-type="investigacion">
         <div class="uni-card-photo">
-          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80&fm=jpg&fit=crop" alt="Rotterdam" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1597224646250-fadbb825dcf8?w=700&q=80&fm=jpg&fit=crop" alt="Skyline de Rotterdam" loading="lazy">
           <span class="uni-card-type">Investigación</span>
         </div>
         <div class="uni-card-body">
@@ -263,6 +274,7 @@
             <span class="uni-tag">Derecho</span>
             <span class="uni-tag">Medicina</span>
           </div>
+          <div class="uni-vibe"><i class="fas fa-city"></i><span>Skyline de rascacielos, arquitectura atrevida y una escena de bares y clubes que no tiene nada que envidiar a Ámsterdam, pero con alquileres más asequibles.</span></div>
           <a href="index.html#contact" class="uni-card-cta">Asesorarme sobre Erasmus <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
@@ -270,7 +282,7 @@
       <!-- Leiden -->
       <div class="uni-full-card" data-city="leiden" data-type="investigacion">
         <div class="uni-card-photo">
-          <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=700&q=80&fm=jpg&fit=crop" alt="Leiden" loading="lazy">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Pieterskerk_Leiden_zij-ingang.JPG?width=700" alt="Pieterskerk en el casco histórico de Leiden" loading="lazy">
           <span class="uni-card-type">Investigación</span>
         </div>
         <div class="uni-card-body">
@@ -284,6 +296,7 @@
             <span class="uni-tag">Arqueología</span>
             <span class="uni-tag">Ciencias</span>
           </div>
+          <div class="uni-vibe"><i class="fas fa-city"></i><span>Ciudad-campus por excelencia: canales, casas del siglo XVII y facultades repartidas por el centro. Ambiente estudiantil clásico, tranquilo entre semana y muy vivo en las asociaciones estudiantiles.</span></div>
           <a href="index.html#contact" class="uni-card-cta">Asesorarme sobre Leiden <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
@@ -291,7 +304,7 @@
       <!-- Utrecht -->
       <div class="uni-full-card" data-city="utrecht" data-type="investigacion">
         <div class="uni-card-photo">
-          <img src="https://images.unsplash.com/photo-1559561853-08451507cbe7?w=700&q=80&fm=jpg&fit=crop" alt="Utrecht" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1744233291331-60d717f651f0?w=700&q=80&fm=jpg&fit=crop" alt="Canal y Dom Tower en Utrecht" loading="lazy">
           <span class="uni-card-type">Investigación</span>
         </div>
         <div class="uni-card-body">
@@ -305,6 +318,7 @@
             <span class="uni-tag">Ciencias Naturales</span>
             <span class="uni-tag">Geociencias</span>
           </div>
+          <div class="uni-vibe"><i class="fas fa-city"></i><span>Una de las ciudades con más proporción de estudiantes del país. Canales de dos niveles llenos de terrazas, muy céntrica y con un ambiente joven las 24 horas.</span></div>
           <a href="index.html#contact" class="uni-card-cta">Asesorarme sobre Utrecht <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
@@ -312,7 +326,7 @@
       <!-- Groningen -->
       <div class="uni-full-card" data-city="groningen" data-type="investigacion">
         <div class="uni-card-photo">
-          <img src="https://images.unsplash.com/photo-1534430480872-3498386e7856?w=700&q=80&fm=jpg&fit=crop" alt="Groningen" loading="lazy">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Groningen_Martinitoren.jpg?width=700" alt="Martinitoren, torre símbolo de Groningen" loading="lazy">
           <span class="uni-card-type">Investigación</span>
         </div>
         <div class="uni-card-body">
@@ -326,6 +340,7 @@
             <span class="uni-tag">Teología</span>
             <span class="uni-tag">Psicología</span>
           </div>
+          <div class="uni-vibe"><i class="fas fa-city"></i><span>La ciudad estudiantil por excelencia: 1 de cada 4 habitantes es estudiante. Fiesta asegurada, alquileres más baratos que en el Randstad y una comunidad internacional muy unida.</span></div>
           <a href="index.html#contact" class="uni-card-cta">Asesorarme sobre Groningen <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
@@ -333,7 +348,7 @@
       <!-- Maastricht -->
       <div class="uni-full-card" data-city="maastricht" data-type="investigacion">
         <div class="uni-card-photo">
-          <img src="https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=700&q=80&fm=jpg&fit=crop" alt="Maastricht" loading="lazy">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Maastricht,_Sint-Servaasbrug.jpg?width=700" alt="Puente Sint-Servaasbrug en Maastricht" loading="lazy">
           <span class="uni-card-type">Investigación · PBL</span>
         </div>
         <div class="uni-card-body">
@@ -347,12 +362,144 @@
             <span class="uni-tag">Medicina</span>
             <span class="uni-tag">Artes y Cultura</span>
           </div>
+          <div class="uni-vibe"><i class="fas fa-city"></i><span>Ambiente casi de sur de Europa: calles medievales, terrazas y a un paso de Bélgica y Alemania. Ritmo más pausado que en el Randstad, ideal si buscas algo distinto a lo "típico holandés".</span></div>
           <a href="index.html#contact" class="uni-card-cta">Asesorarme sobre Maastricht <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
 
-    </div>
+      <!-- THUAS -->
+      <div class="uni-full-card" data-city="denhaag" data-type="aplicadas">
+        <div class="uni-card-photo">
+          <img src="https://images.unsplash.com/photo-1586174035695-35ab9e19215c?w=700&q=80&fm=jpg&fit=crop" alt="Buitenhof en el centro de La Haya" loading="lazy">
+          <span class="uni-card-type">Ciencias aplicadas</span>
+        </div>
+        <div class="uni-card-body">
+          <span class="uni-card-city">La Haya</span>
+          <h3>The Hague University of Applied Sciences</h3>
+          <span class="uni-abbr-badge">THUAS</span>
+          <p>Formación muy práctica con periodos de prácticas integrados en el plan de estudios. Aprovecha la sede de organismos internacionales en La Haya para programas de relaciones internacionales, seguridad y derecho.</p>
+          <div class="uni-tags">
+            <span class="uni-tag">Relaciones Internacionales</span>
+            <span class="uni-tag">Comunicación</span>
+            <span class="uni-tag">Negocios</span>
+            <span class="uni-tag">Ciberseguridad</span>
+          </div>
+          <div class="uni-vibe"><i class="fas fa-city"></i><span>Ciudad institucional y elegante, con playa en Scheveningen a un tranvía de distancia. Ambiente más formal que Ámsterdam, pero con mucha vida internacional gracias a las embajadas y la ONU.</span></div>
+          <a href="index.html#contact" class="uni-card-cta">Asesorarme sobre THUAS <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
 
+      <!-- Inholland -->
+      <div class="uni-full-card" data-city="rotterdam" data-type="aplicadas">
+        <div class="uni-card-photo">
+          <img src="https://images.unsplash.com/photo-1649059966331-811c8d985002?w=700&q=80&fm=jpg&fit=crop" alt="Rotterdam junto al río Nieuwe Maas" loading="lazy">
+          <span class="uni-card-type">Ciencias aplicadas</span>
+        </div>
+        <div class="uni-card-body">
+          <span class="uni-card-city">Rotterdam (varios campus)</span>
+          <h3>Inholland University of Applied Sciences</h3>
+          <span class="uni-abbr-badge">Inholland</span>
+          <p>Una de las hogescholen más grandes del país, con campus en Rotterdam, Ámsterdam, Haarlem y otras ciudades. Programas muy orientados a empleabilidad en negocios, comunicación y ciencias de la salud.</p>
+          <div class="uni-tags">
+            <span class="uni-tag">Negocios</span>
+            <span class="uni-tag">Comunicación</span>
+            <span class="uni-tag">Enfermería</span>
+            <span class="uni-tag">Marketing</span>
+          </div>
+          <div class="uni-vibe"><i class="fas fa-city"></i><span>Al escoger campus escoges también vibra: Rotterdam para algo más urbano y multicultural, Ámsterdam o Haarlem si prefieres un ambiente más clásico y compacto.</span></div>
+          <a href="index.html#contact" class="uni-card-cta">Asesorarme sobre Inholland <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- Hogeschool Rotterdam -->
+      <div class="uni-full-card" data-city="rotterdam" data-type="aplicadas">
+        <div class="uni-card-photo">
+          <img src="https://images.unsplash.com/photo-1597224646250-fadbb825dcf8?w=700&q=80&fm=jpg&fit=crop" alt="Rascacielos junto al agua en Rotterdam" loading="lazy">
+          <span class="uni-card-type">Ciencias aplicadas</span>
+        </div>
+        <div class="uni-card-body">
+          <span class="uni-card-city">Rotterdam</span>
+          <h3>Rotterdam University of Applied Sciences</h3>
+          <span class="uni-abbr-badge">RUAS</span>
+          <p>La hogeschool más grande de Róterdam, con fuerte conexión con el puerto y las empresas locales. Muy orientada a prácticas y proyectos reales con la industria desde el primer año.</p>
+          <div class="uni-tags">
+            <span class="uni-tag">Ingeniería</span>
+            <span class="uni-tag">Logística Portuaria</span>
+            <span class="uni-tag">Negocios</span>
+            <span class="uni-tag">Diseño</span>
+          </div>
+          <div class="uni-vibe"><i class="fas fa-city"></i><span>Campus en pleno centro, rodeado del ambiente de mercados, arte urbano y terrazas junto al agua que ha convertido a Rotterdam en una de las ciudades más "cool" del país.</span></div>
+          <a href="index.html#contact" class="uni-card-cta">Asesorarme sobre Hogeschool Rotterdam <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- HvA -->
+      <div class="uni-full-card" data-city="amsterdam" data-type="aplicadas">
+        <div class="uni-card-photo">
+          <img src="https://images.unsplash.com/photo-1753810809240-a28f725d3328?w=700&q=80&fm=jpg&fit=crop" alt="Casas de canal coloridas en Ámsterdam" loading="lazy">
+          <span class="uni-card-type">Ciencias aplicadas</span>
+        </div>
+        <div class="uni-card-body">
+          <span class="uni-card-city">Ámsterdam</span>
+          <h3>Amsterdam University of Applied Sciences</h3>
+          <span class="uni-abbr-badge">HvA</span>
+          <p>La mayor hogeschool de los Países Bajos, con más de 46.000 estudiantes. Amplia oferta en negocios, educación, salud y tecnología, con estrechos lazos con empresas de Ámsterdam.</p>
+          <div class="uni-tags">
+            <span class="uni-tag">Negocios</span>
+            <span class="uni-tag">Educación</span>
+            <span class="uni-tag">Salud</span>
+            <span class="uni-tag">Tecnología</span>
+          </div>
+          <div class="uni-vibe"><i class="fas fa-city"></i><span>Toda la energía de Ámsterdam pero con un enfoque más práctico y aplicado que en la UvA o la VU. Campus repartidos por la ciudad, muy conectados en bici.</span></div>
+          <a href="index.html#contact" class="uni-card-cta">Asesorarme sobre la HvA <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- Hanze Groningen -->
+      <div class="uni-full-card" data-city="groningen" data-type="aplicadas">
+        <div class="uni-card-photo">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Groningen_Martinitoren.jpg?width=700" alt="Martinitoren en Groningen" loading="lazy">
+          <span class="uni-card-type">Ciencias aplicadas</span>
+        </div>
+        <div class="uni-card-body">
+          <span class="uni-card-city">Groningen</span>
+          <h3>Hanze University of Applied Sciences</h3>
+          <span class="uni-abbr-badge">Hanze</span>
+          <p>La hogeschool de referencia en el norte del país, con fuerte apuesta por energías renovables, negocios internacionales y salud. Muy popular entre estudiantes internacionales por su coste de vida.</p>
+          <div class="uni-tags">
+            <span class="uni-tag">Energía Sostenible</span>
+            <span class="uni-tag">Negocios Internacionales</span>
+            <span class="uni-tag">Salud</span>
+            <span class="uni-tag">Comunicación</span>
+          </div>
+          <div class="uni-vibe"><i class="fas fa-city"></i><span>Comparte la misma esencia estudiantil de Groningen: ciudad pequeña, vida nocturna a tope y una de las comunidades internacionales más acogedoras del país.</span></div>
+          <a href="index.html#contact" class="uni-card-cta">Asesorarme sobre Hanze <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- HU Utrecht -->
+      <div class="uni-full-card" data-city="utrecht" data-type="aplicadas">
+        <div class="uni-card-photo">
+          <img src="https://images.unsplash.com/photo-1744233291331-60d717f651f0?w=700&q=80&fm=jpg&fit=crop" alt="Canal de Utrecht al atardecer" loading="lazy">
+          <span class="uni-card-type">Ciencias aplicadas</span>
+        </div>
+        <div class="uni-card-body">
+          <span class="uni-card-city">Utrecht</span>
+          <h3>HU University of Applied Sciences Utrecht</h3>
+          <span class="uni-abbr-badge">HU</span>
+          <p>Una de las hogescholen mejor valoradas del país, con fuerte enfoque en salud, tecnología y comunicación. Campus moderno junto a la estación central, muy bien conectado con el resto de Holanda.</p>
+          <div class="uni-tags">
+            <span class="uni-tag">Salud</span>
+            <span class="uni-tag">Comunicación</span>
+            <span class="uni-tag">Tecnología</span>
+            <span class="uni-tag">Educación</span>
+          </div>
+          <div class="uni-vibe"><i class="fas fa-city"></i><span>Misma ciudad joven y céntrica que la Universidad de Utrecht, con la ventaja de estar en el centro geográfico del país: cualquier ciudad queda a menos de una hora en tren.</span></div>
+          <a href="index.html#contact" class="uni-card-cta">Asesorarme sobre HU Utrecht <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+    </div>
     <!-- Compare CTA -->
     <div class="compare-strip reveal">
       <div>
@@ -363,7 +510,6 @@
     </div>
   </div>
 </section>
-
 <!-- MAP -->
 <section class="section section-alt">
   <div class="container">
@@ -381,7 +527,6 @@
     </div>
   </div>
 </section>
-
 <!-- FOOTER -->
 <footer class="footer">
   <div class="container footer-inner">
@@ -414,10 +559,8 @@
     <p>© 2025 Studex Consulting — Asesoramiento educativo independiente. No estamos asociados oficialmente con ninguna universidad.</p>
   </div>
 </footer>
-
 <a href="https://wa.me/message/KPGVXIR7MH3CP1" target="_blank" class="float-wa"><i class="fab fa-whatsapp"></i></a>
 <button class="back-top" id="backTop"><i class="fas fa-arrow-up"></i></button>
-
 <script>
 document.addEventListener('DOMContentLoaded', () => {
   const bar = document.getElementById('scrollBar');
@@ -428,17 +571,14 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('nav').classList.toggle('scrolled', scrollY > 60);
   }, { passive: true });
   document.getElementById('backTop').addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-
   const ham = document.getElementById('hamburger');
   const mob = document.getElementById('mobileMenu');
   ham.addEventListener('click', () => {
     mob.classList.toggle('open');
     ham.querySelector('i').className = mob.classList.contains('open') ? 'fas fa-times' : 'fas fa-bars';
   });
-
   const ro = new IntersectionObserver(e => e.forEach(x => { if (x.isIntersecting) x.target.classList.add('in'); }), { threshold: 0.1 });
   document.querySelectorAll('.reveal, .up').forEach(el => ro.observe(el));
-
   // Filter
   const cards = document.querySelectorAll('.uni-full-card');
   document.querySelectorAll('.filter-btn').forEach(btn => {
