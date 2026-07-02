@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog | Studex Consulting</title>
+<meta name="description" content="Guías y consejos para estudiar en los Países Bajos: carta de motivación, presupuesto, plazos, vivienda y más. Por estudiantes que ya lo vivieron.">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
+<link rel="icon" href="assets/favicon_io/favicon.ico">
+<meta name="theme-color" content="#0D2440">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<style>
+/* ---- blog extras ---- */
+.page-hero {
+  background: linear-gradient(160deg, var(--night) 0%, var(--navy) 100%);
+  padding: 8rem 5% 5rem; text-align: center;
+  position: relative; overflow: hidden;
+}
+.page-hero::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(ellipse 80% 60% at 50% 120%, rgba(63,169,194,.15), transparent);
+}
+.page-hero-inner { position: relative; z-index: 1; max-width: 680px; margin: 0 auto; }
+.page-hero h1 { color: var(--white); font-size: clamp(2.4rem,5vw,3.8rem); margin-bottom: 1rem; }
+.page-hero h1 em { color: var(--teal); }
+.page-hero p { color: rgba(255,255,255,.75); font-size: 1.1rem; max-width:540px; margin:0 auto; }
+
+/* article layout */
+.blog-layout {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 4rem;
+  align-items: start;
+}
+.article {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--r-l);
+  overflow: hidden;
+  margin-bottom: 2.5rem;
+  transition: box-shadow .3s;
+}
+.article:hover { box-shadow: var(--sh-m); }
+.article-photo {
+  height: 280px; overflow: hidden;
+}
+.article-photo img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform .6s var(--spring);
+}
+.article:hover .article-photo img { transform: scale(1.05); }
+.article-body { padding: 2.5rem; }
+.article-meta {
+  display: flex; align-items: center; gap: 1rem;
+  margin-bottom: 1.2rem; flex-wrap: wrap;
+}
+.article-tag {
+  font-size: .7rem; font-weight: 700; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--teal);
+}
+.article-date { font-size: .82rem; color: var(--muted); }
+.article-read { font-size: .82rem; color: var(--muted); }
+.article-body h2 {
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  margin-bottom: 1rem; line-height: 1.2;
+}
+.article-body .intro {
+  font-size: 1.05rem; color: var(--muted); margin-bottom: 1.8rem;
+  font-style: italic;
+}
+.article-body h3 {
+  font-size: 1.15rem; margin: 2rem 0 .7rem;
+}
+.article-body p {
+  font-size: .97rem; margin-bottom: 1rem; color: var(--muted);
+}
+.article-body ul, .article-body ol {
+  padding-left: 1.4rem; margin-bottom: 1.2rem;
+}
+.article-body li {
+  font-size: .97rem; color: var(--muted); margin-bottom: .5rem;
+}
+.article-body strong { color: var(--night); }
+.article-tip {
+  background: var(--off); border-left: 3px solid var(--teal);
+  border-radius: 0 var(--r-s) var(--r-s) 0;
+  padding: 1.2rem 1.4rem; margin: 1.6rem 0;
+  font-size: .95rem; color: var(--ink);
+}
+.article-tip i { color: var(--teal); margin-right: .5rem; }
+.cost-table {
+  width: 100%; border-collapse: collapse; margin: 1.6rem 0;
+  font-size: .93rem;
+}
+.cost-table th {
+  background: var(--off); color: var(--night);
+  padding: .8rem 1rem; text-align: left;
+  font-family: 'Fraunces', serif; font-weight: 600;
+  border-bottom: 2px solid var(--line);
+}
+.cost-table td {
+  padding: .8rem 1rem; border-bottom: 1px solid var(--line); color: var(--muted);
+}
+.cost-table tr:last-child td { border-bottom: none; font-weight: 700; color: var(--night); }
+.timeline {
+  list-style: none; position: relative; margin: 1.6rem 0;
+  padding-left: 1.8rem;
+}
+.timeline::before {
+  content: ''; position: absolute; left: 7px; top: 0; bottom: 0;
+  width: 2px; background: var(--line);
+}
+.timeline li {
+  position: relative; padding: .4rem 0 1.2rem 1.2rem; color: var(--muted); font-size: .95rem;
+}
+.timeline li::before {
+  content: ''; position: absolute; left: -1.5rem; top: 10px;
+  width: 10px; height: 10px; border-radius: 50%;
+  background: var(--white); border: 2px solid var(--teal);
+}
+.timeline li strong { color: var(--night); display: block; margin-bottom: .2rem; }
+
+.article-cta {
+  background: var(--navy); border-radius: var(--r-m);
+  padding: 1.8rem; margin-top: 2rem;
+  display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap;
+}
+.article-cta p { color: rgba(255,255,255,.8); margin: 0; font-size: .95rem; }
+.article-cta strong { color: var(--white); }
+
+/* sidebar */
+.sidebar { position: sticky; top: 6rem; }
+.sidebar-card {
+  background: var(--white); border: 1px solid var(--line);
+  border-radius: var(--r-l); padding: 1.8rem; margin-bottom: 1.8rem;
+}
+.sidebar-card h4 {
+  font-size: 1rem; margin-bottom: 1.2rem;
+  padding-bottom: .8rem; border-bottom: 1px solid var(--line);
+}
+.sidebar-list { list-style: none; }
+.sidebar-list li {
+  padding: .65rem 0; border-bottom: 1px solid var(--off);
+  font-size: .9rem;
+}
+.sidebar-list li:last-child { border-bottom: none; }
+.sidebar-list a {
+  color: var(--cobalt); font-weight: 500;
+  display: flex; align-items: center; gap: .5rem;
+  transition: gap .2s;
+}
+.sidebar-list a:hover { gap: .8rem; }
+.sidebar-list .s-tag {
+  font-size: .68rem; font-weight: 700; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--muted);
+  display: block; margin-bottom: .2rem;
+}
+
+.sidebar-cta {
+  background: linear-gradient(145deg, var(--night), var(--navy));
+  border-radius: var(--r-l); padding: 2rem; text-align: center;
+}
+.sidebar-cta h4 { color: var(--white); margin-bottom: .7rem; }
+.sidebar-cta p { color: rgba(255,255,255,.65); font-size: .88rem; margin-bottom: 1.4rem; }
+
+@media (max-width: 900px) {
+  .blog-layout { grid-template-columns: 1fr; }
+  .sidebar { position: static; }
+}
+</style>
+</head>
+<body>
+
+<div class="scroll-bar" id="scrollBar"></div>
+
+<nav class="nav" id="nav">
+  <a href="index.html" class="logo">
+    <img src="assets/ITER.png" alt="Studex" class="logo-img" loading="lazy">
+    <span class="logo-name">Studex</span>
+  </a>
+  <div class="nav-center">
+    <a href="index.html" class="nl">Inicio</a>
+    <a href="destinos.html" class="nl">Destinos</a>
+    <a href="blog.html" class="nl active">Blog</a>
+  </div>
+  <div class="nav-end">
+    <div class="langs">
+      <a href="blog.html" class="lg active">ES</a>
+      <a href="en-blog.html" class="lg">EN</a>
+      <a href="ca-blog.html" class="lg">CA</a>
+    </div>
+    <a href="index.html#contact" class="pill-btn">Contacto</a>
+    <button class="hamburger" id="hamburger" aria-label="Menú"><i class="fas fa-bars"></i></button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Inicio</a>
+  <a href="destinos.html">Destinos</a>
+  <a href="blog.html">Blog</a>
+  <a href="index.html#contact">Contacto</a>
+  <div class="mob-langs">
+    <a href="blog.html" class="active">ES</a>
+    <a href="en-blog.html">EN</a>
+    <a href="ca-blog.html">CA</a>
+  </div>
+</div>
+
+<header class="page-hero">
+  <div class="page-hero-inner">
+    <span class="tag light up">Blog</span>
+    <h1 class="up">Guías que de verdad<br><em>te ayudan.</em></h1>
+    <p class="up">Todo lo que necesitas saber sobre estudiar en los Países Bajos, escrito por estudiantes que ya lo hicieron.</p>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+    <div class="blog-layout">
+
+      <!-- ARTICLES -->
+      <main>
+
+        <!-- ARTICLE 1: Carta de motivación -->
+        <article class="article reveal" id="carta-motivacion">
+          <div class="article-photo">
+            <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=900&q=80&fm=jpg&fit=crop" alt="Escribir carta de motivación" loading="lazy">
+          </div>
+          <div class="article-body">
+            <div class="article-meta">
+              <span class="article-tag">Guía esencial</span>
+              <span class="article-date">Actualizado 2025</span>
+              <span class="article-read"><i class="fas fa-clock"></i> 8 min de lectura</span>
+            </div>
+            <h2 id="carta-motivacion-titulo">Cómo preparar una carta de motivación que funcione</h2>
+            <p class="intro">La carta de motivación es el documento más importante de tu solicitud. Las universidades neerlandesas la valoran más que las notas. Aquí te explicamos cómo escribir una que de verdad destaque.</p>
+
+            <h3>¿Por qué importa tanto?</h3>
+            <p>En los Países Bajos, muchos programas tienen numerus fixus (plazas limitadas). La carta de motivación puede ser el único criterio diferenciador entre dos candidatos con expedientes similares. No es un trámite: es tu oportunidad de convencer.</p>
+
+            <h3>La estructura que funciona</h3>
+            <p>Una buena carta tiene entre 500 y 800 palabras y responde a estas tres preguntas con claridad:</p>
+            <ul>
+              <li><strong>¿Por qué este programa?</strong> — Sé específico. Menciona asignaturas, líneas de investigación, profesores.</li>
+              <li><strong>¿Por qué esta universidad?</strong> — No uses argumentos genéricos. Investiga qué la hace única.</li>
+              <li><strong>¿Por qué tú?</strong> — Muestra quién eres, no solo qué has hecho. Conecta tu historia con tu objetivo.</li>
+            </ul>
+
+            <div class="article-tip">
+              <i class="fas fa-lightbulb"></i>
+              <strong>Consejo de experiencia:</strong> Las cartas más flojas empiezan con "Siempre he soñado con..." o "Me llamo X y quiero estudiar...". Empieza con algo que te haga memorable desde la primera línea.
+            </div>
+
+            <h3>Errores que cuestan la plaza</h3>
+            <ul>
+              <li>Copiar frases de internet o de otras cartas</li>
+              <li>No adaptar la carta a cada programa (se nota)</li>
+              <li>Hablar solo de logros académicos sin mostrar tu personalidad</li>
+              <li>Exceder el límite de palabras indicado por la universidad</li>
+              <li>No pedir feedback antes de enviarla</li>
+            </ul>
+
+            <h3>El proceso que recomendamos</h3>
+            <ol>
+              <li>Investiga el programa a fondo antes de escribir ni una palabra</li>
+              <li>Haz un borrador sin límite: escribe todo lo que se te ocurra</li>
+              <li>Edita hasta llegar al límite de palabras indicado</li>
+              <li>Pide feedback a alguien que no te conozca bien</li>
+              <li>Deja reposar 48h y revisa con ojos frescos</li>
+            </ol>
+
+            <div class="article-cta">
+              <div>
+                <strong>¿Quieres que revisemos tu carta?</strong>
+                <p>Te damos feedback detallado y te ayudamos a mejorarla antes de enviarla.</p>
+              </div>
+              <a href="index.html#contact" class="btn-light">Pedir revisión <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ARTICLE 2: Presupuesto -->
+        <article class="article reveal" id="presupuesto">
+          <div class="article-photo">
+            <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=900&q=80&fm=jpg&fit=crop" alt="Presupuesto estudiante" loading="lazy">
+          </div>
+          <div class="article-body">
+            <div class="article-meta">
+              <span class="article-tag">Costos</span>
+              <span class="article-date">Actualizado 2025</span>
+              <span class="article-read"><i class="fas fa-clock"></i> 6 min de lectura</span>
+            </div>
+            <h2>Presupuesto real para estudiar en Países Bajos</h2>
+            <p class="intro">Ni tan caro como piensas, ni tan barato como te cuentan. Aquí tienes los números reales de lo que cuesta vivir y estudiar en los Países Bajos, ciudad por ciudad.</p>
+
+            <h3>Matrícula universitaria</h3>
+            <p>Para estudiantes de la UE/EEE, la matrícula en universidades públicas neerlandesas es la misma que para estudiantes locales. En 2024-2025 el precio es de <strong>2.530 €/año</strong>. Para estudiantes de fuera de la UE, las tasas varían entre 8.000 € y 20.000 € anuales según el programa.</p>
+
+            <div class="article-tip">
+              <i class="fas fa-euro-sign"></i>
+              <strong>Importante:</strong> Puedes solicitar el préstamo DUO al empezar a estudiar, que cubre tanto matrícula como manutención. No es una beca, pero tiene condiciones muy favorables.
+            </div>
+
+            <h3>Coste de vida mensual estimado</h3>
+            <table class="cost-table">
+              <thead>
+                <tr><th>Concepto</th><th>Mínimo</th><th>Recomendado</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Alquiler (hab. individual)</td><td>500 €</td><td>700–900 €</td></tr>
+                <tr><td>Alimentación</td><td>150 €</td><td>200–250 €</td></tr>
+                <tr><td>Seguro médico</td><td>130 €</td><td>130–160 €</td></tr>
+                <tr><td>Transporte</td><td>30 €</td><td>30–60 €</td></tr>
+                <tr><td>Ocio y varios</td><td>80 €</td><td>150–200 €</td></tr>
+                <tr><td><strong>Total estimado</strong></td><td><strong>~890 €</strong></td><td><strong>~1.200 €</strong></td></tr>
+              </tbody>
+            </table>
+
+            <h3>Las ayudas que pueden reducir tu gasto real</h3>
+            <ul>
+              <li><strong>DUO:</strong> préstamo de estudio de hasta 1.100 €/mes (condonable en parte si acabas la carrera)</li>
+              <li><strong>Huurtoeslag:</strong> ayuda al alquiler de hasta 350 €/mes si tu renta supera un mínimo</li>
+              <li><strong>Zorgtoeslag:</strong> subsidio del seguro médico de hasta 130 €/mes</li>
+              <li><strong>Bijverdienen:</strong> puedes trabajar hasta 16h/semana con un student OV-chipkaart</li>
+            </ul>
+
+            <div class="article-cta">
+              <div>
+                <strong>¿Quieres saber cuánto te correspondería?</strong>
+                <p>Calculamos tu escenario económico personalizado en la primera consulta.</p>
+              </div>
+              <a href="index.html#contact" class="btn-light">Calcular mi caso <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ARTICLE 3: Calendario -->
+        <article class="article reveal" id="calendario">
+          <div class="article-photo">
+            <img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=900&q=80&fm=jpg&fit=crop" alt="Calendario plazos universidad" loading="lazy">
+          </div>
+          <div class="article-body">
+            <div class="article-meta">
+              <span class="article-tag">Plazos</span>
+              <span class="article-date">Actualizado 2025</span>
+              <span class="article-read"><i class="fas fa-clock"></i> 5 min de lectura</span>
+            </div>
+            <h2>El calendario de solicitudes que necesitas guardar</h2>
+            <p class="intro">Los plazos en los Países Bajos son estrictos y no perdonan. Un día de retraso puede costarte la plaza. Aquí tienes todas las fechas clave del año académico 2025–2026.</p>
+
+            <h3>Fechas clave para cursos que empiezan en septiembre 2026</h3>
+            <ul class="timeline">
+              <li>
+                <strong>Septiembre – Octubre 2025</strong>
+                Investiga programas y universidades. Decide tu lista final. Empieza a preparar la carta de motivación.
+              </li>
+              <li>
+                <strong>Noviembre – Diciembre 2025</strong>
+                Solicita las cartas de recomendación. Recopila tu expediente académico y lo mandas a traducir si es necesario.
+              </li>
+              <li>
+                <strong>1 de enero 2026</strong>
+                Abre Studielink (plataforma oficial de solicitudes neerlandesa). Puedes registrarte y empezar a rellenar tu solicitud.
+              </li>
+              <li>
+                <strong>15 de enero 2026 ⚠️</strong>
+                <strong>Fecha límite para la mayoría de programas con numerus fixus.</strong> Si el programa tiene plazas limitadas, esta es tu última oportunidad.
+              </li>
+              <li>
+                <strong>1 de mayo 2026</strong>
+                Fecha límite para la mayoría de programas sin numerus fixus. Algunos cierran antes — comprueba siempre la web oficial.
+              </li>
+              <li>
+                <strong>Junio 2026</strong>
+                Las universidades comunican decisiones de admisión. Si te aceptan, confirmas tu plaza.
+              </li>
+              <li>
+                <strong>Julio – Agosto 2026</strong>
+                Solicitas vivienda, abres cuenta bancaria, pides el BSN (número de registro civil) y gestionas las ayudas con Belastingdienst.
+              </li>
+              <li>
+                <strong>Septiembre 2026</strong>
+                ¡Empieza el curso! La mayoría de introweken son la semana antes del inicio oficial.
+              </li>
+            </ul>
+
+            <div class="article-tip">
+              <i class="fas fa-triangle-exclamation"></i>
+              <strong>No esperes al último momento.</strong> Studielink puede tener problemas técnicos los días previos al cierre de plazos. Envía tu solicitud con al menos 10 días de margen.
+            </div>
+
+            <div class="article-cta">
+              <div>
+                <strong>¿Quieres que te ayudemos a gestionar todos estos plazos?</strong>
+                <p>Te avisamos, te recordamos y te ayudamos a preparar cada documento a tiempo.</p>
+              </div>
+              <a href="index.html#contact" class="btn-light">Empezar ahora <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
+
+      </main>
+
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <div class="sidebar-card reveal">
+          <h4>Artículos</h4>
+          <ul class="sidebar-list">
+            <li>
+              <span class="s-tag">Guía</span>
+              <a href="#carta-motivacion">Carta de motivación que funciona <i class="fas fa-arrow-right"></i></a>
+            </li>
+            <li>
+              <span class="s-tag">Costos</span>
+              <a href="#presupuesto">Presupuesto real en Países Bajos <i class="fas fa-arrow-right"></i></a>
+            </li>
+            <li>
+              <span class="s-tag">Plazos</span>
+              <a href="#calendario">Calendario de solicitudes 2025–26 <i class="fas fa-arrow-right"></i></a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="sidebar-cta reveal">
+          <h4>¿Dudas con el proceso?</h4>
+          <p>Primera consulta gratuita. Te respondemos en menos de 24h.</p>
+          <a href="index.html#contact" class="btn-light" style="width:100%;justify-content:center;">
+            Hablar con nosotros <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="sidebar-card reveal">
+          <h4>Universidades destacadas</h4>
+          <ul class="sidebar-list">
+            <li><a href="destinos.html#uva">Universidad de Ámsterdam (UvA) <i class="fas fa-arrow-right"></i></a></li>
+            <li><a href="destinos.html#tud">TU Delft <i class="fas fa-arrow-right"></i></a></li>
+            <li><a href="destinos.html#eur">Erasmus Rotterdam <i class="fas fa-arrow-right"></i></a></li>
+            <li><a href="destinos.html#lei">Universidad de Leiden <i class="fas fa-arrow-right"></i></a></li>
+            <li><a href="destinos.html">Ver todas <i class="fas fa-arrow-right"></i></a></li>
+          </ul>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <div class="footer-name">Studex Consulting</div>
+      <p>Asesoría especializada para estudiar en los Países Bajos.<br><em>By students, for students.</em></p>
+      <div class="footer-socials">
+        <a href="https://tiktok.com/@studexconsulting" target="_blank"><i class="fab fa-tiktok"></i></a>
+        <a href="https://instagram.com/studexconsulting" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/message/KPGVXIR7MH3CP1" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+    <div class="footer-col"><h4>Navegación</h4>
+      <a href="index.html">Inicio</a><a href="destinos.html">Destinos</a>
+      <a href="blog.html">Blog</a><a href="index.html#contact">Contacto</a>
+    </div>
+    <div class="footer-col"><h4>Blog</h4>
+      <a href="#carta-motivacion">Carta de motivación</a>
+      <a href="#presupuesto">Presupuesto</a>
+      <a href="#calendario">Calendario</a>
+    </div>
+    <div class="footer-col"><h4>Legal</h4>
+      <a href="aviso-legal.html">Aviso Legal</a>
+      <a href="privacidad.html">Privacidad</a>
+      <a href="cookies.html">Cookies</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Studex Consulting — Asesoramiento educativo independiente. No estamos asociados oficialmente con ninguna universidad.</p>
+  </div>
+</footer>
+
+<a href="https://wa.me/message/KPGVXIR7MH3CP1" target="_blank" class="float-wa"><i class="fab fa-whatsapp"></i></a>
+<button class="back-top" id="backTop"><i class="fas fa-arrow-up"></i></button>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const bar = document.getElementById('scrollBar');
+  window.addEventListener('scroll', () => {
+    const h = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = (h > 0 ? (scrollY / h) * 100 : 0) + '%';
+    document.getElementById('backTop').classList.toggle('show', scrollY > 400);
+    document.getElementById('nav').classList.toggle('scrolled', scrollY > 60);
+  }, { passive: true });
+  document.getElementById('backTop').addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  const ham = document.getElementById('hamburger');
+  const mob = document.getElementById('mobileMenu');
+  ham.addEventListener('click', () => {
+    mob.classList.toggle('open');
+    ham.querySelector('i').className = mob.classList.contains('open') ? 'fas fa-times' : 'fas fa-bars';
+  });
+  const ro = new IntersectionObserver(e => e.forEach(x => { if (x.isIntersecting) x.target.classList.add('in'); }), { threshold: 0.08 });
+  document.querySelectorAll('.reveal, .up').forEach(el => ro.observe(el));
+});
+</script>
+</body>
+</html>
