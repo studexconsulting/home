@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Destinos | Studex Consulting</title>
+<meta name="description" content="Conoce las mejores universidades de los Países Bajos: Amsterdam, Delft, Rotterdam, Leiden, Utrecht, Groningen, Maastricht. Studex te ayuda a elegir la tuya.">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
+<link rel="icon" href="assets/favicon_io/favicon.ico">
+<meta name="theme-color" content="#0D2440">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<style>
+/* ---- destinos extras ---- */
+.page-hero {
+  background: linear-gradient(160deg, var(--night) 0%, var(--navy) 100%);
+  padding: 8rem 5% 5rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.page-hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 80% 60% at 50% 120%, rgba(63,169,194,.15), transparent);
+}
+.page-hero-inner { position: relative; z-index: 1; max-width: 680px; margin: 0 auto; }
+.page-hero h1 { color: var(--white); font-size: clamp(2.4rem, 5vw, 3.8rem); margin-bottom: 1rem; }
+.page-hero h1 em { color: var(--teal); }
+.page-hero p { color: rgba(255,255,255,.75); font-size: 1.1rem; max-width: 540px; margin: 0 auto; }
+
+.filters {
+  display: flex; gap: .7rem; justify-content: center; flex-wrap: wrap;
+  padding: 2.5rem 5% 0;
+}
+.filter-btn {
+  padding: .55rem 1.4rem; border-radius: var(--r-p);
+  border: 1.5px solid var(--line); background: var(--white);
+  font-size: .88rem; font-weight: 600; color: var(--muted);
+  cursor: pointer; transition: background .2s, color .2s, border-color .2s;
+}
+.filter-btn:hover, .filter-btn.active {
+  background: var(--navy); color: var(--white); border-color: var(--navy);
+}
+
+.uni-full-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+.uni-full-card {
+  border-radius: var(--r-l);
+  border: 1px solid var(--line);
+  background: var(--white);
+  overflow: hidden;
+  transition: transform .35s var(--spring), box-shadow .35s, border-color .35s;
+}
+.uni-full-card:hover { transform: translateY(-7px); box-shadow: var(--sh-m); border-color: var(--teal); }
+.uni-card-photo {
+  height: 200px; overflow: hidden; position: relative;
+  background: var(--navy);
+}
+.uni-card-photo img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform .6s var(--spring);
+}
+.uni-full-card:hover .uni-card-photo img { transform: scale(1.07); }
+.uni-card-type {
+  position: absolute; top: 1rem; right: 1rem;
+  font-size: .7rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+  background: rgba(13,36,64,.75); color: var(--white);
+  padding: .3rem .8rem; border-radius: var(--r-p);
+  backdrop-filter: blur(6px);
+}
+.uni-card-body { padding: 1.8rem; }
+.uni-card-city {
+  font-size: .72rem; font-weight: 700; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--teal); display: block; margin-bottom: .5rem;
+}
+.uni-card-body h3 { font-size: 1.2rem; margin-bottom: .4rem; }
+.uni-abbr-badge {
+  display: inline-block; font-size: .75rem; font-weight: 700;
+  color: var(--cobalt); background: rgba(31,92,153,.1);
+  padding: .2rem .7rem; border-radius: var(--r-p); margin-bottom: .8rem;
+  font-family: 'Inter', sans-serif;
+}
+.uni-card-body p { font-size: .93rem; margin-bottom: 1.3rem; }
+.uni-tags { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 1.4rem; }
+.uni-tag {
+  font-size: .74rem; font-weight: 600; color: var(--muted);
+  background: var(--off); padding: .3rem .75rem; border-radius: var(--r-p);
+  border: 1px solid var(--line);
+}
+.uni-card-cta {
+  display: inline-flex; align-items: center; gap: .45rem;
+  font-size: .88rem; font-weight: 600; color: var(--cobalt);
+  transition: gap .2s;
+}
+.uni-full-card:hover .uni-card-cta { gap: .7rem; }
+
+.compare-strip {
+  background: var(--night); border-radius: var(--r-l);
+  padding: 2.5rem; margin-top: 4rem;
+  display: flex; align-items: center; justify-content: space-between; gap: 2rem;
+  flex-wrap: wrap;
+}
+.compare-strip h3 { color: var(--white); font-size: 1.4rem; }
+.compare-strip p { color: rgba(255,255,255,.65); margin-top: .4rem; }
+
+@media (max-width: 640px) {
+  .uni-full-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<div class="scroll-bar" id="scrollBar"></div>
+
+<nav class="nav" id="nav">
+  <a href="index.html" class="logo">
+    <img src="assets/ITER.png" alt="Studex" class="logo-img" loading="lazy">
+    <span class="logo-name">Studex</span>
+  </a>
+  <div class="nav-center">
+    <a href="index.html" class="nl">Inicio</a>
+    <a href="destinos.html" class="nl active">Destinos</a>
+    <a href="blog.html" class="nl">Blog</a>
+  </div>
+  <div class="nav-end">
+    <div class="langs">
+      <a href="destinos.html" class="lg active">ES</a>
+      <a href="en-destinos.html" class="lg">EN</a>
+      <a href="ca-destinos.html" class="lg">CA</a>
+    </div>
+    <a href="index.html#contact" class="pill-btn">Contacto</a>
+    <button class="hamburger" id="hamburger" aria-label="Menú"><i class="fas fa-bars"></i></button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Inicio</a>
+  <a href="destinos.html">Destinos</a>
+  <a href="blog.html">Blog</a>
+  <a href="index.html#contact">Contacto</a>
+  <div class="mob-langs">
+    <a href="destinos.html" class="active">ES</a>
+    <a href="en-destinos.html">EN</a>
+    <a href="ca-destinos.html">CA</a>
+  </div>
+</div>
+
+<!-- PAGE HERO -->
+<header class="page-hero">
+  <div class="page-hero-inner">
+    <span class="tag light up">Dónde estudiar</span>
+    <h1 class="up">Las universidades<br>que <em>te esperan.</em></h1>
+    <p class="up">Todo lo que necesitas saber sobre las principales universidades de los Países Bajos, para que puedas elegir con criterio.</p>
+  </div>
+</header>
+
+<!-- FILTERS -->
+<div class="filters reveal">
+  <button class="filter-btn active" data-filter="all">Todas</button>
+  <button class="filter-btn" data-filter="investigacion">Investigación</button>
+  <button class="filter-btn" data-filter="aplicadas">Ciencias aplicadas</button>
+  <button class="filter-btn" data-filter="amsterdam">Ámsterdam</button>
+  <button class="filter-btn" data-filter="rotterdam">Rotterdam</button>
+  <button class="filter-btn" data-filter="delft">Delft</button>
+  <button class="filter-btn" data-filter="leiden">Leiden</button>
+  <button class="filter-btn" data-filter="utrecht">Utrecht</button>
+  <button class="filter-btn" data-filter="groningen">Groningen</button>
+  <button class="filter-btn" data-filter="maastricht">Maastricht</button>
+</div>
+
+<!-- UNIVERSITIES GRID -->
+<section class="section">
+  <div class="container">
+    <div class="uni-full-grid reveal" id="uniGrid">
+
+      <!-- UvA -->
+      <div class="uni-full-card" data-city="amsterdam" data-type="investigacion">
+        <div class="uni-card-photo">
+          <img src="https://images.unsplash.com/photo-1512470604168-cb6b5f897773?w=700&q=80&fm=jpg&fit=crop" alt="Ámsterdam" loading="lazy">
+          <span class="uni-card-type">Investigación</span>
+        </div>
+        <div class="uni-card-body">
+          <span class="uni-card-city">Ámsterdam</span>
+          <h3>Universidad de Ámsterdam</h3>
+          <span class="uni-abbr-badge">UvA</span>
+          <p>Una de las universidades más prestigiosas de Europa. Más de 3.000 programas en inglés entre grados, másteres y cursos libres. Campus distribuido por el centro histórico de Ámsterdam.</p>
+          <div class="uni-tags">
+            <span class="uni-tag">Humanidades</span>
+            <span class="uni-tag">Ciencias Sociales</span>
+            <span class="uni-tag">Derecho</span>
+            <span class="uni-tag">Economía</span>
+            <span class="uni-tag">Ciencias</span>
+          </div>
+          <a href="index.html#contact" class="uni-card-cta">Asesorarme sobre la UvA <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- VU -->
+      <div class="uni-full-card" data-city="amsterdam" data-type="investigacion">
+        <div class="uni-card-photo">
+          <img src="https://images.unsplash.com/photo-1576924542622-772281b13aa0?w=700&q=80&fm=jpg&fit=crop" alt="Ámsterdam VU" loading="lazy">
+          <span class="uni-card-type">Investigación</span>
+        </div>
+        <div class="uni-card-body">
+          <span class="uni-card-city">Ámsterdam</span>
+          <h3>Vrije Universiteit Amsterdam</h3>
+          <span class="uni-abbr-badge">VU</span>
+          <p>Universidad con fuerte orientación internacional y campus moderno al sur de Ámsterdam. Destacada en negocios, psicología y ciencias de la salud. Muy buena relación calidad-vida.</p>
+          <div class="uni-tags">
+            <span class="uni-tag">Negocios</span>
+            <span class="uni-tag">Psicología</span>
+            <span class="uni-tag">Medicina</span>
+            <span class="uni-tag">Filosofía</span>
+          </div>
+          <a href="index.html#contact" class="uni-card-cta">Asesorarme sobre la VU <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- TU Delft -->
+      <div class="uni-full-card" data-city="delft" data-type="investigacion" style="border-color:var(--teal)">
+        <div class="uni-card-photo">
+          <img src="https://images.unsplash.com/photo-1611095973763-414019e72400?w=700&q=80&fm=jpg&fit=crop" alt="TU Delft" loading="lazy">
+          <span class="uni-card-type">Investigación · Técnica</span>
+        </div>
+        <div class="uni-card-body">
+          <span class="uni-card-city">Delft</span>
+          <h3>TU Delft</h3>
+          <span class="uni-abbr-badge">TUD</span>
+          <p>La mejor escuela de ingeniería de Europa. Campus impresionante, infraestructura de primer nivel y una reputación global incomparable en tecnología, diseño y arquitectura.</p>
+          <div class="uni-tags">
+            <span class="uni-tag">Ingeniería</span>
+            <span class="uni-tag">Arquitectura</span>
+            <span class="uni-tag">Diseño Industrial</span>
+            <span class="uni-tag">Aeroespacial</span>
+            <span class="uni-tag">Informática</span>
+          </div>
+          <a href="index.html#contact" class="uni-card-cta">Asesorarme sobre TU Delft <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- Erasmus -->
+      <div class="uni-full-card" data-city="rotterdam" data-type="investigacion">
+        <div class="uni-card-photo">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80&fm=jpg&fit=crop" alt="Rotterdam" loading="lazy">
+          <span class="uni-card-type">Investigación</span>
+        </div>
+        <div class="uni-card-body">
+          <span class="uni-card-city">Rotterdam</span>
+          <h3>Erasmus University Rotterdam</h3>
+          <span class="uni-abbr-badge">EUR</span>
+          <p>Top 5 en Europa para negocios y economía. Su Erasmus School of Economics es mundialmente reconocida. Ciudad moderna, multicultural y con un ambiente muy dinámico.</p>
+          <div class="uni-tags">
+            <span class="uni-tag">Economía</span>
+            <span class="uni-tag">Management</span>
+            <span class="uni-tag">Derecho</span>
+            <span class="uni-tag">Medicina</span>
+          </div>
+          <a href="index.html#contact" class="uni-card-cta">Asesorarme sobre Erasmus <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- Leiden -->
+      <div class="uni-full-card" data-city="leiden" data-type="investigacion">
+        <div class="uni-card-photo">
+          <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=700&q=80&fm=jpg&fit=crop" alt="Leiden" loading="lazy">
+          <span class="uni-card-type">Investigación</span>
+        </div>
+        <div class="uni-card-body">
+          <span class="uni-card-city">Leiden</span>
+          <h3>Universidad de Leiden</h3>
+          <span class="uni-abbr-badge">LEI</span>
+          <p>La universidad más antigua de los Países Bajos, fundada en 1575. Reconocida mundialmente en Derecho, Humanidades y Ciencias Naturales. Ciudad histórica de gran belleza.</p>
+          <div class="uni-tags">
+            <span class="uni-tag">Derecho</span>
+            <span class="uni-tag">Humanidades</span>
+            <span class="uni-tag">Arqueología</span>
+            <span class="uni-tag">Ciencias</span>
+          </div>
+          <a href="index.html#contact" class="uni-card-cta">Asesorarme sobre Leiden <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- Utrecht -->
+      <div class="uni-full-card" data-city="utrecht" data-type="investigacion">
+        <div class="uni-card-photo">
+          <img src="https://images.unsplash.com/photo-1559561853-08451507cbe7?w=700&q=80&fm=jpg&fit=crop" alt="Utrecht" loading="lazy">
+          <span class="uni-card-type">Investigación</span>
+        </div>
+        <div class="uni-card-body">
+          <span class="uni-card-city">Utrecht</span>
+          <h3>Universidad de Utrecht</h3>
+          <span class="uni-abbr-badge">UU</span>
+          <p>Consistentemente la mejor valorada por sus estudiantes. Campus en pleno centro histórico, fuerte en investigación y con una de las mejores vidas estudiantiles del país.</p>
+          <div class="uni-tags">
+            <span class="uni-tag">Medicina</span>
+            <span class="uni-tag">Veterinaria</span>
+            <span class="uni-tag">Ciencias Naturales</span>
+            <span class="uni-tag">Geociencias</span>
+          </div>
+          <a href="index.html#contact" class="uni-card-cta">Asesorarme sobre Utrecht <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- Groningen -->
+      <div class="uni-full-card" data-city="groningen" data-type="investigacion">
+        <div class="uni-card-photo">
+          <img src="https://images.unsplash.com/photo-1534430480872-3498386e7856?w=700&q=80&fm=jpg&fit=crop" alt="Groningen" loading="lazy">
+          <span class="uni-card-type">Investigación</span>
+        </div>
+        <div class="uni-card-body">
+          <span class="uni-card-city">Groningen</span>
+          <h3>Universidad de Groningen</h3>
+          <span class="uni-abbr-badge">RUG</span>
+          <p>Una de las universidades más internacionales del país. Ciudad 100% estudiantil en el norte, con coste de vida más bajo y una vida social muy activa. Cientos de programas en inglés.</p>
+          <div class="uni-tags">
+            <span class="uni-tag">Economía</span>
+            <span class="uni-tag">Farmacia</span>
+            <span class="uni-tag">Teología</span>
+            <span class="uni-tag">Psicología</span>
+          </div>
+          <a href="index.html#contact" class="uni-card-cta">Asesorarme sobre Groningen <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- Maastricht -->
+      <div class="uni-full-card" data-city="maastricht" data-type="investigacion">
+        <div class="uni-card-photo">
+          <img src="https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=700&q=80&fm=jpg&fit=crop" alt="Maastricht" loading="lazy">
+          <span class="uni-card-type">Investigación · PBL</span>
+        </div>
+        <div class="uni-card-body">
+          <span class="uni-card-city">Maastricht</span>
+          <h3>Maastricht University</h3>
+          <span class="uni-abbr-badge">UM</span>
+          <p>La universidad más internacional de los Países Bajos: más del 50% de sus estudiantes vienen del extranjero. Metodología PBL (aprendizaje basado en problemas) y 100% en inglés.</p>
+          <div class="uni-tags">
+            <span class="uni-tag">Derecho Europeo</span>
+            <span class="uni-tag">Negocios</span>
+            <span class="uni-tag">Medicina</span>
+            <span class="uni-tag">Artes y Cultura</span>
+          </div>
+          <a href="index.html#contact" class="uni-card-cta">Asesorarme sobre Maastricht <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Compare CTA -->
+    <div class="compare-strip reveal">
+      <div>
+        <h3>¿No sabes cuál encaja contigo?</h3>
+        <p>Te ayudamos a elegir en función de tu perfil, tu carrera y tus objetivos.</p>
+      </div>
+      <a href="index.html#contact" class="btn-light">Consulta gratuita <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- MAP -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="tag">Mapa</span>
+      <h2>Todas en <em>un vistazo.</em></h2>
+    </div>
+    <div class="map-frame reveal">
+      <img src="assets/mapa_es.svg" alt="Mapa de universidades en Países Bajos">
+      <div class="map-legend">
+        <span><span class="dot blue"></span> Universidades de investigación</span>
+        <span><span class="dot teal"></span> Ciencias aplicadas</span>
+        <span><span class="dot sand"></span> Institutos especializados</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <div class="footer-name">Studex Consulting</div>
+      <p>Asesoría especializada para estudiar en los Países Bajos.<br><em>By students, for students.</em></p>
+      <div class="footer-socials">
+        <a href="https://tiktok.com/@studexconsulting" target="_blank"><i class="fab fa-tiktok"></i></a>
+        <a href="https://instagram.com/studexconsulting" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/message/KPGVXIR7MH3CP1" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+    <div class="footer-col"><h4>Navegación</h4>
+      <a href="index.html">Inicio</a><a href="destinos.html">Destinos</a>
+      <a href="blog.html">Blog</a><a href="index.html#contact">Contacto</a>
+    </div>
+    <div class="footer-col"><h4>Servicios</h4>
+      <a href="index.html#services">Asesoramiento</a>
+      <a href="index.html#services">Documentación</a>
+      <a href="index.html#services">Becas y ayudas</a>
+      <a href="index.html#services">Vivienda</a>
+    </div>
+    <div class="footer-col"><h4>Legal</h4>
+      <a href="aviso-legal.html">Aviso Legal</a>
+      <a href="privacidad.html">Privacidad</a>
+      <a href="cookies.html">Cookies</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Studex Consulting — Asesoramiento educativo independiente. No estamos asociados oficialmente con ninguna universidad.</p>
+  </div>
+</footer>
+
+<a href="https://wa.me/message/KPGVXIR7MH3CP1" target="_blank" class="float-wa"><i class="fab fa-whatsapp"></i></a>
+<button class="back-top" id="backTop"><i class="fas fa-arrow-up"></i></button>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const bar = document.getElementById('scrollBar');
+  window.addEventListener('scroll', () => {
+    const h = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = (h > 0 ? (scrollY / h) * 100 : 0) + '%';
+    document.getElementById('backTop').classList.toggle('show', scrollY > 400);
+    document.getElementById('nav').classList.toggle('scrolled', scrollY > 60);
+  }, { passive: true });
+  document.getElementById('backTop').addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+  const ham = document.getElementById('hamburger');
+  const mob = document.getElementById('mobileMenu');
+  ham.addEventListener('click', () => {
+    mob.classList.toggle('open');
+    ham.querySelector('i').className = mob.classList.contains('open') ? 'fas fa-times' : 'fas fa-bars';
+  });
+
+  const ro = new IntersectionObserver(e => e.forEach(x => { if (x.isIntersecting) x.target.classList.add('in'); }), { threshold: 0.1 });
+  document.querySelectorAll('.reveal, .up').forEach(el => ro.observe(el));
+
+  // Filter
+  const cards = document.querySelectorAll('.uni-full-card');
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const f = btn.dataset.filter;
+      cards.forEach(c => {
+        const show = f === 'all' || c.dataset.city === f || c.dataset.type === f;
+        c.style.display = show ? '' : 'none';
+      });
+    });
+  });
+});
+</script>
+</body>
+</html>
