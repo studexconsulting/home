@@ -3,87 +3,621 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Academic Consulting for the Netherlands | VR Academic</title>
-<meta name="description" content="Personalized academic consulting to study in the Netherlands. University selection, applications, scholarships, and relocation support.">
+<title>Studex Consulting | Study in the Netherlands</title>
+<meta name="description" content="Personalised academic consultancy to study in the Netherlands. By students, for students.">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
+<link rel="icon" href="assets/favicon_io/favicon.ico">
+<meta name="theme-color" content="#0D2440">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=EB+Garamond:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<nav class="nav fade-in">
-  <span class="logo">VR Academic</span>
-  <div class="nav-right">
-    <div class="language-selector">
-      <a href="index.html" class="lang">ES</a><span>|</span>
-      <a href="en.html" class="lang active">EN</a><span>|</span>
-      <a href="ca.html" class="lang">CA</a>
+<div class="scroll-bar" id="scrollBar"></div>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <a href="/" class="logo">
+    <img src="assets/ITER2.png" alt="Studex" class="logo-img" loading="lazy">
+    
+  </a>
+  <div class="nav-center">
+    <a href="en.html" class="nl active">Home</a>
+    <a href="en-destinos.html" class="nl">Destinations</a>
+    <a href="en-blog.html" class="nl">Blog</a>
+  </div>
+  <div class="nav-end">
+    <div class="langs">
+      <a href="index.html" class="lg">ES</a>
+      <a href="en.html" class="lg active">EN</a>
+      <a href="ca.html" class="lg">CA</a>
     </div>
-    <a href="#contact" class="nav-btn">Contact</a>
+    <a href="#contact" class="pill-btn">Contact</a>
+    <button class="hamburger" id="hamburger" aria-label="Menú"><i class="fas fa-bars"></i></button>
   </div>
 </nav>
 
-<header class="hero fade-in">
-  <h1>Academic consulting<br>for studying in Europe</h1>
-  <p>We support international students in making informed academic decisions with a focus on the Netherlands.</p>
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="en.html">Home</a>
+  <a href="en-destinos.html">Destinations</a>
+  <a href="en-blog.html">Blog</a>
+  <a href="#contact">Contact</a>
+  <div class="mob-langs">
+    <a href="index.html">ES</a>
+    <a href="en.html">EN</a>
+    <a href="ca.html">CA</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-photo">
+    <img src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=1800&q=85&fm=jpg&fit=crop" 
+         alt="Amsterdam" fetchpriority="high">
+    <div class="hero-overlay"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-label up">By students, for students</div>
+    <h1 class="up">
+      Your place at a<br>
+      <em>university</em><br>
+      in the Netherlands
+    </h1>
+    <p class="hero-lead up">We are students who already made this journey.<br>Now we guide you, from start to finish.</p>
+    <div class="hero-btns up">
+      <a href="#contact" class="btn-hero-main">Get advice <i class="fas fa-arrow-right"></i></a>
+      <a href="#services" class="btn-hero-ghost">See services</a>
+    </div>
+  </div>
+  <a href="#about" class="scroll-hint" aria-label="Scroll down">
+    <i class="fas fa-chevron-down"></i>
+  </a>
 </header>
 
-<section class="section light fade-in" id="about">
-  <h2>About Us</h2>
-  <p>We are VR Academic, a team dedicated to helping students make informed decisions about studying abroad. Our mission is to guide you through applications, scholarships, and life in the Netherlands smoothly and confidently.</p>
-  <p>We focus on personalized support because every student’s path is unique. Our experience with Dutch universities ensures you choose the best fit for your goals.</p>
-</section>
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker">
+    <span>UvA · Amsterdam</span><span class="sep">◆</span>
+    <span>TU Delft</span><span class="sep">◆</span>
+    <span>Erasmus Rotterdam</span><span class="sep">◆</span>
+    <span>University of Leiden</span><span class="sep">◆</span>
+    <span>University of Utrecht</span><span class="sep">◆</span>
+    <span>Maastricht University</span><span class="sep">◆</span>
+    <span>University of Groningen</span><span class="sep">◆</span>
+    <span>VU Amsterdam</span><span class="sep">◆</span>
+    <span>UvA · Amsterdam</span><span class="sep">◆</span>
+    <span>TU Delft</span><span class="sep">◆</span>
+    <span>Erasmus Rotterdam</span><span class="sep">◆</span>
+    <span>University of Leiden</span><span class="sep">◆</span>
+    <span>University of Utrecht</span><span class="sep">◆</span>
+    <span>Maastricht University</span><span class="sep">◆</span>
+    <span>University of Groningen</span><span class="sep">◆</span>
+    <span>VU Amsterdam</span><span class="sep">◆</span>
+  </div>
+</div>
 
-<section class="section fade-in">
-  <h2>Our Services</h2>
-  <div class="cards">
-    <div class="card fade-in"><h3>University Applications</h3><p>Guidance throughout the entire application process.</p></div>
-    <div class="card fade-in"><h3>Finding the Right University</h3><p>Analyze your academic profile and goals.</p></div>
-    <div class="card fade-in"><h3>Personalized Advising</h3><p>One-on-one sessions adapted to your personal situation.</p></div>
-    <div class="card fade-in"><h3>Scholarships & Funding</h3><p>Identification and application support for scholarships.</p></div>
-    <div class="card fade-in"><h3>Relocation Support</h3><p>Residence, health insurance and essential steps for living abroad.</p></div>
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="container about-wrap">
+    <div class="about-text reveal">
+      <span class="tag">Who we are</span>
+      <h2>We made<br>your same<br><em>journey.</em></h2>
+      <p class="big-lead">We are <strong>Studex Consulting</strong>, a team of students who have studied at the best Dutch universities. We know how confusing the process can be — and we guide you so you don't have to figure it out alone.</p>
+      <p>We start with you from the profile analysis and finish when you're already settled in your new apartment. That's how complete it is.</p>
+      <a href="#contact" class="btn-outline">Talk to us <i class="fas fa-arrow-right"></i></a>
+    </div>
+    <div class="about-img reveal">
+      <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=900&q=85&fm=jpg&fit=crop" 
+           alt="Estudiantes universitarios" loading="lazy">
+      <div class="about-badge">
+        <span class="ab-num">+150</span>
+        <span class="ab-text">students<br>advised</span>
+      </div>
+    </div>
   </div>
 </section>
 
-<section class="section light fade-in">
-  <h2>Focused on the Netherlands</h2>
-  <p>We specialize in Dutch universities, internationally recognized for academic quality and innovative teaching.</p>
-  <p>Key cities: Amsterdam, Utrecht, Groningen, Leiden, Eindhoven, Rotterdam.</p>
-  <p>Leading universities: University of Amsterdam, Utrecht University, Leiden University, TU Delft, Eindhoven University of Technology.</p>
-
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1564874.606190559!2d4.895168!3d52.212991" width="100%" height="350" style="border:0; border-radius:16px; margin-top:2rem;" loading="lazy"></iframe>
-</section>
-
-<section class="section fade-in">
-  <h2>Testimonials</h2>
-  <div class="cards">
-    <div class="card fade-in"><p>“VR Academic helped me find a university that truly matched my profile.”</p><strong>— Psychology student, Utrecht</strong></div>
-    <div class="card fade-in"><p>“Clear guidance, professional support and zero stress.”</p><strong>— International student, Groningen</strong></div>
+<!-- BENEFITS (dark) -->
+<section class="section dark-section" id="benefits">
+  <div class="container">
+    <div class="benefits-top reveal">
+      <span class="tag light">Beyond admission</span>
+      <h2 class="light-h">Up to <em class="gold">€600/month</em><br>just for studying.</h2>
+      <p class="light-p">We don't just inform you about the grants: we manage them with you.</p>
+    </div>
+    <div class="benefits-grid reveal">
+      <div class="benefit-card">
+        <span class="b-num">01</span>
+        <h3>DUO — Study financing</h3>
+        <p>The Dutch government lends money to all students to cover living costs and tuition. We help you apply.</p>
+      </div>
+      <div class="benefit-card">
+        <span class="b-num">02</span>
+        <h3>Huurtoeslag — Rent allowance</h3>
+        <p>If your income is low, the State covers part of your monthly rent. We manage the application with you.</p>
+      </div>
+      <div class="benefit-card">
+        <span class="b-num">03</span>
+        <h3>Zorgtoeslag — Healthcare allowance</h3>
+        <p>Monthly subsidy to cover mandatory health insurance. Don't miss a single euro you're entitled to.</p>
+      </div>
+      <div class="benefit-card">
+        <span class="b-num">04</span>
+        <h3>Grants and additional support</h3>
+        <p>We identify and apply for all grants available for your profile, both private and institutional.</p>
+      </div>
+    </div>
   </div>
 </section>
 
-<section class="section light fade-in" id="contact">
-  <h2>Contact</h2>
-  <p>Tell us about your academic plans and we’ll get back to you.</p>
-  <form action="https://formspree.io/f/XXXXYYYY" method="POST" class="contact-form">
-    <input type="text" name="name" placeholder="Full name" required>
-    <input type="email" name="email" placeholder="Email address" required>
-    <textarea name="message" placeholder="Your message" required></textarea>
-    <button type="submit" class="nav-btn">Send message</button>
-  </form>
+<!-- SERVICES -->
+<section class="section" id="services">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="tag">How we help you</span>
+      <h2>Everything you<br>need, <em>in one place.</em></h2>
+      <p>Full support from your first email to your first day of class.</p>
+    </div>
+    <div class="services-grid reveal">
+      <div class="svc">
+        <div class="svc-icon"><i class="fas fa-graduation-cap"></i></div>
+        <h3>Profile analysis</h3>
+        <p>We evaluate your record and tell you what options you really have, without false expectations.</p>
+        <a href="#contact" class="svc-link">More info <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="svc">
+        <div class="svc-icon"><i class="fas fa-pen-nib"></i></div>
+        <h3>Motivation letter</h3>
+        <p>Your letter is what matters most. We help you find your voice and write something that truly stands out.</p>
+        <a href="#contact" class="svc-link">More info <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="svc">
+        <div class="svc-icon"><i class="fas fa-university"></i></div>
+        <h3>University selection</h3>
+        <p>Not all universities fit the same way. We guide you on programmes, cities and options based on your goals.</p>
+        <a href="#contact" class="svc-link">More info <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="svc">
+        <div class="svc-icon"><i class="fas fa-coins"></i></div>
+        <h3>Grants & support</h3>
+        <p>DUO, huurtoeslag, zorgtoeslag — we identify and manage everything you're entitled to.</p>
+        <a href="#contact" class="svc-link">More info <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="svc">
+        <div class="svc-icon"><i class="fas fa-house"></i></div>
+        <h3>Housing search</h3>
+        <p>Finding a flat in the Netherlands is hard. We give you strategy, contacts and real support.</p>
+        <a href="#contact" class="svc-link">More info <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="svc">
+        <div class="svc-icon"><i class="fas fa-route"></i></div>
+        <h3>Full follow-up</h3>
+        <p>We are with you every step: deadlines, documents, emails, admin. Nothing slips through.</p>
+        <a href="#contact" class="svc-link">More info <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
 </section>
 
-<footer class="footer fade-in">
-  <p>© 2026 VR Academic Consulting</p>
+<!-- UNIVERSITIES -->
+<section class="section section-alt" id="universidades">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="tag">Where to study</span>
+      <h2>The best<br>universities, <em>within reach.</em></h2>
+    </div>
+    <div class="uni-grid reveal">
+      <div class="uni-card">
+        <span class="uni-city">Amsterdam</span>
+        <h4>Universidad de Ámsterdam <span class="uni-abbr">UvA</span></h4>
+        <p>One of the best in Europe. Thousands of programmes in English.</p>
+      </div>
+      <div class="uni-card">
+        <span class="uni-city">Amsterdam</span>
+        <h4>Vrije Universiteit <span class="uni-abbr">VU</span></h4>
+        <p>Strong in business, health and social sciences.</p>
+      </div>
+      <div class="uni-card featured">
+        <span class="uni-city">Delft</span>
+        <h4>TU Delft <span class="uni-abbr">TUD</span></h4>
+        <p>The best technical school in Europe. Engineering and design.</p>
+      </div>
+      <div class="uni-card">
+        <span class="uni-city">Rotterdam</span>
+        <h4>Erasmus University <span class="uni-abbr">EUR</span></h4>
+        <p>Top in business, economics and global management.</p>
+      </div>
+      <div class="uni-card">
+        <span class="uni-city">Leiden</span>
+        <h4>University of Leiden <span class="uni-abbr">LEI</span></h4>
+        <p>The oldest in the Netherlands. Law and humanities.</p>
+      </div>
+      <div class="uni-card">
+        <span class="uni-city">Utrecht</span>
+        <h4>University of Utrecht <span class="uni-abbr">UU</span></h4>
+        <p>World-class research. Unbeatable student life.</p>
+      </div>
+      <div class="uni-card">
+        <span class="uni-city">Groningen</span>
+        <h4>University of Groningen <span class="uni-abbr">RUG</span></h4>
+        <p>International atmosphere and a 100% student city.</p>
+      </div>
+      <div class="uni-card">
+        <span class="uni-city">Maastricht</span>
+        <h4>Maastricht University <span class="uni-abbr">UM</span></h4>
+        <p>PBL method, 100% English, unique European atmosphere.</p>
+      </div>
+    </div>
+    <div class="center-btn reveal">
+      <a href="en-destinos.html" class="btn-outline">See all universities <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- LIFE IN NL -->
+<section class="section life-section" id="vida">
+  <div class="life-photo">
+    <img src="https://images.unsplash.com/photo-1776179342972-875cbbcdd32f?w=1600&q=85&fm=jpg&fit=crop" 
+         alt="Amsterdam en bicicleta" loading="lazy">
+    <div class="life-overlay"></div>
+  </div>
+  <div class="life-content reveal">
+    <span class="tag light">Life there</span>
+    <h2 class="light-h">Living in<br>the Netherlands.</h2>
+    <ul class="life-list">
+      <li>
+        <i class="fas fa-bicycle"></i>
+        <div><strong>Everything by bike</strong> — Forget the metro. You cycle to work, class, the supermarket and the canals.</div>
+      </li>
+      <li>
+        <i class="fas fa-cloud-sun-rain"></i>
+        <div><strong>The weather</strong> — Yes, it rains, but it's never truly cold. With the right raincoat, it's perfectly liveable.</div>
+      </li>
+      <li>
+        <i class="fas fa-people-group"></i>
+        <div><strong>Student life</strong> — Introweken, societies, events. It's very easy to make international friends.</div>
+      </li>
+      <li>
+        <i class="fas fa-wallet"></i>
+        <div><strong>Real cost</strong> — Between rent, food and leisure, you can live comfortably on €900–1,200/month (and with grants, less).</div>
+      </li>
+    </ul>
+    <a href="en-blog.html" class="btn-light">Read the full guide <i class="fas fa-arrow-right"></i></a>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section" id="testimonios">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="tag">Real experiences</span>
+      <h2>What our<br><em>students say.</em></h2>
+    </div>
+    <div class="testi-grid reveal">
+      <div class="testi-card">
+        <div class="testi-q">"</div>
+        <p>Without Studex I wouldn't have known where to begin with the motivation letter. They helped me find my own voice instead of giving me a generic template.</p>
+        <div class="testi-person">
+          <div class="testi-av">L</div>
+          <div>
+            <strong>Lucía R.</strong>
+            <span>Psychology — University of Amsterdam</span>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card featured-testi">
+        <div class="testi-q">"</div>
+        <p>The constant follow-up made all the difference. Every deadline, every document, we had everything under control weeks before the due date. I never felt alone in the process.</p>
+        <div class="testi-person">
+          <div class="testi-av">M</div>
+          <div>
+            <strong>Marcos T.</strong>
+            <span>Civil Engineering — TU Delft</span>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-q">"</div>
+        <p>I arrived thinking about one city and ended up choosing another that fitted much better with what I wanted. Their guidance was honest — they don't sell you what you don't need.</p>
+        <div class="testi-person">
+          <div class="testi-av">S</div>
+          <div>
+            <strong>Sofía N.</strong>
+            <span>International Business — Erasmus Rotterdam</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAP -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="tag">Mapa</span>
+      <h2>All options,<br><em>at a glance.</em></h2>
+    </div>
+    <div class="map-frame reveal">
+      <img src="assets/mapa_es.svg" alt="Map of universities in the Netherlands">
+      <div class="map-legend">
+        <span><span class="dot blue"></span> Research universities</span>
+        <span><span class="dot teal"></span> Applied sciences</span>
+        <span><span class="dot sand"></span> Specialised institutes</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section class="section" id="blog-preview">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="tag">Blog</span>
+      <h2>Guides that<br><em>actually help.</em></h2>
+    </div>
+    <div class="blog-grid reveal">
+      <a href="en-blog.html#carta-motivacion" class="blog-card">
+        <span class="blog-tag">Guide</span>
+        <h3>How to write a motivation letter that works</h3>
+        <p>The keys to standing out in a Dutch application, with real examples.</p>
+        <span class="read-more">Read <i class="fas fa-arrow-right"></i></span>
+      </a>
+      <a href="en-blog.html#presupuesto" class="blog-card">
+        <span class="blog-tag">Costs</span>
+        <h3>Real budget for studying in the Netherlands</h3>
+        <p>Honest breakdown of expenses: tuition, rent, food and leisure.</p>
+        <span class="read-more">Read <i class="fas fa-arrow-right"></i></span>
+      </a>
+      <a href="en-blog.html#calendario" class="blog-card">
+        <span class="blog-tag">Deadlines</span>
+        <h3>The application calendar you need to save</h3>
+        <p>All the key dates of the Dutch academic year, no excuses.</p>
+        <span class="read-more">Read <i class="fas fa-arrow-right"></i></span>
+      </a>
+    </div>
+    <div class="center-btn reveal">
+      <a href="en-blog.html" class="btn-outline">See all articles <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section section-alt" id="faq">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="tag">FAQ</span>
+      <h2>The questions<br>everyone asks.</h2>
+    </div>
+    <div class="faq-wrap reveal">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span>When should I start the process?</span>
+          <span class="faq-ico"><i class="fas fa-plus"></i></span>
+        </button>
+        <div class="faq-a"><p>Between 9 and 12 months before the course starts. Most Dutch universities close their deadlines between January and May for programmes starting in September.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span>Does the consultancy cost anything?</span>
+          <span class="faq-ico"><i class="fas fa-plus"></i></span>
+        </button>
+        <div class="faq-a"><p>The first consultation is free to assess your profile. We then explain exactly what each plan includes before you decide anything.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span>Do you work with all Dutch universities?</span>
+          <span class="faq-ico"><i class="fas fa-plus"></i></span>
+        </button>
+        <div class="faq-a"><p>We cover the main research universities and universities of applied sciences, including programmes in English and Dutch in the eight university cities of the country.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span>Do you also help with accommodation?</span>
+          <span class="faq-ico"><i class="fas fa-plus"></i></span>
+        </button>
+        <div class="faq-a"><p>Yes. We advise you on platforms, strategy, deadlines and budget by city. The Dutch rental market is competitive — it's better to go prepared.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span>Are you an official university body?</span>
+          <span class="faq-ico"><i class="fas fa-plus"></i></span>
+        </button>
+        <div class="faq-a"><p>No. Studex Consulting is an independent consultancy formed by former students. We are not officially affiliated with any Dutch university.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIKTOK + SOCIAL -->
+<section class="section dark-section" id="social">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="tag light">Social media</span>
+      <h2 class="light-h">Daily content<br>about <em class="gold">living and studying</em><br>in the Netherlands.</h2>
+    </div>
+    <div class="tiktok-grid reveal">
+      <!--
+        TIKTOK EMBEDS:
+        Sustituye REPLACE_VIDEO_ID_X por el ID real de cada vídeo.
+        URL del vídeo: tiktok.com/@studexconsulting/video/7XXXXXXXXXXXXXXXXX
+        O usa "Compartir → Insertar" desde la app de TikTok.
+      -->
+      <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@studexconsulting/video/REPLACE_VIDEO_ID_1"
+        data-video-id="REPLACE_VIDEO_ID_1" style="max-width:325px;min-width:280px;margin:0 auto;">
+        <section><a target="_blank" href="https://www.tiktok.com/@studexconsulting">@studexconsulting</a></section>
+      </blockquote>
+      <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@studexconsulting/video/REPLACE_VIDEO_ID_2"
+        data-video-id="REPLACE_VIDEO_ID_2" style="max-width:325px;min-width:280px;margin:0 auto;">
+        <section><a target="_blank" href="https://www.tiktok.com/@studexconsulting">@studexconsulting</a></section>
+      </blockquote>
+      <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@studexconsulting/video/REPLACE_VIDEO_ID_3"
+        data-video-id="REPLACE_VIDEO_ID_3" style="max-width:325px;min-width:280px;margin:0 auto;">
+        <section><a target="_blank" href="https://www.tiktok.com/@studexconsulting">@studexconsulting</a></section>
+      </blockquote>
+    </div>
+    <script async src="https://www.tiktok.com/embed.js"></script>
+    <div class="social-pills reveal">
+      <a href="https://tiktok.com/@studexconsulting" target="_blank" class="soc-pill tt"><i class="fab fa-tiktok"></i> TikTok</a>
+      <a href="https://instagram.com/studexconsulting" target="_blank" class="soc-pill ig"><i class="fab fa-instagram"></i> Instagram</a>
+      <a href="https://wa.me/message/KPGVXIR7MH3CP1" target="_blank" class="soc-pill wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="tag">Let's talk</span>
+      <h2>Any questions?<br><em>Tell us.</em></h2>
+      <p>First consultation free, no commitment.</p>
+    </div>
+    <div class="contact-options reveal">
+      <a href="https://wa.me/message/KPGVXIR7MH3CP1" target="_blank" class="copt wa-opt">
+        <i class="fab fa-whatsapp"></i>
+        <div>
+          <strong>WhatsApp</strong>
+          <span>Quick reply</span>
+        </div>
+      </a>
+      <div class="copt email-opt" onclick="document.getElementById('contact-form').scrollIntoView({behavior:'smooth'})">
+        <i class="fas fa-envelope"></i>
+        <div>
+          <strong>Form</strong>
+          <span>Detailed enquiry</span>
+        </div>
+      </div>
+    </div>
+    <form id="contact-form" action="https://formspree.io/f/XXXXYYYY" method="POST" class="cform reveal">
+      <div class="cform-row two">
+        <input type="text" name="name" placeholder="Full name" required>
+        <input type="email" name="email" placeholder="Email address" required>
+      </div>
+      <select name="interest" required>
+        <option value="" disabled selected>How can we help you?</option>
+        <option value="asesoramiento">General advice</option>
+        <option value="documentos">Document preparation</option>
+        <option value="universidades">University selectiones</option>
+        <option value="becas">Grants & support económicas</option>
+        <option value="vivienda">Housing search</option>
+        <option value="otros">Other</option>
+      </select>
+      <textarea name="message" placeholder="Tell us about your situation, what degree you're interested in, which city you're considering..." rows="5" required></textarea>
+      <div class="privacy-row">
+        <input type="checkbox" id="priv" name="privacy" required>
+        <label for="priv">I accept the <a href="privacidad.html">Privacy Policy</a></label>
+      </div>
+      <button type="submit" class="submit-btn">Send enquiry <i class="fas fa-arrow-right"></i></button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <div class="footer-name">Studex Consulting</div>
+      <p>Specialist consultancy for studying in the Netherlands.<br><em>By students, for students.</em></p>
+      <div class="footer-socials">
+        <a href="https://tiktok.com/@studexconsulting" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        <a href="https://instagram.com/studexconsulting" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/message/KPGVXIR7MH3CP1" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <a href="en.html">Home</a>
+      <a href="en-destinos.html">Destinations</a>
+      <a href="en-blog.html">Blog</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <a href="#services">Advice</a>
+      <a href="#services">Documentation</a>
+      <a href="#services">Grants & support</a>
+      <a href="#services">Housing</a>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <a href="aviso-legal.html">Legal Notice</a>
+      <a href="privacidad.html">Privacy</a>
+      <a href="cookies.html">Cookies</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Studex Consulting — Independent educational consultancy. We are not officially affiliated with any university.</p>
+  </div>
 </footer>
 
+<!-- Floating WA -->
+<a href="https://wa.me/message/KPGVXIR7MH3CP1" target="_blank" class="float-wa" aria-label="WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+<button class="back-top" id="backTop" aria-label="Back to top">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-  const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if(entry.isIntersecting){ entry.target.classList.add("fade-in-visible"); }}); }, { threshold: 0.1 });
-  document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
+document.addEventListener('DOMContentLoaded', () => {
+
+  /* scroll progress */
+  const bar = document.getElementById('scrollBar');
+  const onScroll = () => {
+    const h = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = (h > 0 ? (scrollY / h) * 100 : 0) + '%';
+    document.getElementById('backTop').classList.toggle('show', scrollY > 500);
+    document.getElementById('nav').classList.toggle('scrolled', scrollY > 60);
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  /* back to top */
+  document.getElementById('backTop').addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+  /* mobile menu */
+  const ham = document.getElementById('hamburger');
+  const mob = document.getElementById('mobileMenu');
+  ham.addEventListener('click', () => {
+    mob.classList.toggle('open');
+    ham.querySelector('i').className = mob.classList.contains('open') ? 'fas fa-times' : 'fas fa-bars';
+  });
+  mob.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    mob.classList.remove('open');
+    ham.querySelector('i').className = 'fas fa-bars';
+  }));
+
+  /* reveal on scroll */
+  const ro = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal, .up').forEach(el => ro.observe(el));
+
+  /* FAQ accordion */
+  document.querySelectorAll('.faq-item').forEach(item => {
+    const q = item.querySelector('.faq-q');
+    const a = item.querySelector('.faq-a');
+    q.addEventListener('click', () => {
+      const open = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(o => {
+        o.classList.remove('open');
+        o.querySelector('.faq-a').style.maxHeight = null;
+        o.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+      });
+      if (!open) {
+        item.classList.add('open');
+        a.style.maxHeight = a.scrollHeight + 'px';
+        q.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
 });
 </script>
-
 </body>
 </html>
