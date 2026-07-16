@@ -14,6 +14,155 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link rel="stylesheet" href="style.css">
+<!--
+  META TAGS RECOMANATS
+  Enganxa dins el <head> de cada pàgina (adapta og:url i canonical per a cada idioma/pàgina).
+  Sense això, quan algú comparteixi el link a WhatsApp/Instagram, no sortirà cap imatge ni títol bonic.
+-->
+
+<!-- Canonical: evita que Google consideri index.html i / com a pàgines duplicades -->
+<link rel="canonical" href="https://studexconsulting.eu/index.html" />
+
+<!-- Idiomes alternatius (reforça el hreflang del sitemap també dins l'HTML) -->
+<link rel="alternate" hreflang="es" href="https://studexconsulting.eu/index.html" />
+<link rel="alternate" hreflang="en" href="https://studexconsulting.eu/en.html" />
+<link rel="alternate" hreflang="ca" href="https://studexconsulting.eu/ca.html" />
+<link rel="alternate" hreflang="x-default" href="https://studexconsulting.eu/" />
+
+<!-- Open Graph (Facebook, Instagram, WhatsApp, LinkedIn) -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Studex Consulting" />
+<meta property="og:title" content="Studex Consulting | Estudia en Países Bajos" />
+<meta property="og:description" content="Asesoría académica personalizada para estudiar en Países Bajos. By students, for students." />
+<meta property="og:image" content="https://studexconsulting.eu/assets/ITER2.png" />
+<meta property="og:url" content="https://studexconsulting.eu/" />
+<meta property="og:locale" content="es_ES" />
+<meta property="og:locale:alternate" content="ca_ES" />
+<meta property="og:locale:alternate" content="en_US" />
+
+<!-- Twitter / X Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Studex Consulting | Estudia en Países Bajos" />
+<meta name="twitter:description" content="Asesoría académica personalizada para estudiar en Países Bajos. By students, for students." />
+<meta name="twitter:image" content="https://studexconsulting.eu/assets/ITER2.png" />
+
+<!-- Robots explícit (per si de cas) -->
+<meta name="robots" content="index, follow" />
+
+<!-- Verificació Google Search Console (substitueix XXXX pel codi que et doni Search Console) -->
+<!-- <meta name="google-site-verification" content="XXXXXXXXXXXXXXXXXXXXXXXX" /> -->
+<!-- 
+  DADES ESTRUCTURADES (Schema.org / JSON-LD)
+  Enganxa aquest bloc sencer just abans de </head> a index.html, en.html i ca.html.
+  Ajuda Google a mostrar-vos amb "rich results": FAQ desplegable, logo, xarxes socials, etc.
+-->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Studex Consulting",
+  "alternateName": "Studex",
+  "url": "https://studexconsulting.eu/",
+  "logo": "https://studexconsulting.eu/assets/ITER2.png",
+  "description": "Asesoría académica personalizada para estudiar en los Países Bajos, gestionada por ex-estudiantes. By students, for students.",
+  "sameAs": [
+    "https://www.instagram.com/studexconsulting",
+    "https://www.tiktok.com/@studexconsulting",
+    "https://wa.me/message/XNS5ZW5F5BIFM1"
+  ],
+  "areaServed": {
+    "@type": "Country",
+    "name": "Netherlands"
+  },
+  "knowsAbout": [
+    "Estudiar en Países Bajos",
+    "Becas DUO",
+    "Huurtoeslag",
+    "Zorgtoeslag",
+    "Admisión universitaria en Holanda",
+    "Vivienda para estudiantes en Países Bajos"
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Asesoría de admisión universitaria",
+  "provider": {
+    "@type": "Organization",
+    "name": "Studex Consulting",
+    "url": "https://studexconsulting.eu/"
+  },
+  "areaServed": "ES",
+  "audience": {
+    "@type": "Audience",
+    "audienceType": "Estudiantes de bachillerato y universidad"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Servicios de Studex Consulting",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Análisis de perfil académico" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Redacción de carta de motivación" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Selección de universidad" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Gestión de becas y ayudas (DUO, huurtoeslag, zorgtoeslag)" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Búsqueda de vivienda en Países Bajos" } }
+    ]
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuándo debo empezar el proceso para estudiar en Países Bajos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Entre 9 y 12 meses antes del inicio del curso. La mayoría de universidades neerlandesas cierran sus plazos entre enero y mayo para programas que comienzan en septiembre."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿La asesoría de Studex Consulting tiene algún coste?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La primera consulta es gratuita para evaluar tu perfil. Después se explica exactamente qué incluye cada plan antes de decidir nada."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Trabajáis con todas las universidades neerlandesas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Se cubren las principales universidades de investigación y de ciencias aplicadas, incluyendo programas en inglés y en neerlandés en las ocho ciudades universitarias del país."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Studex Consulting ayuda también con el alojamiento?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, se orienta sobre plataformas, estrategia, plazos y presupuesto por ciudad para el mercado de alquiler holandés."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Studex Consulting es una entidad oficial de las universidades neerlandesas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Studex Consulting es un servicio de asesoramiento independiente formado por ex-estudiantes, sin asociación oficial con ninguna universidad neerlandesa."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
