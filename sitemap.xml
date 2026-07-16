@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- HOME (ES por defecto) -->
+  <url>
+    <loc>https://studexconsulting.eu/</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://studexconsulting.eu/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://studexconsulting.eu/en.html" />
+    <xhtml:link rel="alternate" hreflang="ca" href="https://studexconsulting.eu/ca.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://studexconsulting.eu/" />
+  </url>
+
+  <url>
+    <loc>https://studexconsulting.eu/index.html</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://studexconsulting.eu/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://studexconsulting.eu/en.html" />
+    <xhtml:link rel="alternate" hreflang="ca" href="https://studexconsulting.eu/ca.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://studexconsulting.eu/" />
+  </url>
+
+  <url>
+    <loc>https://studexconsulting.eu/en.html</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://studexconsulting.eu/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://studexconsulting.eu/en.html" />
+    <xhtml:link rel="alternate" hreflang="ca" href="https://studexconsulting.eu/ca.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://studexconsulting.eu/" />
+  </url>
+
+  <url>
+    <loc>https://studexconsulting.eu/ca.html</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://studexconsulting.eu/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://studexconsulting.eu/en.html" />
+    <xhtml:link rel="alternate" hreflang="ca" href="https://studexconsulting.eu/ca.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://studexconsulting.eu/" />
+  </url>
+
+  <!-- DESTINOS -->
+  <url>
+    <loc>https://studexconsulting.eu/destinos.html</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- BLOG -->
+  <url>
+    <loc>https://studexconsulting.eu/blog.html</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- LEGAL -->
+  <url>
+    <loc>https://studexconsulting.eu/aviso-legal.html</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+  </url>
+
+  <url>
+    <loc>https://studexconsulting.eu/privacidad.html</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+  </url>
+
+  <url>
+    <loc>https://studexconsulting.eu/cookies.html</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+  </url>
+
+</urlset>

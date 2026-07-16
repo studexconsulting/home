@@ -1,0 +1,11 @@
+# robots.txt — studexconsulting.eu
+# Permet rastreig complet a tots els motors de cerca (Google, Bing, DuckDuckGo, etc.)
+
+User-agent: *
+Allow: /
+
+# Evita indexar paràmetres de tracking (utm_, fbclid, etc.) com a URLs duplicades
+Disallow: /*?utm_
+Disallow: /*?fbclid
+
+Sitemap: https://studexconsulting.eu/sitemap.xml
