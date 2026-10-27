@@ -1,598 +1,530 @@
 <!DOCTYPE html>
 <html lang="ca">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Destinacions | Studex Consulting</title>
-<meta name="description" content="Coneix les millors universitats dels Països Baixos: Amsterdam, Delft, Rotterdam, Leiden, Utrecht, Groningen, Maastricht i la Haia. Studex t'ajuda a triar la teva.">
-<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
-<link rel="icon" href="assets/favicon_io/favicon.ico">
-<meta name="theme-color" content="#0D2440">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Universitats a Holanda: on estudiar als Països Baixos | Studex</title>
+<meta name="description" content="Guia de les principals universitats d'Holanda: UvA, TU Delft, Erasmus, Leiden, Utrecht, Groningen, Maastricht i les hogescholen. Què destaca de cada una i com és la seva ciutat.">
+<link rel="canonical" href="https://studexconsulting.eu/ca-destinos.html">
+<link rel="alternate" hreflang="es" href="https://studexconsulting.eu/destinos.html">
+<link rel="alternate" hreflang="ca" href="https://studexconsulting.eu/ca-destinos.html">
+<link rel="alternate" hreflang="en" href="https://studexconsulting.eu/en-destinos.html">
+<link rel="alternate" hreflang="x-default" href="https://studexconsulting.eu/destinos.html">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#172E50">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Studex Consulting">
+<meta property="og:title" content="Universitats a Holanda: on estudiar als Països Baixos">
+<meta property="og:description" content="Les principals universitats i hogescholen dels Països Baixos, ciutat a ciutat.">
+<meta property="og:url" content="https://studexconsulting.eu/ca-destinos.html">
+<meta property="og:image" content="https://studexconsulting.eu/assets/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="ca_ES">
+<meta name="twitter:card" content="summary_large_image">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link rel="stylesheet" href="style.css">
-<style>
-/* ---- destinos extras ---- */
-.page-hero {
-  background: linear-gradient(160deg, var(--night) 0%, var(--navy) 100%);
-  padding: 8rem 5% 5rem;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-.page-hero::before {
-  content: '';
-  position: absolute; inset: 0;
-  background: radial-gradient(ellipse 80% 60% at 50% 120%, rgba(63,169,194,.15), transparent);
-}
-.page-hero-inner { position: relative; z-index: 1; max-width: 680px; margin: 0 auto; }
-.page-hero h1 { color: var(--white); font-size: clamp(2.4rem, 5vw, 3.8rem); margin-bottom: 1rem; }
-.page-hero h1 em { color: var(--teal); }
-.page-hero p { color: rgba(255,255,255,.75); font-size: 1.1rem; max-width: 540px; margin: 0 auto; }
-.filters {
-  display: flex; gap: .7rem; justify-content: center; flex-wrap: wrap;
-  padding: 2.5rem 5% 0;
-}
-.filter-btn {
-  padding: .55rem 1.4rem; border-radius: var(--r-p);
-  border: 1.5px solid var(--line); background: var(--white);
-  font-size: .88rem; font-weight: 600; color: var(--muted);
-  cursor: pointer; transition: background .2s, color .2s, border-color .2s;
-}
-.filter-btn:hover, .filter-btn.active {
-  background: var(--navy); color: var(--white); border-color: var(--navy);
-}
-.uni-full-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-  gap: 2rem;
-  margin-top: 3rem;
-}
-.uni-full-card {
-  border-radius: var(--r-l);
-  border: 1px solid var(--line);
-  background: var(--white);
-  overflow: hidden;
-  transition: transform .35s var(--spring), box-shadow .35s, border-color .35s;
-}
-.uni-full-card:hover { transform: translateY(-7px); box-shadow: var(--sh-m); border-color: var(--teal); }
-.uni-card-photo {
-  height: 200px; overflow: hidden; position: relative;
-  background: var(--navy);
-}
-.uni-card-photo img {
-  width: 100%; height: 100%; object-fit: cover;
-  transition: transform .6s var(--spring);
-  display: block;
-}
-.uni-full-card:hover .uni-card-photo img { transform: scale(1.07); }
-.uni-card-type {
-  position: absolute; top: 1rem; right: 1rem;
-  font-size: .7rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
-  background: rgba(13,36,64,.75); color: var(--white);
-  padding: .3rem .8rem; border-radius: var(--r-p);
-  backdrop-filter: blur(6px);
-}
-.uni-card-body { padding: 1.8rem; }
-.uni-card-city {
-  font-size: .72rem; font-weight: 700; letter-spacing: .12em;
-  text-transform: uppercase; color: var(--teal); display: block; margin-bottom: .5rem;
-}
-.uni-card-body h3 { font-size: 1.2rem; margin-bottom: .4rem; }
-.uni-abbr-badge {
-  display: inline-block; font-size: .75rem; font-weight: 700;
-  color: var(--cobalt); background: rgba(31,92,153,.1);
-  padding: .2rem .7rem; border-radius: var(--r-p); margin-bottom: .8rem;
-  font-family: 'Inter', sans-serif;
-}
-.uni-card-body p { font-size: .93rem; margin-bottom: 1.1rem; }
-.uni-tags { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 1.1rem; }
-.uni-tag {
-  font-size: .74rem; font-weight: 600; color: var(--muted);
-  background: var(--off); padding: .3rem .75rem; border-radius: var(--r-p);
-  border: 1px solid var(--line);
-}
-.uni-vibe {
-  display: flex; align-items: flex-start; gap: .55rem;
-  font-size: .85rem; color: var(--muted); line-height: 1.45;
-  background: var(--off); border: 1px solid var(--line);
-  border-radius: var(--r-p); padding: .7rem .85rem;
-  margin-bottom: 1.3rem;
-}
-.uni-vibe i { color: var(--teal); margin-top: .15rem; }
-.uni-card-cta {
-  display: inline-flex; align-items: center; gap: .45rem;
-  font-size: .88rem; font-weight: 600; color: var(--cobalt);
-  transition: gap .2s;
-}
-.uni-full-card:hover .uni-card-cta { gap: .7rem; }
-.compare-strip {
-  background: var(--night); border-radius: var(--r-l);
-  padding: 2.5rem; margin-top: 4rem;
-  display: flex; align-items: center; justify-content: space-between; gap: 2rem;
-  flex-wrap: wrap;
-}
-.compare-strip h3 { color: var(--white); font-size: 1.4rem; }
-.compare-strip p { color: rgba(255,255,255,.65); margin-top: .4rem; }
-@media (max-width: 640px) {
-  .uni-full-grid { grid-template-columns: 1fr; }
-}
+<link rel="preconnect" href="https://images.unsplash.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap">
+<link rel="stylesheet" href="assets/css/studex.css">
+<script>document.documentElement.classList.add('js');setTimeout(function(){var d=document.documentElement;if(!d.classList.contains('js-ready'))d.classList.add('js-fallback')},2500)</script>
 
-/* ---- logo fix: bigger mark, no wordmark ---- */
-.logo-name { display: none; }
-.logo-img {
-  height: 54px;
-  width: auto;
-  display: block;
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Inici", "item": "https://studexconsulting.eu/ca.html" },
+        { "@type": "ListItem", "position": 2, "name": "Universitats a Holanda", "item": "https://studexconsulting.eu/ca-destinos.html" }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "name": "Universitats als Països Baixos",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "item": { "@type": "CollegeOrUniversity", "name": "Universiteit van Amsterdam", "address": { "@type": "PostalAddress", "addressLocality": "Amsterdam", "addressCountry": "NL" } } },
+        { "@type": "ListItem", "position": 2, "item": { "@type": "CollegeOrUniversity", "name": "Vrije Universiteit Amsterdam", "address": { "@type": "PostalAddress", "addressLocality": "Amsterdam", "addressCountry": "NL" } } },
+        { "@type": "ListItem", "position": 3, "item": { "@type": "CollegeOrUniversity", "name": "TU Delft", "address": { "@type": "PostalAddress", "addressLocality": "Delft", "addressCountry": "NL" } } },
+        { "@type": "ListItem", "position": 4, "item": { "@type": "CollegeOrUniversity", "name": "Erasmus University Rotterdam", "address": { "@type": "PostalAddress", "addressLocality": "Rotterdam", "addressCountry": "NL" } } },
+        { "@type": "ListItem", "position": 5, "item": { "@type": "CollegeOrUniversity", "name": "Universiteit Leiden", "address": { "@type": "PostalAddress", "addressLocality": "Leiden", "addressCountry": "NL" } } },
+        { "@type": "ListItem", "position": 6, "item": { "@type": "CollegeOrUniversity", "name": "Universiteit Utrecht", "address": { "@type": "PostalAddress", "addressLocality": "Utrecht", "addressCountry": "NL" } } },
+        { "@type": "ListItem", "position": 7, "item": { "@type": "CollegeOrUniversity", "name": "Rijksuniversiteit Groningen", "address": { "@type": "PostalAddress", "addressLocality": "Groningen", "addressCountry": "NL" } } },
+        { "@type": "ListItem", "position": 8, "item": { "@type": "CollegeOrUniversity", "name": "Maastricht University", "address": { "@type": "PostalAddress", "addressLocality": "Maastricht", "addressCountry": "NL" } } },
+        { "@type": "ListItem", "position": 9, "item": { "@type": "CollegeOrUniversity", "name": "The Hague University of Applied Sciences", "address": { "@type": "PostalAddress", "addressLocality": "La Haia", "addressCountry": "NL" } } },
+        { "@type": "ListItem", "position": 10, "item": { "@type": "CollegeOrUniversity", "name": "Inholland University of Applied Sciences", "address": { "@type": "PostalAddress", "addressCountry": "NL" } } },
+        { "@type": "ListItem", "position": 11, "item": { "@type": "CollegeOrUniversity", "name": "Rotterdam University of Applied Sciences", "address": { "@type": "PostalAddress", "addressLocality": "Rotterdam", "addressCountry": "NL" } } },
+        { "@type": "ListItem", "position": 12, "item": { "@type": "CollegeOrUniversity", "name": "Amsterdam University of Applied Sciences", "address": { "@type": "PostalAddress", "addressLocality": "Amsterdam", "addressCountry": "NL" } } },
+        { "@type": "ListItem", "position": 13, "item": { "@type": "CollegeOrUniversity", "name": "Hanze University of Applied Sciences", "address": { "@type": "PostalAddress", "addressLocality": "Groningen", "addressCountry": "NL" } } },
+        { "@type": "ListItem", "position": 14, "item": { "@type": "CollegeOrUniversity", "name": "HU University of Applied Sciences Utrecht", "address": { "@type": "PostalAddress", "addressLocality": "Utrecht", "addressCountry": "NL" } } }
+      ]
+    }
+  ]
 }
-.logo { display: flex; align-items: center; }
-</style>
+</script>
 </head>
 <body>
-<div class="scroll-bar" id="scrollBar"></div>
-<nav class="nav" id="nav">
-  <a href="index.html" class="logo">
-    <img src="assets/ITER2.png" alt="Studex" class="logo-img" loading="lazy">
-  </a>
-  <div class="nav-center">
-    <a href="index.html" class="nl">Inici</a>
-    <a href="ca-destinos.html" class="nl active">Destinacions</a>
-    <a href="ca-blog.html" class="nl">Blog</a>
-  </div>
-  <div class="nav-end">
-    <div class="langs">
-      <a href="destinos.html" class="lg">ES</a>
-      <a href="en-destinos.html" class="lg">EN</a>
-      <a href="ca-destinos.html" class="lg active">CA</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-arrow" viewBox="0 0 170 171"><path d="M0 0H170V171H136V34H0Z"/><path d="M8.5 137.5 146 0H170V23L32 161Z"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/></symbol>
+  <symbol id="i-tt" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 7h18M3 12h18M3 17h18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+</svg>
+
+<a class="skip-link" href="#contingut">Salta al contingut</a>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="ca.html" aria-label="Studex Consulting, inici">
+      <img src="assets/img/studex-logo.png" alt="Studex academic consulting" width="480" height="145">
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <a href="ca.html#serveis">Serveis</a>
+      <a href="ca.html#proces">Com treballem</a>
+      <a href="ca.html#ajudes">Matrícula i ajudes</a>
+      <a href="ca-destinos.html" aria-current="page">Universitats</a>
+      <a href="ca-blog.html">Guies</a>
+    </nav>
+    <div class="lang" aria-label="Idioma">
+      <a href="destinos.html" hreflang="es" lang="es">ES</a>
+      <a href="ca-destinos.html" hreflang="ca" lang="ca" aria-current="true">CA</a>
+      <a href="en-destinos.html" hreflang="en" lang="en">EN</a>
     </div>
-    <a href="index.html#contact" class="pill-btn">Contacte</a>
-    <button class="hamburger" id="hamburger" aria-label="Menú"><i class="fas fa-bars"></i></button>
-  </div>
-</nav>
-<div class="mobile-menu" id="mobileMenu">
-  <a href="index.html">Inici</a>
-  <a href="ca-destinos.html">Destinacions</a>
-  <a href="ca-blog.html">Blog</a>
-  <a href="index.html#contact">Contacte</a>
-  <div class="mob-langs">
-    <a href="destinos.html">ES</a>
-    <a href="en-destinos.html">EN</a>
-    <a href="ca-destinos.html" class="active">CA</a>
-  </div>
-</div>
-<!-- PAGE HERO -->
-<header class="page-hero">
-  <div class="page-hero-inner">
-    <span class="tag light up">On estudiar</span>
-    <h1 class="up">Les universitats<br>que <em>t'esperen.</em></h1>
-    <p class="up">Tot el que necessites saber sobre les principals universitats dels Països Baixos —de recerca i de ciències aplicades—, perquè puguis triar amb criteri.</p>
+    <a class="btn btn--sm header-cta" href="ca.html#contacte">Consulta gratuïta</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Obre el menú" data-close="Tanca el menú">
+      <svg class="icon icon-menu" aria-hidden="true"><use href="#i-menu"/></svg>
+      <svg class="icon icon-close" aria-hidden="true"><use href="#i-close"/></svg>
+    </button>
   </div>
 </header>
-<!-- FILTERS -->
-<div class="filters reveal">
-  <button class="filter-btn active" data-filter="all">Totes</button>
-  <button class="filter-btn" data-filter="investigacion">Recerca</button>
-  <button class="filter-btn" data-filter="aplicadas">Ciències aplicades</button>
-  <button class="filter-btn" data-filter="amsterdam">Amsterdam</button>
-  <button class="filter-btn" data-filter="rotterdam">Rotterdam</button>
-  <button class="filter-btn" data-filter="delft">Delft</button>
-  <button class="filter-btn" data-filter="leiden">Leiden</button>
-  <button class="filter-btn" data-filter="utrecht">Utrecht</button>
-  <button class="filter-btn" data-filter="groningen">Groningen</button>
-  <button class="filter-btn" data-filter="maastricht">Maastricht</button>
-  <button class="filter-btn" data-filter="denhaag">La Haia</button>
-</div>
-<!-- UNIVERSITIES GRID -->
-<section class="section">
+
+<nav class="mobile-nav" id="mobile-nav" aria-label="Menú mòbil" aria-hidden="true">
+  <a href="ca.html#serveis">Serveis</a>
+  <a href="ca.html#proces">Com treballem</a>
+  <a href="ca.html#ajudes">Matrícula i ajudes</a>
+  <a href="ca-destinos.html" aria-current="page">Universitats</a>
+  <a href="ca-blog.html">Guies</a>
+  <a href="ca.html#preguntes">Preguntes freqüents</a>
+  <div class="lang">
+    <a href="destinos.html" hreflang="es" lang="es">ES</a>
+    <a href="ca-destinos.html" hreflang="ca" lang="ca" aria-current="true">CA</a>
+    <a href="en-destinos.html" hreflang="en" lang="en">EN</a>
+  </div>
+  <a class="btn btn--block" href="ca.html#contacte">Sol·licita una consulta gratuïta</a>
+</nav>
+
+<main id="contingut">
+
+  <section class="page-hero" aria-labelledby="page-title">
+    <div class="container">
+      <ol class="breadcrumb">
+        <li><a href="ca.html">Inici</a></li>
+        <li aria-current="page">Universitats</li>
+      </ol>
+      <div class="page-hero-grid">
+        <div>
+          <p class="eyebrow" data-intro style="--d:.05s">Universitats a Holanda</p>
+          <h1 id="page-title" data-split>On estudiar als Països Baixos</h1>
+          <p class="lead" data-intro style="--d:.45s">Una selecció de 14 universitats i hogescholen, amb el que destaca de cada una i com és la vida a la seva ciutat. Si no saps quina encaixa amb tu, ho mirem junts a la consulta gratuïta.</p>
+        </div>
+        <dl class="page-hero-facts" data-intro style="--d:.6s">
+          <div><dt>14</dt><dd>universitats</dd></div>
+          <div><dt>8</dt><dd>ciutats</dd></div>
+          <div><dt>2</dt><dd>tipus: WO i HBO</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- WO / HBO -->
+  <section class="section section--white" aria-labelledby="types-title" style="padding-block: clamp(56px, 7vw, 96px);">
+    <div class="container">
+      <header class="sh" data-reveal>
+        <p class="sh-index"><span class="n">01</span> Abans de triar</p>
+        <h2 class="sh-title" id="types-title">Universitat de recerca o de ciències aplicades.</h2>
+        <p class="sh-intro">Als Països Baixos hi ha dos tipus d'universitat. Totes dues donen títols oficials reconeguts a tota Europa, però l'enfocament és diferent.</p>
+      </header>
+      <div class="types" data-stagger>
+        <article class="type-card">
+          <span class="eyebrow">WO · Wetenschappelijk onderwijs</span>
+          <h3>Universitat de recerca</h3>
+          <p>Formació acadèmica, amb molt pes de la teoria i la recerca. És el camí natural si després vols fer un màster de recerca o un doctorat.</p>
+          <dl>
+            <dt>Grau</dt><dd>3 anys (180 ECTS)</dd>
+            <dt>Enfocament</dt><dd>Acadèmic i investigador</dd>
+            <dt>Després</dt><dd>Accés directe a màsters WO</dd>
+          </dl>
+        </article>
+        <article class="type-card">
+          <span class="eyebrow">HBO · Hoger beroepsonderwijs</span>
+          <h3>Universitat de ciències aplicades</h3>
+          <p>Les hogescholen ofereixen una formació pràctica i orientada a la professió, amb pràctiques en empresa i projectes reals dins del pla d'estudis.</p>
+          <dl>
+            <dt>Grau</dt><dd>4 anys (240 ECTS)</dd>
+            <dt>Enfocament</dt><dd>Pràctic i professional</dd>
+            <dt>Després</dt><dd>Màster WO, sovint amb un curs pont (pre-master)</dd>
+          </dl>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- LLISTAT -->
+  <section class="section section--tight-top" aria-labelledby="list-title">
+    <div class="container">
+      <h2 class="visually-hidden" id="list-title">Llistat d'universitats</h2>
+      <div class="filters" data-filters>
+        <div class="filter-row" data-filter-group="type" role="group" aria-label="Filtra per tipus">
+          <span>Tipus</span>
+          <button class="chip" type="button" data-filter="all" aria-pressed="true">Totes</button>
+          <button class="chip" type="button" data-filter="wo" aria-pressed="false">Recerca (WO)</button>
+          <button class="chip" type="button" data-filter="hbo" aria-pressed="false">Ciències aplicades (HBO)</button>
+        </div>
+        <div class="filter-row" data-filter-group="city" role="group" aria-label="Filtra per ciutat">
+          <span>Ciutat</span>
+          <button class="chip" type="button" data-filter="all" aria-pressed="true">Totes</button>
+          <button class="chip" type="button" data-filter="amsterdam" aria-pressed="false">Amsterdam</button>
+          <button class="chip" type="button" data-filter="rotterdam" aria-pressed="false">Rotterdam</button>
+          <button class="chip" type="button" data-filter="delft" aria-pressed="false">Delft</button>
+          <button class="chip" type="button" data-filter="leiden" aria-pressed="false">Leiden</button>
+          <button class="chip" type="button" data-filter="denhaag" aria-pressed="false">La Haia</button>
+          <button class="chip" type="button" data-filter="utrecht" aria-pressed="false">Utrecht</button>
+          <button class="chip" type="button" data-filter="groningen" aria-pressed="false">Groningen</button>
+          <button class="chip" type="button" data-filter="maastricht" aria-pressed="false">Maastricht</button>
+        </div>
+        <p class="filter-count" data-count-label data-one="{n} universitat" data-many="{n} universitats" aria-live="polite">14 universitats</p>
+      </div>
+
+      <div class="uni-group" data-group="wo">
+        <div class="uni-group-head">
+          <h2>Universitats de recerca</h2>
+          <p>Vuit de les universitats de recerca més conegudes del país.</p>
+        </div>
+        <div class="uni-grid" data-stagger>
+
+          <article class="uni-card" id="uva" data-uni data-type="wo" data-city="amsterdam">
+            <figure class="uni-card-media">
+              <img src="https://images.unsplash.com/photo-1754835143820-bcf20e2e1a35?auto=format&amp;fit=crop&amp;w=800&amp;h=450&amp;q=75"
+                   srcset="https://images.unsplash.com/photo-1754835143820-bcf20e2e1a35?auto=format&amp;fit=crop&amp;w=560&amp;h=315&amp;q=75 560w, https://images.unsplash.com/photo-1754835143820-bcf20e2e1a35?auto=format&amp;fit=crop&amp;w=800&amp;h=450&amp;q=75 800w, https://images.unsplash.com/photo-1754835143820-bcf20e2e1a35?auto=format&amp;fit=crop&amp;w=1100&amp;h=619&amp;q=75 1100w"
+                   sizes="(max-width: 640px) 100vw, 50vw" width="800" height="450" loading="lazy"
+                   alt="Cases amb façanes esglaonades al costat d'un canal d'Amsterdam">
+            </figure>
+            <div class="uni-card-body">
+              <p class="uni-meta"><span>Amsterdam</span><span>Recerca</span></p>
+              <h3>Universiteit van Amsterdam <abbr title="Universiteit van Amsterdam">UvA</abbr></h3>
+              <p>Una de les universitats més reconegudes d'Europa, amb una àmplia oferta de graus i màsters en anglès i facultats repartides pel centre històric de la ciutat.</p>
+              <p class="uni-strengths"><strong>Destaca en</strong> Psicologia, Comunicació, Economia, Dret i Ciències Socials</p>
+              <p class="uni-vibe"><strong>La ciutat</strong> Vida social tot l'any, festivals i una comunitat internacional enorme. Ideal si vols ser al centre de tot; el lloguer és dels més cars del país.</p>
+              <a class="link-arrow" href="ca.html#contacte">Consulta sobre la UvA <svg class="icon icon-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </div>
+          </article>
+
+          <article class="uni-card" id="vu" data-uni data-type="wo" data-city="amsterdam">
+            <figure class="uni-card-media">
+              <img src="https://images.unsplash.com/photo-1742054294211-4036a4bfa4ef?auto=format&amp;fit=crop&amp;w=800&amp;h=450&amp;q=75"
+                   srcset="https://images.unsplash.com/photo-1742054294211-4036a4bfa4ef?auto=format&amp;fit=crop&amp;w=560&amp;h=315&amp;q=75 560w, https://images.unsplash.com/photo-1742054294211-4036a4bfa4ef?auto=format&amp;fit=crop&amp;w=800&amp;h=450&amp;q=75 800w, https://images.unsplash.com/photo-1742054294211-4036a4bfa4ef?auto=format&amp;fit=crop&amp;w=1100&amp;h=619&amp;q=75 1100w"
+                   sizes="(max-width: 640px) 100vw, 50vw" width="800" height="450" loading="lazy"
+                   alt="Cases de canal d'Amsterdam reflectides a l'aigua">
+            </figure>
+            <div class="uni-card-body">
+              <p class="uni-meta"><span>Amsterdam</span><span>Recerca</span></p>
+              <h3>Vrije Universiteit Amsterdam <abbr title="Vrije Universiteit">VU</abbr></h3>
+              <p>Universitat de forta orientació internacional, amb un campus modern al sud d'Amsterdam, al costat del districte financer de Zuidas.</p>
+              <p class="uni-strengths"><strong>Destaca en</strong> Empresa, Psicologia, Medicina i Filosofia</p>
+              <p class="uni-vibe"><strong>La ciutat</strong> Campus propi i un ambient una mica més tranquil que el de la UvA, a 15 minuts en bici dels canals i les terrasses del centre.</p>
+              <a class="link-arrow" href="ca.html#contacte">Consulta sobre la VU <svg class="icon icon-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </div>
+          </article>
+
+          <article class="uni-card" id="tud" data-uni data-type="wo" data-city="delft">
+            <figure class="uni-card-media">
+              <img src="https://images.unsplash.com/photo-1692897011326-5dfe88c1c373?auto=format&amp;fit=crop&amp;w=800&amp;h=450&amp;q=75"
+                   srcset="https://images.unsplash.com/photo-1692897011326-5dfe88c1c373?auto=format&amp;fit=crop&amp;w=560&amp;h=315&amp;q=75 560w, https://images.unsplash.com/photo-1692897011326-5dfe88c1c373?auto=format&amp;fit=crop&amp;w=800&amp;h=450&amp;q=75 800w, https://images.unsplash.com/photo-1692897011326-5dfe88c1c373?auto=format&amp;fit=crop&amp;w=1100&amp;h=619&amp;q=75 1100w"
+                   sizes="(max-width: 640px) 100vw, 50vw" width="800" height="450" loading="lazy"
+                   alt="Edifici de la TU Delft amb el logotip de la universitat">
+            </figure>
+            <div class="uni-card-body">
+              <p class="uni-meta"><span>Delft</span><span>Recerca · Tècnica</span></p>
+              <h3>TU Delft <abbr title="Technische Universiteit Delft">TUD</abbr></h3>
+              <p>Una de les universitats tècniques més prestigioses del món, referent en enginyeria, arquitectura i disseny, amb instal·lacions de primer nivell.</p>
+              <p class="uni-strengths"><strong>Destaca en</strong> Enginyeria, Arquitectura, Disseny Industrial, Aeroespacial i Informàtica</p>
+              <p class="uni-vibe"><strong>La ciutat</strong> Petita, tranquil·la i amb més bicis que gent. La vida social gira entorn del campus i les associacions, a 15 minuts en tren de Rotterdam i de la Haia.</p>
+              <a class="link-arrow" href="ca.html#contacte">Consulta sobre TU Delft <svg class="icon icon-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </div>
+          </article>
+
+          <article class="uni-card" id="eur" data-uni data-type="wo" data-city="rotterdam">
+            <figure class="uni-card-media">
+              <img src="https://images.unsplash.com/photo-1597224646250-fadbb825dcf8?auto=format&amp;fit=crop&amp;w=800&amp;h=450&amp;q=75"
+                   srcset="https://images.unsplash.com/photo-1597224646250-fadbb825dcf8?auto=format&amp;fit=crop&amp;w=560&amp;h=315&amp;q=75 560w, https://images.unsplash.com/photo-1597224646250-fadbb825dcf8?auto=format&amp;fit=crop&amp;w=800&amp;h=450&amp;q=75 800w, https://images.unsplash.com/photo-1597224646250-fadbb825dcf8?auto=format&amp;fit=crop&amp;w=1100&amp;h=619&amp;q=75 1100w"
+                   sizes="(max-width: 640px) 100vw, 50vw" width="800" height="450" loading="lazy"
+                   alt="Gratacels de Rotterdam al costat del riu Mosa">
+            </figure>
+            <div class="uni-card-body">
+              <p class="uni-meta"><span>Rotterdam</span><span>Recerca</span></p>
+              <h3>Erasmus University Rotterdam <abbr title="Erasmus Universiteit Rotterdam">EUR</abbr></h3>
+              <p>Referent internacional en economia i empresa: l'Erasmus School of Economics i la Rotterdam School of Management són conegudes arreu del món.</p>
+              <p class="uni-strengths"><strong>Destaca en</strong> Economia, Business, Dret i Medicina</p>
+              <p class="uni-vibe"><strong>La ciutat</strong> Gratacels, arquitectura atrevida i una escena de bars i clubs que no té res a envejar a Amsterdam, amb lloguers una mica més assequibles.</p>
+              <a class="link-arrow" href="ca.html#contacte">Consulta sobre Erasmus <svg class="icon icon-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </div>
+          </article>
+
+          <article class="uni-card" id="lei" data-uni data-type="wo" data-city="leiden denhaag">
+            <figure class="uni-card-media">
+              <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Leiden_-_Rapenburg%2C_Academiegebouw_en_Nonnenbrug.jpg/960px-Leiden_-_Rapenburg%2C_Academiegebouw_en_Nonnenbrug.jpg"
+                   width="960" height="640" loading="lazy"
+                   alt="El canal Rapenburg de Leiden amb l'Academiegebouw, seu històrica de la universitat">
+            </figure>
+            <div class="uni-card-body">
+              <p class="uni-meta"><span>Leiden · La Haia</span><span>Recerca</span></p>
+              <h3>Universiteit Leiden <abbr title="Universiteit Leiden">UL</abbr></h3>
+              <p>La universitat més antiga dels Països Baixos, fundada el 1575. Reconeguda en Dret, Humanitats i Ciències, amb un segon campus a la Haia.</p>
+              <p class="uni-strengths"><strong>Destaca en</strong> Dret, Humanitats, Relacions Internacionals, Arqueologia i Ciències</p>
+              <p class="uni-vibe"><strong>La ciutat</strong> Canals, cases del segle XVII i facultats repartides pel centre. Tranquil·la entre setmana i molt viva gràcies a les associacions d'estudiants.</p>
+              <a class="link-arrow" href="ca.html#contacte">Consulta sobre Leiden <svg class="icon icon-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </div>
+          </article>
+
+          <article class="uni-card" id="uu" data-uni data-type="wo" data-city="utrecht">
+            <figure class="uni-card-media">
+              <img src="https://images.unsplash.com/photo-1744233291331-60d717f651f0?auto=format&amp;fit=crop&amp;w=800&amp;h=450&amp;q=75"
+                   srcset="https://images.unsplash.com/photo-1744233291331-60d717f651f0?auto=format&amp;fit=crop&amp;w=560&amp;h=315&amp;q=75 560w, https://images.unsplash.com/photo-1744233291331-60d717f651f0?auto=format&amp;fit=crop&amp;w=800&amp;h=450&amp;q=75 800w, https://images.unsplash.com/photo-1744233291331-60d717f651f0?auto=format&amp;fit=crop&amp;w=1100&amp;h=619&amp;q=75 1100w"
+                   sizes="(max-width: 640px) 100vw, 50vw" width="800" height="450" loading="lazy"
+                   alt="Canal d'Utrecht al vespre, amb terrasses a la vora de l'aigua">
+            </figure>
+            <div class="uni-card-body">
+              <p class="uni-meta"><span>Utrecht</span><span>Recerca</span></p>
+              <h3>Universiteit Utrecht <abbr title="Universiteit Utrecht">UU</abbr></h3>
+              <p>Una de les grans universitats de recerca del país, amb facultats al centre històric i un gran campus científic, l'Utrecht Science Park.</p>
+              <p class="uni-strengths"><strong>Destaca en</strong> Medicina, Veterinària, Geociències, Ciències Naturals i Psicologia</p>
+              <p class="uni-vibe"><strong>La ciutat</strong> Una de les ciutats amb més proporció d'estudiants. Canals de dos nivells plens de terrasses, al centre del país i amb ambient jove tot l'any.</p>
+              <a class="link-arrow" href="ca.html#contacte">Consulta sobre Utrecht <svg class="icon icon-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </div>
+          </article>
+
+          <article class="uni-card" id="rug" data-uni data-type="wo" data-city="groningen">
+            <figure class="uni-card-media">
+              <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/20100523_Grote_Markt_en_Martinitoren_Groningen_NL.jpg/960px-20100523_Grote_Markt_en_Martinitoren_Groningen_NL.jpg"
+                   width="960" height="561" loading="lazy"
+                   alt="La Grote Markt de Groningen amb la torre Martinitoren">
+            </figure>
+            <div class="uni-card-body">
+              <p class="uni-meta"><span>Groningen</span><span>Recerca</span></p>
+              <h3>Rijksuniversiteit Groningen <abbr title="Rijksuniversiteit Groningen">RUG</abbr></h3>
+              <p>Una de les universitats més internacionals del país, amb centenars de programes en anglès i un cost de vida més baix que a l'oest.</p>
+              <p class="uni-strengths"><strong>Destaca en</strong> Economia, Psicologia, Farmàcia i Ciències</p>
+              <p class="uni-vibe"><strong>La ciutat</strong> La ciutat estudiantil per excel·lència: aproximadament un de cada quatre habitants és estudiant. Vida nocturna intensa i lloguers més barats que a la Randstad.</p>
+              <a class="link-arrow" href="ca.html#contacte">Consulta sobre Groningen <svg class="icon icon-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </div>
+          </article>
+
+          <article class="uni-card" id="um" data-uni data-type="wo" data-city="maastricht">
+            <figure class="uni-card-media">
+              <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/Maastricht%2C_Maas%2C_Sint-Servaasbrug.jpg/960px-Maastricht%2C_Maas%2C_Sint-Servaasbrug.jpg"
+                   width="960" height="640" loading="lazy"
+                   alt="El pont de Sant Servaci sobre el riu Mosa a Maastricht">
+            </figure>
+            <div class="uni-card-body">
+              <p class="uni-meta"><span>Maastricht</span><span>Recerca · PBL</span></p>
+              <h3>Maastricht University <abbr title="Universiteit Maastricht">UM</abbr></h3>
+              <p>La universitat més internacional dels Països Baixos: més de la meitat dels seus estudiants venen de l'estranger. Treballa amb l'aprenentatge basat en problemes (PBL), en grups reduïts.</p>
+              <p class="uni-strengths"><strong>Destaca en</strong> Dret Europeu, Business, Medicina i Arts i Cultura</p>
+              <p class="uni-vibe"><strong>La ciutat</strong> Carrers medievals, terrasses i a un pas de Bèlgica i Alemanya. Un ritme més pausat que a la Randstad, ideal si busques una cosa diferent.</p>
+              <a class="link-arrow" href="ca.html#contacte">Consulta sobre Maastricht <svg class="icon icon-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <div class="uni-group" data-group="hbo">
+        <div class="uni-group-head">
+          <h2>Universitats de ciències aplicades</h2>
+          <p>Hogescholen amb formació pràctica i pràctiques en empresa des dels primers cursos.</p>
+        </div>
+        <div class="uni-grid uni-grid--compact" data-stagger>
+
+          <article class="uni-card uni-card--compact" id="hva" data-uni data-type="hbo" data-city="amsterdam">
+            <div class="uni-card-body">
+              <p class="uni-meta"><span>Amsterdam</span><span>Ciències aplicades</span></p>
+              <h3>Amsterdam University of Applied Sciences <abbr title="Hogeschool van Amsterdam">HvA</abbr></h3>
+              <p>Una de les hogescholen més grans del país, amb estrets vincles amb les empreses d'Amsterdam.</p>
+              <p class="uni-strengths"><strong>Destaca en</strong> Negocis, Educació, Salut i Tecnologia</p>
+              <a class="link-arrow" href="ca.html#contacte">Consulta sobre la HvA <svg class="icon icon-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </div>
+          </article>
+
+          <article class="uni-card uni-card--compact" id="ruas" data-uni data-type="hbo" data-city="rotterdam">
+            <div class="uni-card-body">
+              <p class="uni-meta"><span>Rotterdam</span><span>Ciències aplicades</span></p>
+              <h3>Rotterdam University of Applied Sciences <abbr title="Hogeschool Rotterdam">RUAS</abbr></h3>
+              <p>La gran hogeschool de Rotterdam, molt connectada amb el port i les empreses de la ciutat, amb projectes reals des del primer any.</p>
+              <p class="uni-strengths"><strong>Destaca en</strong> Enginyeria, Logística, Negocis i Disseny</p>
+              <a class="link-arrow" href="ca.html#contacte">Consulta sobre RUAS <svg class="icon icon-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </div>
+          </article>
+
+          <article class="uni-card uni-card--compact" id="inholland" data-uni data-type="hbo" data-city="rotterdam amsterdam denhaag">
+            <div class="uni-card-body">
+              <p class="uni-meta"><span>Diversos campus</span><span>Ciències aplicades</span></p>
+              <h3>Inholland University of Applied Sciences</h3>
+              <p>Hogeschool amb campus a Rotterdam, Amsterdam, Haarlem, la Haia i altres ciutats, amb programes molt orientats a l'ocupació.</p>
+              <p class="uni-strengths"><strong>Destaca en</strong> Negocis, Comunicació, Infermeria i Màrqueting</p>
+              <a class="link-arrow" href="ca.html#contacte">Consulta sobre Inholland <svg class="icon icon-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </div>
+          </article>
+
+          <article class="uni-card uni-card--compact" id="thuas" data-uni data-type="hbo" data-city="denhaag">
+            <div class="uni-card-body">
+              <p class="uni-meta"><span>La Haia</span><span>Ciències aplicades</span></p>
+              <h3>The Hague University of Applied Sciences <abbr title="De Haagse Hogeschool">THUAS</abbr></h3>
+              <p>Pràctiques integrades al pla d'estudis i programes que aprofiten la presència d'organismes internacionals a la Haia.</p>
+              <p class="uni-strengths"><strong>Destaca en</strong> Relacions Internacionals, Comunicació, Negocis i Ciberseguretat</p>
+              <a class="link-arrow" href="ca.html#contacte">Consulta sobre THUAS <svg class="icon icon-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </div>
+          </article>
+
+          <article class="uni-card uni-card--compact" id="hu" data-uni data-type="hbo" data-city="utrecht">
+            <div class="uni-card-body">
+              <p class="uni-meta"><span>Utrecht</span><span>Ciències aplicades</span></p>
+              <h3>HU University of Applied Sciences Utrecht <abbr title="Hogeschool Utrecht">HU</abbr></h3>
+              <p>Una de les grans hogescholen del país, en una ciutat des de la qual qualsevol altra queda a menys d'una hora en tren.</p>
+              <p class="uni-strengths"><strong>Destaca en</strong> Salut, Tecnologia, Comunicació i Educació</p>
+              <a class="link-arrow" href="ca.html#contacte">Consulta sobre la HU <svg class="icon icon-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </div>
+          </article>
+
+          <article class="uni-card uni-card--compact" id="hanze" data-uni data-type="hbo" data-city="groningen">
+            <div class="uni-card-body">
+              <p class="uni-meta"><span>Groningen</span><span>Ciències aplicades</span></p>
+              <h3>Hanze University of Applied Sciences <abbr title="Hanzehogeschool Groningen">Hanze</abbr></h3>
+              <p>La hogeschool de referència al nord, amb una aposta forta per l'energia sostenible. Molt popular entre estudiants internacionals.</p>
+              <p class="uni-strengths"><strong>Destaca en</strong> Energia, Negocis Internacionals, Salut i Comunicació</p>
+              <a class="link-arrow" href="ca.html#contacte">Consulta sobre Hanze <svg class="icon icon-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <p class="no-results" data-empty hidden>No hi ha universitats amb aquesta combinació de filtres. Prova amb una altra ciutat o tipus.</p>
+    </div>
+  </section>
+
+  <!-- MAPA + CTA -->
+  <section class="section section--white" aria-labelledby="map-title">
+    <div class="container">
+      <header class="sh" data-reveal>
+        <p class="sh-index"><span class="n">02</span> El mapa</p>
+        <h2 class="sh-title" id="map-title">Tot és més a prop del que sembla.</h2>
+        <p class="sh-intro">Entre Amsterdam, Leiden, la Haia, Delft, Rotterdam i Utrecht hi ha menys d'una hora en tren. Groningen i Maastricht queden més lluny, amb un ambient propi i un cost de vida més baix.</p>
+      </header>
+      <div class="unis">
+        <div class="map" role="img" aria-label="Mapa dels Països Baixos amb les ciutats universitàries: Amsterdam, Leiden, la Haia, Delft, Rotterdam, Utrecht, Groningen i Maastricht" data-reveal="map">
+          <img src="assets/img/mapa-nl.svg" alt="" width="480" height="564" loading="lazy">
+          <span class="pin" data-city="amsterdam" style="--x:39.87%;--y:42.01%" aria-hidden="true"><span class="pin-label">Amsterdam</span></span>
+          <span class="pin" data-city="leiden" style="--x:29.93%;--y:49.31%" aria-hidden="true"><span class="pin-label">Leiden</span></span>
+          <span class="pin pin--left" data-city="denhaag" style="--x:25.00%;--y:52.15%" aria-hidden="true"><span class="pin-label">La Haia</span></span>
+          <span class="pin pin--left pin--below" data-city="delft" style="--x:26.43%;--y:54.44%" aria-hidden="true"><span class="pin-label">Delft</span></span>
+          <span class="pin" data-city="rotterdam" style="--x:29.48%;--y:57.57%" aria-hidden="true"><span class="pin-label">Rotterdam</span></span>
+          <span class="pin" data-city="utrecht" style="--x:45.55%;--y:51.70%" aria-hidden="true"><span class="pin-label">Utrecht</span></span>
+          <span class="pin pin--left" data-city="groningen" style="--x:81.68%;--y:12.53%" aria-hidden="true"><span class="pin-label">Groningen</span></span>
+          <span class="pin pin--left" data-city="maastricht" style="--x:59.77%;--y:94.76%" aria-hidden="true"><span class="pin-label">Maastricht</span></span>
+        </div>
+        <div>
+          <ul class="city-list" data-stagger>
+            <li data-city-item="amsterdam"><a href="#uva"><span class="city-name">Amsterdam</span><span class="city-unis">UvA, VU, HvA i Inholland</span><span class="city-type">WO · HBO</span></a></li>
+            <li data-city-item="rotterdam"><a href="#eur"><span class="city-name">Rotterdam</span><span class="city-unis">Erasmus, RUAS i Inholland</span><span class="city-type">WO · HBO</span></a></li>
+            <li data-city-item="delft"><a href="#tud"><span class="city-name">Delft</span><span class="city-unis">TU Delft</span><span class="city-type">WO</span></a></li>
+            <li data-city-item="leiden"><a href="#lei"><span class="city-name">Leiden</span><span class="city-unis">Universiteit Leiden</span><span class="city-type">WO</span></a></li>
+            <li data-city-item="denhaag"><a href="#thuas"><span class="city-name">La Haia</span><span class="city-unis">THUAS i el campus de Leiden a la Haia</span><span class="city-type">WO · HBO</span></a></li>
+            <li data-city-item="utrecht"><a href="#uu"><span class="city-name">Utrecht</span><span class="city-unis">Universiteit Utrecht i HU</span><span class="city-type">WO · HBO</span></a></li>
+            <li data-city-item="groningen"><a href="#rug"><span class="city-name">Groningen</span><span class="city-unis">RUG i Hanze</span><span class="city-type">WO · HBO</span></a></li>
+            <li data-city-item="maastricht"><a href="#um"><span class="city-name">Maastricht</span><span class="city-unis">Maastricht University</span><span class="city-type">WO</span></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="cta-band" style="margin-top: clamp(56px, 7vw, 96px);" data-reveal>
+        <div>
+          <h2>No saps quina encaixa amb tu?</h2>
+          <p>T'ajudem a triar segons el teu perfil, la carrera que busques i el teu pressupost. La primera consulta és gratuïta.</p>
+        </div>
+        <div class="actions">
+          <a class="btn btn--light" href="ca.html#contacte">Reserva la teva consulta <svg class="icon icon-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn--outline-light" href="https://wa.me/message/XNS5ZW5F5BIFM1" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </div>
+
+      <p class="credits">Fotografies: <a href="https://unsplash.com" rel="noopener" target="_blank">Unsplash</a> i Wikimedia Commons:
+        <a href="https://commons.wikimedia.org/wiki/File:Leiden_-_Rapenburg,_Academiegebouw_en_Nonnenbrug.jpg" rel="noopener" target="_blank">Rapenburg, Leiden</a>, de FrDr (<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ca" rel="noopener" target="_blank">CC BY-SA 4.0</a>);
+        <a href="https://commons.wikimedia.org/wiki/File:20100523_Grote_Markt_en_Martinitoren_Groningen_NL.jpg" rel="noopener" target="_blank">Grote Markt, Groningen</a>, de Wutsje (<a href="https://creativecommons.org/licenses/by-sa/3.0/deed.ca" rel="noopener" target="_blank">CC BY-SA 3.0</a>);
+        <a href="https://commons.wikimedia.org/wiki/File:Maastricht,_Maas,_Sint-Servaasbrug.jpg" rel="noopener" target="_blank">Sint-Servaasbrug, Maastricht</a>, de Kleon3 (<a href="https://creativecommons.org/licenses/by-sa/3.0/deed.ca" rel="noopener" target="_blank">CC BY-SA 3.0</a>).</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
   <div class="container">
-    <div class="uni-full-grid reveal" id="uniGrid">
-
-      <!-- UvA -->
-      <div class="uni-full-card" data-city="amsterdam" data-type="investigacion">
-        <div class="uni-card-photo">
-          <img src="https://images.unsplash.com/photo-1754835143820-bcf20e2e1a35?w=700&q=80&fm=jpg&fit=crop" alt="Canals del centre d'Amsterdam" loading="lazy">
-          <span class="uni-card-type">Recerca</span>
-        </div>
-        <div class="uni-card-body">
-          <span class="uni-card-city">Amsterdam</span>
-          <h3>Universitat d'Amsterdam</h3>
-          <span class="uni-abbr-badge">UvA</span>
-          <p>Una de les universitats més prestigioses d'Europa. Més de 3.000 programes en anglès entre graus, màsters i cursos lliures. Campus repartit pel centre històric d'Amsterdam.</p>
-          <div class="uni-tags">
-            <span class="uni-tag">Humanitats</span>
-            <span class="uni-tag">Ciències Socials</span>
-            <span class="uni-tag">Dret</span>
-            <span class="uni-tag">Economia</span>
-            <span class="uni-tag">Ciències</span>
-          </div>
-          <div class="uni-vibe"><i class="fas fa-city"></i><span>Vida social a tot drap durant tot l'any: la ciutat no para mai, hi ha esdeveniments, festivals i una comunitat internacional enorme. Ideal si vols estar al centre de tot.</span></div>
-          <a href="index.html#contact" class="uni-card-cta">Assessora'm sobre la UvA <i class="fas fa-arrow-right"></i></a>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="assets/img/studex-logo.png" alt="Studex academic consulting" width="480" height="145" loading="lazy">
+        <p>Assessoria acadèmica independent per estudiar als Països Baixos. By students, for students.</p>
+        <div class="footer-social">
+          <a href="https://wa.me/message/XNS5ZW5F5BIFM1" target="_blank" rel="noopener" aria-label="WhatsApp"><svg class="icon" aria-hidden="true"><use href="#i-wa"/></svg></a>
+          <a href="https://www.instagram.com/studexconsulting" target="_blank" rel="noopener" aria-label="Instagram"><svg class="icon" aria-hidden="true"><use href="#i-ig"/></svg></a>
+          <a href="https://www.tiktok.com/@studexconsulting" target="_blank" rel="noopener" aria-label="TikTok"><svg class="icon" aria-hidden="true"><use href="#i-tt"/></svg></a>
         </div>
       </div>
-
-      <!-- VU -->
-      <div class="uni-full-card" data-city="amsterdam" data-type="investigacion">
-        <div class="uni-card-photo">
-          <img src="https://images.unsplash.com/photo-1742054294211-4036a4bfa4ef?w=700&q=80&fm=jpg&fit=crop" alt="Cases de canal a Amsterdam" loading="lazy">
-          <span class="uni-card-type">Recerca</span>
-        </div>
-        <div class="uni-card-body">
-          <span class="uni-card-city">Amsterdam</span>
-          <h3>Vrije Universiteit Amsterdam</h3>
-          <span class="uni-abbr-badge">VU</span>
-          <p>Universitat amb una forta orientació internacional i campus modern al sud d'Amsterdam. Destacada en negocis, psicologia i ciències de la salut. Molt bona relació qualitat-vida.</p>
-          <div class="uni-tags">
-            <span class="uni-tag">Negocis</span>
-            <span class="uni-tag">Psicologia</span>
-            <span class="uni-tag">Medicina</span>
-            <span class="uni-tag">Filosofia</span>
-          </div>
-          <div class="uni-vibe"><i class="fas fa-city"></i><span>Campus propi al costat del districte de negocis Zuidas, però a 15 min en bici de l'ambient de canals i terrasses del centre. Vibra més tranquil·la que la UvA, igual d'internacional.</span></div>
-          <a href="index.html#contact" class="uni-card-cta">Assessora'm sobre la VU <i class="fas fa-arrow-right"></i></a>
-        </div>
+      <div class="footer-col">
+        <h2>Studex</h2>
+        <ul>
+          <li><a href="ca.html#serveis">Serveis</a></li>
+          <li><a href="ca.html#proces">Com treballem</a></li>
+          <li><a href="ca.html#ajudes">Matrícula i ajudes</a></li>
+          <li><a href="ca.html#contacte">Contacte</a></li>
+        </ul>
       </div>
-
-      <!-- TU Delft -->
-      <div class="uni-full-card" data-city="delft" data-type="investigacion" style="border-color:var(--teal)">
-        <div class="uni-card-photo">
-          <img src="https://images.unsplash.com/photo-1692897011326-5dfe88c1c373?w=700&q=80&fm=jpg&fit=crop" alt="Campus de TU Delft" loading="lazy">
-          <span class="uni-card-type">Recerca · Tècnica</span>
-        </div>
-        <div class="uni-card-body">
-          <span class="uni-card-city">Delft</span>
-          <h3>TU Delft</h3>
-          <span class="uni-abbr-badge">TUD</span>
-          <p>La millor escola d'enginyeria d'Europa. Campus impressionant, infraestructura de primer nivell i una reputació global incomparable en tecnologia, disseny i arquitectura.</p>
-          <div class="uni-tags">
-            <span class="uni-tag">Enginyeria</span>
-            <span class="uni-tag">Arquitectura</span>
-            <span class="uni-tag">Disseny Industrial</span>
-            <span class="uni-tag">Aeroespacial</span>
-            <span class="uni-tag">Informàtica</span>
-          </div>
-          <div class="uni-vibe"><i class="fas fa-city"></i><span>Ciutat petita, tranquil·la i amb més bicis que gent. La vida social gira al voltant del campus: associacions d'estudiants molt actives i un ambient relaxat a 15 min d'Amsterdam i Rotterdam en tren.</span></div>
-          <a href="index.html#contact" class="uni-card-cta">Assessora'm sobre TU Delft <i class="fas fa-arrow-right"></i></a>
-        </div>
+      <div class="footer-col">
+        <h2>Estudiar a Holanda</h2>
+        <ul>
+          <li><a href="ca-destinos.html">Universitats</a></li>
+          <li><a href="ca-blog.html#carta-motivacio">Carta de motivació</a></li>
+          <li><a href="ca-blog.html#pressupost">Costos i ajudes</a></li>
+          <li><a href="ca-blog.html#calendari">Terminis de Studielink</a></li>
+        </ul>
       </div>
-
-      <!-- Erasmus -->
-      <div class="uni-full-card" data-city="rotterdam" data-type="investigacion">
-        <div class="uni-card-photo">
-          <img src="https://images.unsplash.com/photo-1597224646250-fadbb825dcf8?w=700&q=80&fm=jpg&fit=crop" alt="Skyline de Rotterdam" loading="lazy">
-          <span class="uni-card-type">Recerca</span>
-        </div>
-        <div class="uni-card-body">
-          <span class="uni-card-city">Rotterdam</span>
-          <h3>Erasmus University Rotterdam</h3>
-          <span class="uni-abbr-badge">EUR</span>
-          <p>Top 5 a Europa en negocis i economia. La seva Erasmus School of Economics és reconeguda mundialment. Ciutat moderna, multicultural i amb un ambient molt dinàmic.</p>
-          <div class="uni-tags">
-            <span class="uni-tag">Economia</span>
-            <span class="uni-tag">Management</span>
-            <span class="uni-tag">Dret</span>
-            <span class="uni-tag">Medicina</span>
-          </div>
-          <div class="uni-vibe"><i class="fas fa-city"></i><span>Skyline de gratacels, arquitectura atrevida i una escena de bars i clubs que no té res a envejar a Amsterdam, però amb lloguers més assequibles.</span></div>
-          <a href="index.html#contact" class="uni-card-cta">Assessora'm sobre Erasmus <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-
-      <!-- Leiden -->
-      <div class="uni-full-card" data-city="leiden" data-type="investigacion">
-        <div class="uni-card-photo">
-          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Pieterskerk_Leiden_zij-ingang.JPG?width=700" alt="Pieterskerk al centre històric de Leiden" loading="lazy">
-          <span class="uni-card-type">Recerca</span>
-        </div>
-        <div class="uni-card-body">
-          <span class="uni-card-city">Leiden</span>
-          <h3>Universitat de Leiden</h3>
-          <span class="uni-abbr-badge">LEI</span>
-          <p>La universitat més antiga dels Països Baixos, fundada el 1575. Reconeguda mundialment en Dret, Humanitats i Ciències Naturals. Ciutat històrica de gran bellesa.</p>
-          <div class="uni-tags">
-            <span class="uni-tag">Dret</span>
-            <span class="uni-tag">Humanitats</span>
-            <span class="uni-tag">Arqueologia</span>
-            <span class="uni-tag">Ciències</span>
-          </div>
-          <div class="uni-vibe"><i class="fas fa-city"></i><span>Ciutat-campus per excel·lència: canals, cases del segle XVII i facultats repartides pel centre. Ambient estudiantil clàssic, tranquil entre setmana i molt viu a les associacions d'estudiants.</span></div>
-          <a href="index.html#contact" class="uni-card-cta">Assessora'm sobre Leiden <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-
-      <!-- Utrecht -->
-      <div class="uni-full-card" data-city="utrecht" data-type="investigacion">
-        <div class="uni-card-photo">
-          <img src="https://images.unsplash.com/photo-1744233291331-60d717f651f0?w=700&q=80&fm=jpg&fit=crop" alt="Canal i Dom Tower a Utrecht" loading="lazy">
-          <span class="uni-card-type">Recerca</span>
-        </div>
-        <div class="uni-card-body">
-          <span class="uni-card-city">Utrecht</span>
-          <h3>Universitat d'Utrecht</h3>
-          <span class="uni-abbr-badge">UU</span>
-          <p>Consistentment la més ben valorada pels seus estudiants. Campus al bell mig del centre històric, forta en recerca i amb una de les millors vides estudiantils del país.</p>
-          <div class="uni-tags">
-            <span class="uni-tag">Medicina</span>
-            <span class="uni-tag">Veterinària</span>
-            <span class="uni-tag">Ciències Naturals</span>
-            <span class="uni-tag">Geociències</span>
-          </div>
-          <div class="uni-vibe"><i class="fas fa-city"></i><span>Una de les ciutats amb més proporció d'estudiants del país. Canals de dos nivells plens de terrasses, molt cèntrica i amb un ambient jove les 24 hores.</span></div>
-          <a href="index.html#contact" class="uni-card-cta">Assessora'm sobre Utrecht <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-
-      <!-- Groningen -->
-      <div class="uni-full-card" data-city="groningen" data-type="investigacion">
-        <div class="uni-card-photo">
-          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Groningen_Martinitoren.jpg?width=700" alt="Martinitoren, torre símbol de Groningen" loading="lazy">
-          <span class="uni-card-type">Recerca</span>
-        </div>
-        <div class="uni-card-body">
-          <span class="uni-card-city">Groningen</span>
-          <h3>Universitat de Groningen</h3>
-          <span class="uni-abbr-badge">RUG</span>
-          <p>Una de les universitats més internacionals del país. Ciutat 100% estudiantil al nord, amb un cost de vida més baix i una vida social molt activa. Centenars de programes en anglès.</p>
-          <div class="uni-tags">
-            <span class="uni-tag">Economia</span>
-            <span class="uni-tag">Farmàcia</span>
-            <span class="uni-tag">Teologia</span>
-            <span class="uni-tag">Psicologia</span>
-          </div>
-          <div class="uni-vibe"><i class="fas fa-city"></i><span>La ciutat estudiantil per excel·lència: 1 de cada 4 habitants és estudiant. Festa assegurada, lloguers més barats que al Randstad i una comunitat internacional molt unida.</span></div>
-          <a href="index.html#contact" class="uni-card-cta">Assessora'm sobre Groningen <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-
-      <!-- Maastricht -->
-      <div class="uni-full-card" data-city="maastricht" data-type="investigacion">
-        <div class="uni-card-photo">
-          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Maastricht,_Sint-Servaasbrug.jpg?width=700" alt="Pont Sint-Servaasbrug a Maastricht" loading="lazy">
-          <span class="uni-card-type">Recerca · PBL</span>
-        </div>
-        <div class="uni-card-body">
-          <span class="uni-card-city">Maastricht</span>
-          <h3>Maastricht University</h3>
-          <span class="uni-abbr-badge">UM</span>
-          <p>La universitat més internacional dels Països Baixos: més del 50% dels seus estudiants vénen de l'estranger. Metodologia PBL (aprenentatge basat en problemes) i 100% en anglès.</p>
-          <div class="uni-tags">
-            <span class="uni-tag">Dret Europeu</span>
-            <span class="uni-tag">Negocis</span>
-            <span class="uni-tag">Medicina</span>
-            <span class="uni-tag">Arts i Cultura</span>
-          </div>
-          <div class="uni-vibe"><i class="fas fa-city"></i><span>Ambient gairebé del sud d'Europa: carrers medievals, terrasses i a tocar de Bèlgica i Alemanya. Ritme més pausat que al Randstad, ideal si busques alguna cosa diferent del "típic holandès".</span></div>
-          <a href="index.html#contact" class="uni-card-cta">Assessora'm sobre Maastricht <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-
-      <!-- THUAS -->
-      <div class="uni-full-card" data-city="denhaag" data-type="aplicadas">
-        <div class="uni-card-photo">
-          <img src="https://images.unsplash.com/photo-1586174035695-35ab9e19215c?w=700&q=80&fm=jpg&fit=crop" alt="Buitenhof al centre de la Haia" loading="lazy">
-          <span class="uni-card-type">Ciències aplicades</span>
-        </div>
-        <div class="uni-card-body">
-          <span class="uni-card-city">La Haia</span>
-          <h3>The Hague University of Applied Sciences</h3>
-          <span class="uni-abbr-badge">THUAS</span>
-          <p>Formació molt pràctica amb períodes de pràctiques integrats al pla d'estudis. Aprofita la seu d'organismes internacionals a la Haia per a programes de relacions internacionals, seguretat i dret.</p>
-          <div class="uni-tags">
-            <span class="uni-tag">Relacions Internacionals</span>
-            <span class="uni-tag">Comunicació</span>
-            <span class="uni-tag">Negocis</span>
-            <span class="uni-tag">Ciberseguretat</span>
-          </div>
-          <div class="uni-vibe"><i class="fas fa-city"></i><span>Ciutat institucional i elegant, amb platja a Scheveningen a un tramvia de distància. Ambient més formal que Amsterdam, però amb molta vida internacional gràcies a les ambaixades i l'ONU.</span></div>
-          <a href="index.html#contact" class="uni-card-cta">Assessora'm sobre THUAS <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-
-      <!-- Inholland -->
-      <div class="uni-full-card" data-city="rotterdam" data-type="aplicadas">
-        <div class="uni-card-photo">
-          <img src="https://images.unsplash.com/photo-1649059966331-811c8d985002?w=700&q=80&fm=jpg&fit=crop" alt="Rotterdam vora el riu Nieuwe Maas" loading="lazy">
-          <span class="uni-card-type">Ciències aplicades</span>
-        </div>
-        <div class="uni-card-body">
-          <span class="uni-card-city">Rotterdam (diversos campus)</span>
-          <h3>Inholland University of Applied Sciences</h3>
-          <span class="uni-abbr-badge">Inholland</span>
-          <p>Una de les hogescholen més grans del país, amb campus a Rotterdam, Amsterdam, Haarlem i altres ciutats. Programes molt orientats a l'ocupabilitat en negocis, comunicació i ciències de la salut.</p>
-          <div class="uni-tags">
-            <span class="uni-tag">Negocis</span>
-            <span class="uni-tag">Comunicació</span>
-            <span class="uni-tag">Infermeria</span>
-            <span class="uni-tag">Màrqueting</span>
-          </div>
-          <div class="uni-vibe"><i class="fas fa-city"></i><span>En triar campus també tries vibra: Rotterdam per a alguna cosa més urbana i multicultural, Amsterdam o Haarlem si prefereixes un ambient més clàssic i compacte.</span></div>
-          <a href="index.html#contact" class="uni-card-cta">Assessora'm sobre Inholland <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-
-      <!-- Hogeschool Rotterdam -->
-      <div class="uni-full-card" data-city="rotterdam" data-type="aplicadas">
-        <div class="uni-card-photo">
-          <img src="https://images.unsplash.com/photo-1597224646250-fadbb825dcf8?w=700&q=80&fm=jpg&fit=crop" alt="Gratacels vora l'aigua a Rotterdam" loading="lazy">
-          <span class="uni-card-type">Ciències aplicades</span>
-        </div>
-        <div class="uni-card-body">
-          <span class="uni-card-city">Rotterdam</span>
-          <h3>Rotterdam University of Applied Sciences</h3>
-          <span class="uni-abbr-badge">RUAS</span>
-          <p>La hogeschool més gran de Rotterdam, amb una forta connexió amb el port i les empreses locals. Molt orientada a pràctiques i projectes reals amb la indústria des del primer any.</p>
-          <div class="uni-tags">
-            <span class="uni-tag">Enginyeria</span>
-            <span class="uni-tag">Logística Portuària</span>
-            <span class="uni-tag">Negocis</span>
-            <span class="uni-tag">Disseny</span>
-          </div>
-          <div class="uni-vibe"><i class="fas fa-city"></i><span>Campus al bell mig del centre, envoltat de l'ambient de mercats, art urbà i terrasses vora l'aigua que ha convertit Rotterdam en una de les ciutats més "cool" del país.</span></div>
-          <a href="index.html#contact" class="uni-card-cta">Assessora'm sobre Hogeschool Rotterdam <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-
-      <!-- HvA -->
-      <div class="uni-full-card" data-city="amsterdam" data-type="aplicadas">
-        <div class="uni-card-photo">
-          <img src="https://images.unsplash.com/photo-1753810809240-a28f725d3328?w=700&q=80&fm=jpg&fit=crop" alt="Cases de canal de colors a Amsterdam" loading="lazy">
-          <span class="uni-card-type">Ciències aplicades</span>
-        </div>
-        <div class="uni-card-body">
-          <span class="uni-card-city">Amsterdam</span>
-          <h3>Amsterdam University of Applied Sciences</h3>
-          <span class="uni-abbr-badge">HvA</span>
-          <p>La hogeschool més gran dels Països Baixos, amb més de 46.000 estudiants. Àmplia oferta en negocis, educació, salut i tecnologia, amb estrets vincles amb empreses d'Amsterdam.</p>
-          <div class="uni-tags">
-            <span class="uni-tag">Negocis</span>
-            <span class="uni-tag">Educació</span>
-            <span class="uni-tag">Salut</span>
-            <span class="uni-tag">Tecnologia</span>
-          </div>
-          <div class="uni-vibe"><i class="fas fa-city"></i><span>Tota l'energia d'Amsterdam però amb un enfocament més pràctic i aplicat que a la UvA o la VU. Campus repartits per la ciutat, molt ben connectats en bici.</span></div>
-          <a href="index.html#contact" class="uni-card-cta">Assessora'm sobre la HvA <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-
-      <!-- Hanze Groningen -->
-      <div class="uni-full-card" data-city="groningen" data-type="aplicadas">
-        <div class="uni-card-photo">
-          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Groningen_Martinitoren.jpg?width=700" alt="Martinitoren a Groningen" loading="lazy">
-          <span class="uni-card-type">Ciències aplicades</span>
-        </div>
-        <div class="uni-card-body">
-          <span class="uni-card-city">Groningen</span>
-          <h3>Hanze University of Applied Sciences</h3>
-          <span class="uni-abbr-badge">Hanze</span>
-          <p>La hogeschool de referència al nord del país, amb una forta aposta per les energies renovables, els negocis internacionals i la salut. Molt popular entre estudiants internacionals pel seu cost de vida.</p>
-          <div class="uni-tags">
-            <span class="uni-tag">Energia Sostenible</span>
-            <span class="uni-tag">Negocis Internacionals</span>
-            <span class="uni-tag">Salut</span>
-            <span class="uni-tag">Comunicació</span>
-          </div>
-          <div class="uni-vibe"><i class="fas fa-city"></i><span>Comparteix la mateixa essència estudiantil de Groningen: ciutat petita, vida nocturna a tot drap i una de les comunitats internacionals més acollidores del país.</span></div>
-          <a href="index.html#contact" class="uni-card-cta">Assessora'm sobre Hanze <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-
-      <!-- HU Utrecht -->
-      <div class="uni-full-card" data-city="utrecht" data-type="aplicadas">
-        <div class="uni-card-photo">
-          <img src="https://images.unsplash.com/photo-1744233291331-60d717f651f0?w=700&q=80&fm=jpg&fit=crop" alt="Canal d'Utrecht al capvespre" loading="lazy">
-          <span class="uni-card-type">Ciències aplicades</span>
-        </div>
-        <div class="uni-card-body">
-          <span class="uni-card-city">Utrecht</span>
-          <h3>HU University of Applied Sciences Utrecht</h3>
-          <span class="uni-abbr-badge">HU</span>
-          <p>Una de les hogescholen més ben valorades del país, amb un fort enfocament en salut, tecnologia i comunicació. Campus modern al costat de l'estació central, molt ben connectat amb la resta d'Holanda.</p>
-          <div class="uni-tags">
-            <span class="uni-tag">Salut</span>
-            <span class="uni-tag">Comunicació</span>
-            <span class="uni-tag">Tecnologia</span>
-            <span class="uni-tag">Educació</span>
-          </div>
-          <div class="uni-vibe"><i class="fas fa-city"></i><span>La mateixa ciutat jove i cèntrica que la Universitat d'Utrecht, amb l'avantatge d'estar al centre geogràfic del país: qualsevol ciutat queda a menys d'una hora en tren.</span></div>
-          <a href="index.html#contact" class="uni-card-cta">Assessora'm sobre HU Utrecht <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-
-    </div>
-    <!-- Compare CTA -->
-    <div class="compare-strip reveal">
-      <div>
-        <h3>No saps quina s'adapta a tu?</h3>
-        <p>T'ajudem a triar en funció del teu perfil, la teva carrera i els teus objectius.</p>
-      </div>
-      <a href="index.html#contact" class="btn-light">Consulta gratuïta <i class="fas fa-arrow-right"></i></a>
-    </div>
-  </div>
-</section>
-<!-- MAP -->
-<section class="section section-alt">
-  <div class="container">
-    <div class="section-head center reveal">
-      <span class="tag">Mapa</span>
-      <h2>Totes d'un cop d'ull.</h2>
-    </div>
-    <div class="map-frame reveal">
-      <img src="assets/mapa_es.svg" alt="Mapa d'universitats als Països Baixos">
-      <div class="map-legend">
-        <span><span class="dot blue"></span> Universitats de recerca</span>
-        <span><span class="dot teal"></span> Ciències aplicades</span>
-        <span><span class="dot sand"></span> Instituts especialitzats</span>
+      <div class="footer-col">
+        <h2>Legal</h2>
+        <ul>
+          <li><a href="aviso-legal.html">Avís legal</a></li>
+          <li><a href="privacidad.html">Privacitat</a></li>
+          <li><a href="cookies.html">Cookies</a></li>
+        </ul>
       </div>
     </div>
-  </div>
-</section>
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="container footer-inner">
-    <div class="footer-brand">
-      <div class="footer-name">Studex Consulting</div>
-      <p>Assessoria especialitzada per estudiar als Països Baixos.<br><em>By students, for students.</em></p>
-      <div class="footer-socials">
-        <a href="https://tiktok.com/@studexconsulting" target="_blank"><i class="fab fa-tiktok"></i></a>
-        <a href="https://instagram.com/studexconsulting" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://wa.me/message/KPGVXIR7MH3CP1" target="_blank"><i class="fab fa-whatsapp"></i></a>
-      </div>
+    <div class="footer-bottom">
+      <p>© <span data-year>2026</span> Studex Consulting. Assessorament educatiu independent, sense vincle oficial amb cap universitat.</p>
+      <p><a href="destinos.html" hreflang="es" lang="es">Español</a> · <a href="en-destinos.html" hreflang="en" lang="en">English</a></p>
     </div>
-    <div class="footer-col"><h4>Navegació</h4>
-      <a href="index.html">Inici</a><a href="ca-destinos.html">Destinacions</a>
-      <a href="ca-blog.html">Blog</a><a href="index.html#contact">Contacte</a>
-    </div>
-    <div class="footer-col"><h4>Serveis</h4>
-      <a href="index.html#services">Assessorament</a>
-      <a href="index.html#services">Documentació</a>
-      <a href="index.html#services">Beques i ajudes</a>
-      <a href="index.html#services">Habitatge</a>
-    </div>
-    <div class="footer-col"><h4>Legal</h4>
-      <a href="aviso-legal.html">Avís Legal</a>
-      <a href="privacidad.html">Privacitat</a>
-      <a href="cookies.html">Cookies</a>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>© 2025 Studex Consulting — Assessorament educatiu independent. No estem associats oficialment amb cap universitat.</p>
   </div>
 </footer>
-<a href="https://wa.me/message/KPGVXIR7MH3CP1" target="_blank" class="float-wa"><i class="fab fa-whatsapp"></i></a>
-<button class="back-top" id="backTop"><i class="fas fa-arrow-up"></i></button>
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const bar = document.getElementById('scrollBar');
-  window.addEventListener('scroll', () => {
-    const h = document.documentElement.scrollHeight - window.innerHeight;
-    bar.style.width = (h > 0 ? (scrollY / h) * 100 : 0) + '%';
-    document.getElementById('backTop').classList.toggle('show', scrollY > 400);
-    document.getElementById('nav').classList.toggle('scrolled', scrollY > 60);
-  }, { passive: true });
-  document.getElementById('backTop').addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-  const ham = document.getElementById('hamburger');
-  const mob = document.getElementById('mobileMenu');
-  ham.addEventListener('click', () => {
-    mob.classList.toggle('open');
-    ham.querySelector('i').className = mob.classList.contains('open') ? 'fas fa-times' : 'fas fa-bars';
-  });
-  const ro = new IntersectionObserver(e => e.forEach(x => { if (x.isIntersecting) x.target.classList.add('in'); }), { threshold: 0.1 });
-  document.querySelectorAll('.reveal, .up').forEach(el => ro.observe(el));
-  // Filter
-  const cards = document.querySelectorAll('.uni-full-card');
-  document.querySelectorAll('.filter-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      const f = btn.dataset.filter;
-      cards.forEach(c => {
-        const show = f === 'all' || c.dataset.city === f || c.dataset.type === f;
-        c.style.display = show ? '' : 'none';
-      });
-    });
-  });
-});
-</script>
+
+<a class="wa-float" href="https://wa.me/message/XNS5ZW5F5BIFM1" target="_blank" rel="noopener" aria-label="Escriu-nos per WhatsApp">
+  <svg class="icon" aria-hidden="true"><use href="#i-wa"/></svg><span>Parlem?</span>
+</a>
+
+<script src="assets/js/site.js" defer></script>
 </body>
 </html>
