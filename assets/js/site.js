@@ -346,12 +346,32 @@
         .then(function (res) {
           if (!res.ok) throw new Error(res.status);
           form.reset();
-          if (status) { status.setAttribute('data-state', 'ok'); status.textContent = form.getAttribute('data-success'); }
+          if (status) {
+            status.setAttribute('data-state', 'ok');
+            status.textContent = form.getAttribute('data-success');
+            var link = form.getAttribute('data-success-link');
+            if (link) {
+              var a = document.createElement('a');
+              a.href = link;
+              a.textContent = ' ' + (form.getAttribute('data-success-link-text') || link);
+              status.appendChild(a);
+            }
+          }
         })
         .catch(function () {
           if (status) { status.setAttribute('data-state', 'error'); status.textContent = form.getAttribute('data-error'); }
         })
         .then(function () { if (button) button.disabled = false; });
+    });
+  });
+
+  /* Planes: al pulsar un plan, se preselecciona en el formulario de contacto */
+  slice(document.querySelectorAll('[data-plan]')).forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var select = document.getElementById('f-plan');
+      if (!select) return;
+      var value = btn.getAttribute('data-plan');
+      slice(select.options).forEach(function (o) { if (o.value === value) select.value = value; });
     });
   });
 

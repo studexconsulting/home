@@ -78,7 +78,10 @@
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Motivation letter and CV" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Studielink and numerus fixus applications" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Grants and benefits: DUO, zorgtoeslag and huurtoeslag" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Housing search and arrival" } }
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Housing search and arrival" } },
+          { "@type": "Offer", "price": "49", "priceCurrency": "EUR", "itemOffered": { "@type": "Service", "name": "Express session (60 min)" } },
+          { "@type": "Offer", "price": "390", "priceCurrency": "EUR", "itemOffered": { "@type": "Service", "name": "Application plan" } },
+          { "@type": "Offer", "price": "690", "priceCurrency": "EUR", "itemOffered": { "@type": "Service", "name": "Complete plan" } }
         ]
       }
     },
@@ -90,7 +93,7 @@
         { "@type": "Question", "name": "How much does it cost to study in the Netherlands?", "acceptedAnswer": { "@type": "Answer", "text": "The statutory tuition fee for EU students is €2,694 in 2026-27. On top of that come living costs, usually between €900 and €1,200 a month depending on the city, which DUO student finance and zorgtoeslag can reduce." } },
         { "@type": "Question", "name": "Can I study in the Netherlands in English?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Hundreds of bachelor's and master's programmes are taught entirely in English. You will usually need to prove your level with a certificate such as IELTS or TOEFL; we tell you what each programme requires." } },
         { "@type": "Question", "name": "What is a numerus fixus degree?", "acceptedAnswer": { "@type": "Answer", "text": "A degree with a limited number of places and its own selection procedure. You apply through Studielink before 15 January, and you can apply to a maximum of two per year." } },
-        { "@type": "Question", "name": "Does advice from Studex Consulting cost anything?", "acceptedAnswer": { "@type": "Answer", "text": "The first consultation is free and is used to assess your profile. Afterwards we explain exactly what each plan includes before you decide anything." } },
+        { "@type": "Question", "name": "Does advice from Studex Consulting cost anything?", "acceptedAnswer": { "@type": "Answer", "text": "The first 30-minute consultation is free. After that you can choose a €49 express session or a full plan from €390, with a fixed price agreed before we start." } },
         { "@type": "Question", "name": "Do you work with all Dutch universities?", "acceptedAnswer": { "@type": "Answer", "text": "We cover the main research universities and universities of applied sciences, with programmes in English and Dutch, in the country's major university cities." } },
         { "@type": "Question", "name": "Do you also help with accommodation?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We advise you on platforms, strategy, deadlines and budget for each city. The Dutch rental market is very competitive, so it pays to arrive prepared." } },
         { "@type": "Question", "name": "Is Studex Consulting an official university body?", "acceptedAnswer": { "@type": "Answer", "text": "No. Studex Consulting is an independent consultancy run by students and graduates. We are not officially affiliated with any Dutch university." } }
@@ -120,7 +123,7 @@
     </a>
     <nav class="nav" aria-label="Main">
       <a href="#services">Services</a>
-      <a href="#process">How we work</a>
+      <a href="#plans">Pricing</a>
       <a href="#funding">Fees &amp; funding</a>
       <a href="en-destinos.html">Universities</a>
       <a href="en-blog.html">Guides</a>
@@ -140,6 +143,7 @@
 
 <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile menu" aria-hidden="true">
   <a href="#services">Services</a>
+  <a href="#plans">Pricing</a>
   <a href="#process">How we work</a>
   <a href="#funding">Fees &amp; funding</a>
   <a href="en-destinos.html">Universities</a>
@@ -284,6 +288,11 @@
       <h2 id="band-title">We made the same journey. Now we'll guide you through yours.</h2>
       <p class="band-text">We are students and graduates of Dutch universities. We know the doubts, the deadlines and the hunt for a room because we lived them, and we guide you so you don't have to figure it all out alone.</p>
       <p class="band-sign">By students, for students.</p>
+      <ul class="band-points">
+        <li><strong>We've lived it</strong><span>We study at, or graduated from, Dutch universities. Studielink, the motivation letter and the room hunt: we went through them first.</span></li>
+        <li><strong>Independent</strong><span>We take no commission from any university. We recommend what suits you, not us.</span></li>
+        <li><strong>One adviser for everything</strong><span>The same person handles your case from start to finish and answers on WhatsApp, no call centres.</span></li>
+      </ul>
     </div>
     <p class="band-credit">Amsterdam, Oudezijds Voorburgwal · Photo: <a href="https://commons.wikimedia.org/wiki/File:Street_and_canal_at_dusk,_Oudezijds_Voorburgwal_%27blue_hour%27,_7_januari_2011_(5821465439).jpg" target="_blank" rel="noopener">Jorge Láscar</a>, <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener">CC BY 2.0</a></p>
   </section>
@@ -350,11 +359,81 @@
     </div>
   </section>
 
+  <!-- 02b PLANES Y PRECIOS -->
+  <section class="section section--tint" id="plans" aria-labelledby="plans-title">
+    <div class="container">
+      <header class="sh" data-reveal>
+        <p class="sh-index"><span class="n">03</span> Plans and pricing</p>
+        <h2 class="sh-title" id="plans-title">Clear prices, no surprises.</h2>
+        <p class="sh-intro lead">Start with a free consultation. If you decide to continue, you choose the plan you need and know from day one what you'll pay.</p>
+      </header>
+      <div class="plans" data-stagger>
+        <article class="plan">
+          
+          <h3 class="plan-name">First consultation</h3>
+          <p class="plan-price">€0</p>
+          <p class="plan-for">To answer your questions and see whether the Netherlands is right for you.</p>
+          <ul class="plan-list">
+            <li>30-minute call</li>
+            <li>Quick review of your profile</li>
+            <li>We tell you which plan you need (or whether you need one at all)</li>
+          </ul>
+          <a class="btn btn--ghost btn--block" href="#contact" data-plan="consulta">Book a call </a>
+        </article>
+        <article class="plan">
+          
+          <h3 class="plan-name">Express session</h3>
+          <p class="plan-price">€49</p>
+          <p class="plan-for">For students who have almost everything covered but are stuck on one step.</p>
+          <ul class="plan-list">
+            <li>60-minute video call</li>
+            <li>One topic: letter, Studielink, DUO or housing</li>
+            <li>Written summary with next steps</li>
+          </ul>
+          <a class="btn btn--ghost btn--block" href="#contact" data-plan="express">Book a session </a>
+        </article>
+        <article class="plan plan--featured">
+          <span class="plan-flag">Recommended</span>
+          <h3 class="plan-name">Application plan</h3>
+          <p class="plan-price">€390</p>
+          <p class="plan-for">To get your place: from choosing a degree to hitting submit.</p>
+          <ul class="plan-list">
+            <li>Profile review and a shortlist of up to 4 programmes</li>
+            <li>Personal calendar of deadlines and documents</li>
+            <li>Motivation letter and CV, revised until the deadline</li>
+            <li>Studielink and each university's portal, step by step</li>
+            <li>Preparation for selection tests (numerus fixus)</li>
+          </ul>
+          <a class="btn btn--block" href="#contact" data-plan="solicitud">I want this plan <svg class="icon icon-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </article>
+        <article class="plan">
+          
+          <h3 class="plan-name">Complete plan</h3>
+          <p class="plan-price">€690</p>
+          <p class="plan-for">To arrive with a place, a room and your paperwork sorted.</p>
+          <ul class="plan-list">
+            <li>Everything in the Application plan</li>
+            <li>Housing strategy and checks on listings and contracts</li>
+            <li>Help with DUO, zorgtoeslag and huurtoeslag</li>
+            <li>Arrival: registration (BSN), bank account and insurance</li>
+            <li>Follow-up until your first month there</li>
+          </ul>
+          <a class="btn btn--ghost btn--block" href="#contact" data-plan="completo">I want this plan </a>
+        </article>
+      </div>
+      <div class="plans-note" data-reveal>
+        <p><strong>Pay in two parts</strong>50% when we start, 50% when we submit your application.</p>
+        <p><strong>No small print</strong>A fixed price per student, with no university commissions or hidden costs.</p>
+        <p><strong>No impossible promises</strong>Admission and housing are decided by universities and landlords. We do everything on our side so you arrive prepared.</p>
+      </div>
+    </div>
+  </section>
+
   <!-- 03 PROCESS -->
   <section class="section" id="process" aria-labelledby="process-title">
     <div class="container">
       <header class="sh" data-reveal>
-        <p class="sh-index"><span class="n">03</span> How we work</p>
+        <p class="sh-index"><span class="n">04</span> How we work</p>
         <h2 class="sh-title" id="process-title">A clear process, in four steps.</h2>
       </header>
       <ol class="steps" data-stagger>
@@ -412,7 +491,7 @@
   <section class="section section--dark" id="funding" aria-labelledby="funding-title">
     <div class="container">
       <header class="sh sh--light" data-reveal>
-        <p class="sh-index"><span class="n">04</span> Fees &amp; funding</p>
+        <p class="sh-index"><span class="n">05</span> Fees &amp; funding</p>
         <h2 class="sh-title" id="funding-title">What it costs to study in the Netherlands, and the support that offsets it.</h2>
         <p class="sh-intro">As a European student you pay the statutory tuition fee and, if you meet the requirements, you can receive the same public support as a Dutch student. These are the 2026 amounts.</p>
       </header>
@@ -439,7 +518,7 @@
         </div>
       </div>
       <div class="funding-note" data-reveal>
-        <p><strong>Key requirement for EU students:</strong> to receive DUO student finance you need to work in the Netherlands for an average of at least 32 hours a month. Huurtoeslag (rent benefit) is only available for self-contained housing. In your first consultation we work out what applies to you.</p>
+        <p><strong>Key requirement for EU students:</strong> to receive DUO student finance you need to work in the Netherlands for an average of at least 32 hours a month. Huurtoeslag (rent benefit) is mainly for self-contained studios and flats; some rooms in student residences also qualify. In your first consultation we work out what applies to you.</p>
         <a class="btn btn--light" href="#contact">Check your case <svg class="icon icon-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
       </div>
       <p class="footnote">2026 amounts published by <a href="https://duo.nl/particulier/bedragen-studiefinanciering-en-tegemoetkoming.jsp" rel="noopener" target="_blank">DUO</a> and the Dutch Tax and Customs Administration (Dienst Toeslagen). They are indicative: the final amount depends on your situation.</p>
@@ -450,7 +529,7 @@
   <section class="section" id="universities" aria-labelledby="unis-title">
     <div class="container">
       <header class="sh" data-reveal>
-        <p class="sh-index"><span class="n">05</span> Where to study</p>
+        <p class="sh-index"><span class="n">06</span> Where to study</p>
         <h2 class="sh-title" id="unis-title">The leading universities in the Netherlands, city by city.</h2>
       </header>
       <div class="unis">
@@ -496,7 +575,7 @@
   <section class="section section--white" id="testimonials" aria-labelledby="quotes-title">
     <div class="container">
       <header class="sh" data-reveal>
-        <p class="sh-index"><span class="n">06</span> Experiences</p>
+        <p class="sh-index"><span class="n">07</span> Experiences</p>
         <h2 class="sh-title" id="quotes-title">In the words of students who are already there.</h2>
       </header>
       <div class="quotes">
@@ -518,14 +597,56 @@
     </div>
   </section>
 
+  <!-- 06b FAMILIAS -->
+  <section class="section section--tint" id="families" aria-labelledby="families-title">
+    <div class="container families">
+      <div class="families-aside" data-reveal>
+        <p class="sh-index"><span class="n">08</span> For families</p>
+        <h2 id="families-title">If you're a parent or guardian, this is for you.</h2>
+        <p class="lead">Sending your child to study abroad is a family decision. We explain the process with clear numbers and keep you up to date.</p>
+        <a class="btn" href="#contact">Talk to us <svg class="icon icon-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+      <ul class="families-list" data-stagger>
+          <li>
+            <h3>What it really costs</h3>
+            <p>Tuition of €2,694 a year and living costs of €900–1,200 a month, depending on the city. See the breakdown in our <a class="text-link" href="en-cost-of-studying-in-netherlands.html">cost guide</a>.</p>
+          </li>
+          <li>
+            <h3>What support exists</h3>
+            <p>A DUO loan to pay tuition and, if your child works 32 hours a month, monthly grants. Our <a class="text-link" href="en-duo-student-finance-netherlands.html">DUO guide</a> explains what applies to you.</p>
+          </li>
+          <li>
+            <h3>Where they'll live</h3>
+            <p>Housing is the hardest part. We start the search early and check every listing and contract to avoid scams. More in our <a class="text-link" href="en-student-housing-netherlands.html">housing guide</a>.</p>
+          </li>
+          <li>
+            <h3>How we keep you informed</h3>
+            <p>If your child agrees, we send you a summary of each stage: what's done, what's missing and the next deadline.</p>
+          </li>
+      </ul>
+    </div>
+  </section>
+
   <!-- 07 GUIDES -->
   <section class="section" id="guides" aria-labelledby="guides-title">
     <div class="container">
       <header class="sh" data-reveal>
-        <p class="sh-index"><span class="n">07</span> Guides</p>
+        <p class="sh-index"><span class="n">09</span> Guides</p>
         <h2 class="sh-title" id="guides-title">Guides to prepare your application.</h2>
       </header>
       <ul class="guide-list" data-stagger>
+        <li><a href="en-student-housing-netherlands.html">
+          <span class="guide-cat">Housing</span>
+          <span class="guide-title">How to find a room in the Netherlands (and avoid scams)</span>
+          <span class="guide-desc">When to start, where to look and the warning signs of a fake listing.</span>
+          <svg class="icon icon-arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a></li>
+        <li><a href="en-duo-student-finance-netherlands.html">
+          <span class="guide-cat">Funding</span>
+          <span class="guide-title">DUO student finance for Spanish students, step by step</span>
+          <span class="guide-desc">Who can get it, how much you receive and how to meet the 32-hour work rule.</span>
+          <svg class="icon icon-arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a></li>
         <li><a href="en-motivation-letter-netherlands.html">
           <span class="guide-cat">Application</span>
           <span class="guide-title">How to write a motivation letter that works</span>
@@ -546,6 +667,27 @@
         </a></li>
       </ul>
       <p class="guides-cta"><a class="link-arrow" href="en-blog.html">See all guides <svg class="icon icon-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
+      <div class="cta-band cta-band--checklist" id="checklist" data-reveal>
+        <div>
+          <p class="eyebrow">Free · Printable</p>
+          <h2>The Studielink 2027 checklist</h2>
+          <p>Every document, step and date to apply for September 2027, on one page. Leave your email and open it straight away.</p>
+        </div>
+        <form class="mini-form" action="https://formspree.io/f/mnjenpbr" method="POST" data-ajax
+              data-sending="Sending…" data-success="Done! Here it is:"
+              data-success-link="en-studielink-checklist-2027.html" data-success-link-text="open the checklist"
+              data-error="We couldn't send it. Please try again or message us on WhatsApp.">
+          <input type="hidden" name="_subject" value="Checklist Studielink (EN)">
+          <input type="hidden" name="source" value="checklist">
+          <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <label class="visually-hidden" for="ck-email-en">Your email address</label>
+          <input id="ck-email-en" type="email" name="email" autocomplete="email" placeholder="Your email address" required>
+          <button class="btn btn--light" type="submit">Get the checklist</button>
+          <label class="consent-mini"><input type="checkbox" name="privacy" required><span>I accept the <a href="en-privacy.html">privacy policy</a> and the occasional deadline reminder.</span></label>
+          <p class="form-status" role="status" aria-live="polite"></p>
+          <noscript><p class="mini-direct"><a href="en-studielink-checklist-2027.html">Open the checklist</a></p></noscript>
+        </form>
+      </div>
     </div>
   </section>
 
@@ -553,7 +695,7 @@
   <section class="section section--tint" id="faq" aria-labelledby="faq-title">
     <div class="container faq">
       <div class="faq-aside" data-reveal>
-        <p class="sh-index"><span class="n">08</span> FAQ</p>
+        <p class="sh-index"><span class="n">10</span> FAQ</p>
         <h2 id="faq-title">Frequently asked questions</h2>
         <p>Can't find yours? <a class="text-link" href="https://wa.me/message/XNS5ZW5F5BIFM1" target="_blank" rel="noopener">Message us on WhatsApp</a> and we'll get back to you.</p>
       </div>
@@ -576,7 +718,7 @@
         </details>
         <details>
           <summary>Does your advice cost anything?</summary>
-          <div class="faq-answer"><p>The first consultation is free and is used to assess your profile. Afterwards we explain exactly what each plan includes before you decide anything.</p></div>
+          <div class="faq-answer"><p>The first 30-minute consultation is free. After that you can choose a €49 express session or a plan from €390. Everything each one includes is under <a class="text-link" href="#plans">plans and pricing</a>.</p></div>
         </details>
         <details>
           <summary>Do you work with all Dutch universities?</summary>
@@ -598,7 +740,7 @@
   <section class="section" id="contact" aria-labelledby="contact-title">
     <div class="container contact">
       <div class="contact-intro" data-reveal>
-        <p class="sh-index"><span class="n">09</span> Contact</p>
+        <p class="sh-index"><span class="n">11</span> Contact</p>
         <h2 id="contact-title">Tell us about your situation.</h2>
         <p class="lead">The first consultation is free and comes with no commitment. We reply within 24 hours.</p>
         <ul class="channels">
@@ -637,21 +779,74 @@
             <label for="f-email">Email</label>
             <input id="f-email" type="email" name="email" autocomplete="email" required>
           </div>
-          <div class="field field--full">
-            <label for="f-interest">How can we help?</label>
-            <select id="f-interest" name="interest" required>
+          <div class="field">
+            <label for="f-who">Who's writing?</label>
+            <select id="f-who" name="who" required>
               <option value="" disabled selected>Choose an option</option>
-              <option value="asesoramiento">General advice</option>
-              <option value="universidades">Choosing a degree and university</option>
-              <option value="documentos">Motivation letter and documents</option>
-              <option value="becas">Grants and funding</option>
-              <option value="vivienda">Finding accommodation</option>
-              <option value="otros">Other</option>
+              <option value="estudiante">I'm a student</option>
+              <option value="familia">I'm a parent or guardian</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-year">Student's current year</label>
+            <select id="f-year" name="year" required>
+              <option value="" disabled selected>Choose an option</option>
+              <option value="4th year of ESO">4th year of ESO</option>
+              <option value="1st year of Bachillerato">1st year of Bachillerato</option>
+              <option value="2nd year of Bachillerato">2nd year of Bachillerato</option>
+              <option value="Finished Bachillerato">Finished Bachillerato</option>
+              <option value="International Baccalaureate (IB)">International Baccalaureate (IB)</option>
+              <option value="Vocational (FP grado superior)">Vocational (FP grado superior)</option>
+              <option value="Already at university">Already at university</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-start">Start date</label>
+            <select id="f-start" name="start" required>
+              <option value="" disabled selected>Choose an option</option>
+              <option value="September 2027">September 2027</option>
+              <option value="September 2028">September 2028</option>
+              <option value="Later">Later</option>
+              <option value="Not sure yet">Not sure yet</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-plan">Plan you're interested in</label>
+            <select id="f-plan" name="plan" required>
+              <option value="consulta" selected>Free consultation</option>
+              <option value="express">Express session · €49</option>
+              <option value="solicitud">Application plan · €390</option>
+              <option value="completo">Complete plan · €690</option>
+              <option value="nose">Not sure yet</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-english">English level <span class="opt">(optional)</span></label>
+            <select id="f-english" name="english">
+              <option value="" disabled selected>Choose an option</option>
+              <option value="Not sure">Not sure</option>
+              <option value="B1 or below">B1 or below</option>
+              <option value="B2">B2</option>
+              <option value="C1 or above">C1 or above</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-source">How did you find us? <span class="opt">(optional)</span></label>
+            <select id="f-source" name="source">
+              <option value="" disabled selected>Choose an option</option>
+              <option value="Instagram">Instagram</option>
+              <option value="TikTok">TikTok</option>
+              <option value="Google">Google</option>
+              <option value="A friend or family member">A friend or family member</option>
+              <option value="My school">My school</option>
+              <option value="ChatGPT or another AI">ChatGPT or another AI</option>
+              <option value="Other">Other</option>
             </select>
           </div>
           <div class="field field--full">
-            <label for="f-message">Your situation</label>
-            <textarea id="f-message" name="message" rows="5" placeholder="What you study now, what you'd like to study, which city you have in mind, when you want to start…" required></textarea>
+            <label for="f-message">Your situation <span class="opt">(optional)</span></label>
+            <textarea id="f-message" name="message" rows="5" placeholder="What you study now, what you'd like to study, which city you have in mind, when you want to start…"></textarea>
           </div>
           <label class="consent">
             <input type="checkbox" name="privacy" required>
@@ -682,6 +877,8 @@
         <h2>Studex</h2>
         <ul>
           <li><a href="#services">Services</a></li>
+          <li><a href="#plans">Pricing</a></li>
+          <li><a href="#families">For families</a></li>
           <li><a href="#process">How we work</a></li>
           <li><a href="#funding">Fees &amp; funding</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -694,6 +891,9 @@
           <li><a href="en-motivation-letter-netherlands.html">Motivation letter</a></li>
           <li><a href="en-cost-of-studying-in-netherlands.html">Costs and funding</a></li>
           <li><a href="en-studielink-deadlines-2027.html">Studielink deadlines</a></li>
+          <li><a href="en-student-housing-netherlands.html">Housing</a></li>
+          <li><a href="en-duo-student-finance-netherlands.html">DUO student finance</a></li>
+          <li><a href="en-studielink-checklist-2027.html">Studielink checklist</a></li>
         </ul>
       </div>
       <div class="footer-col">

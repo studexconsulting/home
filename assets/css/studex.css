@@ -903,3 +903,93 @@ strong { font-weight: 600; color: var(--navy-ink); }
 .js-fallback [data-reveal], .js-fallback [data-stagger] > *, .js-fallback [data-split] { opacity: 1 !important; transform: none !important; visibility: visible !important; }
 .js-fallback [data-reveal] img, .js-fallback [data-reveal="map"] > img { clip-path: none !important; -webkit-mask-image: none !important; mask-image: none !important; transform: none !important; }
 .js-fallback [data-reveal="map"] .pin { opacity: 1 !important; }
+
+/* ==========================================================================
+   Revamp 2026-10 — equipo, planes y precios, familias, checklist
+   ========================================================================== */
+
+/* --- Quiénes somos: tres compromisos sobre la banda ----------------------- */
+.band-points { list-style: none; padding: 0; margin-top: 40px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 32px; max-width: 980px; border-top: 1px solid rgba(255,255,255,.22); }
+.band-points li { padding-top: 20px; }
+.band-points strong { display: block; color: var(--white); font-size: 1.02rem; }
+.band-points span { display: block; margin-top: 6px; font-size: .95rem; color: rgba(255,255,255,.72); line-height: 1.5; }
+
+/* --- Planes y precios ------------------------------------------------------ */
+.plans { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; align-items: stretch; }
+.plan { position: relative; display: flex; flex-direction: column; padding: 28px 24px 24px; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius-lg); }
+.plan--featured { border-color: var(--navy); box-shadow: 0 18px 40px -24px rgba(13, 26, 47, .45); }
+.plan-flag { position: absolute; top: -12px; left: 24px; padding: 4px 10px; border-radius: 999px; background: var(--navy); color: var(--white); font-size: .74rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
+.plan-name { font-size: .78rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--sky-ink); }
+.plan-price { margin-top: 14px; font-family: var(--ff-serif); font-size: 2.9rem; line-height: 1; color: var(--navy-ink); font-variant-numeric: lining-nums tabular-nums; }
+.plan-price small { font-family: var(--ff-sans); font-size: .88rem; color: var(--muted); margin-left: 4px; }
+.plan-for { margin-top: 12px; font-size: .95rem; color: var(--text); min-height: 3em; }
+.plan-list { list-style: none; padding: 18px 0 0; margin-top: 18px; border-top: 1px solid var(--line); display: grid; align-content: start; gap: 9px; font-size: .94rem; flex: 1; }
+.plan-list li { position: relative; padding-left: 22px; }
+.plan-list li::before { content: ""; position: absolute; left: 2px; top: .5em; width: 9px; height: 5px; border-left: 1.6px solid var(--sky-ink); border-bottom: 1.6px solid var(--sky-ink); transform: rotate(-45deg); }
+.plan .btn { margin-top: 24px; }
+.plans-note { margin-top: 28px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px 32px; font-size: .92rem; color: var(--muted); border-top: 1px solid var(--line); padding-top: 20px; }
+.plans-note strong { display: block; color: var(--navy-ink); font-size: .95rem; margin-bottom: 2px; }
+
+/* --- Para familias --------------------------------------------------------- */
+.families { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(32px, 5vw, 80px); align-items: start; }
+.families-aside { position: sticky; top: calc(var(--header-h) + 32px); }
+.families-aside .lead { margin-top: 20px; }
+.families-aside .btn { margin-top: 28px; }
+.families-list { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 32px; border-top: 1px solid var(--line); }
+.families-list li { padding: 24px 0; border-bottom: 1px solid var(--line); }
+.families-list p { margin-top: 8px; font-size: .97rem; }
+
+/* --- Checklist (lead magnet) ---------------------------------------------- */
+.cta-band--checklist { margin-top: clamp(48px, 6vw, 72px); }
+.cta-band .eyebrow { color: var(--sky); }
+.cta-band .eyebrow + h2 { margin-top: 12px; }
+.mini-form { display: flex; flex-wrap: wrap; gap: 10px; align-items: stretch; max-width: 460px; }
+.mini-form input[type="email"] { flex: 1 1 220px; min-width: 0; padding: 14px 14px; border-radius: var(--radius); border: 1px solid rgba(255,255,255,.35); background: rgba(255,255,255,.08); color: var(--white); font-size: 1rem; }
+.mini-form input[type="email"]::placeholder { color: rgba(255,255,255,.6); }
+.mini-form input[type="email"]:focus { outline: none; border-color: var(--sky); box-shadow: 0 0 0 3px rgba(94,180,202,.3); }
+.mini-form .consent-mini { flex-basis: 100%; display: flex; gap: 10px; align-items: flex-start; font-size: .82rem; color: rgba(255,255,255,.7); }
+.mini-form .consent-mini input { width: 16px; height: 16px; margin-top: 2px; accent-color: var(--sky); flex: none; }
+.mini-form .consent-mini a { color: inherit; }
+.mini-form .form-status { flex-basis: 100%; font-size: .92rem; color: var(--white); }
+.mini-form .form-status a { color: var(--sky); font-weight: 600; }
+.mini-direct { margin-top: 12px; font-size: .86rem; color: rgba(255,255,255,.6); }
+.mini-direct a { color: rgba(255,255,255,.85); }
+
+/* --- Checklist page -------------------------------------------------------- */
+.checklist { list-style: none; padding: 0 !important; display: grid; gap: 0; border-top: 1px solid var(--line); }
+.checklist li { margin: 0 !important; padding: 14px 0 14px 38px; border-bottom: 1px solid var(--line); position: relative; }
+.checklist li::before { content: ""; position: absolute; left: 4px; top: 17px; width: 18px; height: 18px; border: 1.5px solid var(--line-strong); border-radius: 4px; background: var(--white); }
+.checklist li strong { display: block; }
+.checklist li span { display: block; font-size: .94rem; color: var(--muted); margin-top: 2px; }
+.print-btn { margin-top: 8px; }
+
+/* --- Formulario: campos opcionales y fila de 3 ---------------------------- */
+.form .field--third { grid-column: span 1; }
+
+@media (max-width: 1100px) {
+  .plans { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 28px; }
+}
+@media (max-width: 960px) {
+  .band-points { grid-template-columns: minmax(0, 1fr); }
+  .families { grid-template-columns: minmax(0, 1fr); }
+  .families-aside { position: static; }
+  .plans-note { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 640px) {
+  .plans { grid-template-columns: minmax(0, 1fr); }
+  .plan-for { min-height: 0; }
+  .families-list { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media print {
+  .site-header, .mobile-nav, .site-footer, .wa-float, .breadcrumb, .sidebar, .article-cta, .print-btn, .skip-link { display: none !important; }
+  body { background: #fff; font-size: 11pt; }
+  .section, .page-hero { padding-block: 12pt !important; }
+  .blog-layout { display: block; }
+  .checklist li { break-inside: avoid; padding-block: 7pt; }
+  .checklist li::before { top: 10pt; }
+  [data-intro], [data-reveal], [data-stagger] > * { opacity: 1 !important; transform: none !important; animation: none !important; }
+}
+
+.cost-table--wrap { min-width: 0; }
+.cost-table--wrap td:last-child { white-space: normal; min-width: 12em; }

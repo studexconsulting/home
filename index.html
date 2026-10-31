@@ -80,7 +80,10 @@
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Carta de motivación y CV" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Solicitud en Studielink y numerus fixus" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Becas y ayudas: DUO, zorgtoeslag y huurtoeslag" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Búsqueda de alojamiento y llegada" } }
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Búsqueda de alojamiento y llegada" } },
+          { "@type": "Offer", "price": "49", "priceCurrency": "EUR", "itemOffered": { "@type": "Service", "name": "Sesión express (60 min)" } },
+          { "@type": "Offer", "price": "390", "priceCurrency": "EUR", "itemOffered": { "@type": "Service", "name": "Plan Solicitud" } },
+          { "@type": "Offer", "price": "690", "priceCurrency": "EUR", "itemOffered": { "@type": "Service", "name": "Plan Completo" } }
         ]
       }
     },
@@ -91,7 +94,7 @@
         { "@type": "Question", "name": "¿Cuánto cuesta estudiar en Holanda?", "acceptedAnswer": { "@type": "Answer", "text": "La matrícula oficial para estudiantes de la UE es de 2.694 € en el curso 2026-27. A eso se suma el coste de vida, que suele estar entre 900 y 1.200 € al mes según la ciudad y que la financiación DUO y la zorgtoeslag pueden reducir." } },
         { "@type": "Question", "name": "¿Se puede estudiar en Holanda en inglés?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. Cientos de grados y másteres se imparten íntegramente en inglés. Normalmente tendrás que acreditar tu nivel con un certificado como IELTS o TOEFL; te decimos qué exige cada programa." } },
         { "@type": "Question", "name": "¿Qué es un grado con numerus fixus?", "acceptedAnswer": { "@type": "Answer", "text": "Es un grado con plazas limitadas y un proceso de selección propio. Se solicita en Studielink antes del 15 de enero y solo puedes presentarte a dos por curso." } },
-        { "@type": "Question", "name": "¿La asesoría de Studex Consulting tiene algún coste?", "acceptedAnswer": { "@type": "Answer", "text": "La primera consulta es gratuita y sirve para evaluar tu perfil. Después te explicamos exactamente qué incluye cada plan antes de que decidas nada." } },
+        { "@type": "Question", "name": "¿La asesoría de Studex Consulting tiene algún coste?", "acceptedAnswer": { "@type": "Answer", "text": "La primera consulta, de 30 minutos, es gratuita. Después puedes elegir una sesión express de 49 € o un plan completo desde 390 €, con precio cerrado antes de empezar." } },
         { "@type": "Question", "name": "¿Trabajáis con todas las universidades neerlandesas?", "acceptedAnswer": { "@type": "Answer", "text": "Cubrimos las principales universidades de investigación y de ciencias aplicadas, con programas en inglés y en neerlandés, en las grandes ciudades universitarias del país." } },
         { "@type": "Question", "name": "¿Me ayudáis también con el alojamiento?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. Te orientamos sobre plataformas, estrategia, plazos y presupuesto en cada ciudad. El mercado de alquiler neerlandés es muy competitivo y conviene llegar preparado." } },
         { "@type": "Question", "name": "¿Studex Consulting es una entidad oficial de las universidades?", "acceptedAnswer": { "@type": "Answer", "text": "No. Studex Consulting es un servicio de asesoramiento independiente formado por estudiantes y graduados. No estamos asociados oficialmente con ninguna universidad neerlandesa." } }
@@ -121,7 +124,7 @@
     </a>
     <nav class="nav" aria-label="Principal">
       <a href="#servicios">Servicios</a>
-      <a href="#proceso">Cómo trabajamos</a>
+      <a href="#planes">Precios</a>
       <a href="#ayudas">Matrícula y ayudas</a>
       <a href="destinos.html">Universidades</a>
       <a href="blog.html">Guías</a>
@@ -141,6 +144,7 @@
 
 <nav class="mobile-nav" id="mobile-nav" aria-label="Menú móvil" aria-hidden="true">
   <a href="#servicios">Servicios</a>
+  <a href="#planes">Precios</a>
   <a href="#proceso">Cómo trabajamos</a>
   <a href="#ayudas">Matrícula y ayudas</a>
   <a href="destinos.html">Universidades</a>
@@ -161,7 +165,7 @@
     <div class="container hero-grid">
       <div class="hero-copy">
         <p class="eyebrow" data-intro style="--d:.05s">Asesoría académica · By students, for students</p>
-        <h1 id="hero-title" data-split>Estudiar en Holanda, <span class="h1-line"><em>con quien ya lo ha hecho.</em></span></h1>
+        <h1 id="hero-title" data-split>Estudiar en los Países Bajos, <span class="h1-line"><em>con quien ya lo ha hecho.</em></span></h1>
         <p class="lead" data-intro style="--d:.55s">Somos estudiantes y graduados de universidades neerlandesas. Te acompañamos en todo el proceso para estudiar en los Países Bajos: elegir carrera y universidad, la solicitud en Studielink, la carta de motivación, las becas DUO y el alojamiento.</p>
         <div class="hero-actions" data-intro style="--d:.65s">
           <a class="btn" href="#contacto">Reserva tu consulta gratuita <svg class="icon icon-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
@@ -234,7 +238,7 @@
   <section class="section" id="por-que-holanda" aria-labelledby="why-title">
     <div class="container">
       <header class="sh" data-reveal>
-        <p class="sh-index"><span class="n">01</span> Por qué Holanda</p>
+        <p class="sh-index"><span class="n">01</span> Por qué los Países Bajos</p>
         <h2 class="sh-title" id="why-title">Una universidad europea de primer nivel, con matrícula regulada.</h2>
         <p class="sh-intro lead">Los Países Bajos combinan universidades con prestigio internacional, docencia en inglés y una matrícula pública para estudiantes europeos. Estas son las razones que más pesan al decidir.</p>
       </header>
@@ -285,6 +289,11 @@
       <h2 id="band-title">Hicimos tu mismo camino. Ahora te acompañamos en el tuyo.</h2>
       <p class="band-text">Somos estudiantes y graduados de universidades neerlandesas. Conocemos las dudas, los plazos y la búsqueda de piso porque los vivimos, y te guiamos para que no tengas que descubrirlo solo.</p>
       <p class="band-sign">By students, for students.</p>
+      <ul class="band-points">
+        <li><strong>Lo hemos vivido</strong><span>Estudiamos o nos hemos graduado en universidades neerlandesas. Studielink, la carta y la búsqueda de piso los pasamos nosotros primero.</span></li>
+        <li><strong>Independientes</strong><span>No cobramos comisiones de ninguna universidad. Te recomendamos lo que te conviene a ti, no a nosotros.</span></li>
+        <li><strong>Un asesor para todo</strong><span>La misma persona lleva tu caso de principio a fin y te contesta por WhatsApp, sin centralitas.</span></li>
+      </ul>
     </div>
     <p class="band-credit">Ámsterdam, Oudezijds Voorburgwal · Foto: <a href="https://commons.wikimedia.org/wiki/File:Street_and_canal_at_dusk,_Oudezijds_Voorburgwal_%27blue_hour%27,_7_januari_2011_(5821465439).jpg" target="_blank" rel="noopener">Jorge Láscar</a>, <a href="https://creativecommons.org/licenses/by/2.0/deed.es" target="_blank" rel="noopener">CC BY 2.0</a></p>
   </section>
@@ -343,7 +352,7 @@
           <span class="service-n">06</span>
           <div>
             <h3>Alojamiento y llegada</h3>
-            <p>Encontrar habitación en Holanda es difícil. Te damos estrategia y apoyo real, y te guiamos en los primeros trámites: BSN, cuenta bancaria y seguro médico.</p>
+            <p>Encontrar habitación en los Países Bajos es difícil. Te damos estrategia y apoyo real, y te guiamos en los primeros trámites: BSN, cuenta bancaria y seguro médico.</p>
             <ul class="service-tags"><li>Vivienda</li><li>BSN</li><li>Primeros trámites</li></ul>
           </div>
         </li>
@@ -351,11 +360,81 @@
     </div>
   </section>
 
+  <!-- 02b PLANES Y PRECIOS -->
+  <section class="section section--tint" id="planes" aria-labelledby="plans-title">
+    <div class="container">
+      <header class="sh" data-reveal>
+        <p class="sh-index"><span class="n">03</span> Planes y precios</p>
+        <h2 class="sh-title" id="plans-title">Precios claros, sin sorpresas.</h2>
+        <p class="sh-intro lead">Empieza con una consulta gratuita. Si decides seguir, eliges el plan que necesitas y sabes desde el principio lo que vas a pagar.</p>
+      </header>
+      <div class="plans" data-stagger>
+        <article class="plan">
+          
+          <h3 class="plan-name">Consulta inicial</h3>
+          <p class="plan-price">0&nbsp;€</p>
+          <p class="plan-for">Para resolver tus dudas y ver si los Países Bajos encajan contigo.</p>
+          <ul class="plan-list">
+            <li>Llamada de 30 minutos</li>
+            <li>Análisis rápido de tu perfil</li>
+            <li>Te decimos qué plan necesitas (o si no necesitas ninguno)</li>
+          </ul>
+          <a class="btn btn--ghost btn--block" href="#contacto" data-plan="consulta">Reservar consulta </a>
+        </article>
+        <article class="plan">
+          
+          <h3 class="plan-name">Sesión express</h3>
+          <p class="plan-price">49&nbsp;€</p>
+          <p class="plan-for">Para quien lo lleva casi todo y se ha atascado en un paso.</p>
+          <ul class="plan-list">
+            <li>60 minutos por videollamada</li>
+            <li>Un tema: carta, Studielink, DUO o piso</li>
+            <li>Resumen por escrito con los siguientes pasos</li>
+          </ul>
+          <a class="btn btn--ghost btn--block" href="#contacto" data-plan="express">Reservar sesión </a>
+        </article>
+        <article class="plan plan--featured">
+          <span class="plan-flag">Recomendado</span>
+          <h3 class="plan-name">Plan Solicitud</h3>
+          <p class="plan-price">390&nbsp;€</p>
+          <p class="plan-for">Para conseguir plaza: de la elección de carrera al envío.</p>
+          <ul class="plan-list">
+            <li>Análisis de perfil y lista de hasta 4 programas</li>
+            <li>Calendario personal de plazos y documentos</li>
+            <li>Carta de motivación y CV, con revisiones hasta el plazo</li>
+            <li>Studielink y portales de cada universidad, paso a paso</li>
+            <li>Preparación de pruebas de selección (numerus fixus)</li>
+          </ul>
+          <a class="btn btn--block" href="#contacto" data-plan="solicitud">Quiero este plan <svg class="icon icon-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </article>
+        <article class="plan">
+          
+          <h3 class="plan-name">Plan Completo</h3>
+          <p class="plan-price">690&nbsp;€</p>
+          <p class="plan-for">Para llegar con plaza, piso y papeles resueltos.</p>
+          <ul class="plan-list">
+            <li>Todo lo del Plan Solicitud</li>
+            <li>Estrategia de alojamiento y revisión de anuncios y contratos</li>
+            <li>Ayuda con DUO, zorgtoeslag y huurtoeslag</li>
+            <li>Llegada: empadronamiento (BSN), cuenta bancaria y seguro</li>
+            <li>Seguimiento hasta tu primer mes allí</li>
+          </ul>
+          <a class="btn btn--ghost btn--block" href="#contacto" data-plan="completo">Quiero este plan </a>
+        </article>
+      </div>
+      <div class="plans-note" data-reveal>
+        <p><strong>Pago en dos partes</strong>50&nbsp;% al empezar y 50&nbsp;% cuando enviamos tu solicitud.</p>
+        <p><strong>Sin letra pequeña</strong>Precio cerrado por estudiante, sin comisiones de universidades ni costes ocultos.</p>
+        <p><strong>Sin promesas imposibles</strong>La admisión y el alojamiento dependen de universidades y caseros. Nosotros ponemos todo de nuestra parte para que llegues preparado.</p>
+      </div>
+    </div>
+  </section>
+
   <!-- 03 PROCESO -->
   <section class="section" id="proceso" aria-labelledby="process-title">
     <div class="container">
       <header class="sh" data-reveal>
-        <p class="sh-index"><span class="n">03</span> Cómo trabajamos</p>
+        <p class="sh-index"><span class="n">04</span> Cómo trabajamos</p>
         <h2 class="sh-title" id="process-title">Un proceso claro, en cuatro pasos.</h2>
       </header>
       <ol class="steps" data-stagger>
@@ -413,8 +492,8 @@
   <section class="section section--dark" id="ayudas" aria-labelledby="funding-title">
     <div class="container">
       <header class="sh sh--light" data-reveal>
-        <p class="sh-index"><span class="n">04</span> Matrícula y ayudas</p>
-        <h2 class="sh-title" id="funding-title">Lo que cuesta estudiar en Holanda, y las ayudas que lo compensan.</h2>
+        <p class="sh-index"><span class="n">05</span> Matrícula y ayudas</p>
+        <h2 class="sh-title" id="funding-title">Lo que cuesta estudiar en los Países Bajos, y las ayudas que lo compensan.</h2>
         <p class="sh-intro">Como estudiante europeo pagas la matrícula oficial y, si cumples los requisitos, puedes optar a las mismas ayudas públicas que un estudiante neerlandés. Estos son los importes de 2026.</p>
       </header>
       <div class="figures" data-stagger>
@@ -440,7 +519,7 @@
         </div>
       </div>
       <div class="funding-note" data-reveal>
-        <p><strong>Requisito para estudiantes de la UE:</strong> para recibir la financiación DUO tienes que trabajar en los Países Bajos una media de al menos 32 horas al mes. La huurtoeslag (ayuda al alquiler) solo se concede en viviendas independientes. En la primera consulta vemos qué te corresponde a ti.</p>
+        <p><strong>Requisito para estudiantes de la UE:</strong> para recibir la financiación DUO tienes que trabajar en los Países Bajos una media de al menos 32 horas al mes. La huurtoeslag (ayuda al alquiler) se concede sobre todo en estudios o pisos independientes; algunas habitaciones de residencias de estudiantes también dan derecho a ella. En la primera consulta vemos qué te corresponde a ti.</p>
         <a class="btn btn--light" href="#contacto">Calcula tu caso <svg class="icon icon-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
       </div>
       <p class="footnote">Importes de 2026 publicados por <a href="https://duo.nl/particulier/bedragen-studiefinanciering-en-tegemoetkoming.jsp" rel="noopener" target="_blank">DUO</a> y la administración tributaria neerlandesa (Dienst Toeslagen). Son orientativos: el importe final depende de tu situación.</p>
@@ -451,7 +530,7 @@
   <section class="section" id="universidades" aria-labelledby="unis-title">
     <div class="container">
       <header class="sh" data-reveal>
-        <p class="sh-index"><span class="n">05</span> Dónde estudiar</p>
+        <p class="sh-index"><span class="n">06</span> Dónde estudiar</p>
         <h2 class="sh-title" id="unis-title">Las principales universidades de los Países Bajos, ciudad a ciudad.</h2>
       </header>
       <div class="unis">
@@ -497,7 +576,7 @@
   <section class="section section--white" id="testimonios" aria-labelledby="quotes-title">
     <div class="container">
       <header class="sh" data-reveal>
-        <p class="sh-index"><span class="n">06</span> Experiencias</p>
+        <p class="sh-index"><span class="n">07</span> Experiencias</p>
         <h2 class="sh-title" id="quotes-title">Lo que cuentan quienes ya están allí.</h2>
       </header>
       <div class="quotes">
@@ -519,14 +598,56 @@
     </div>
   </section>
 
+  <!-- 06b FAMILIAS -->
+  <section class="section section--tint" id="familias" aria-labelledby="families-title">
+    <div class="container families">
+      <div class="families-aside" data-reveal>
+        <p class="sh-index"><span class="n">08</span> Para familias</p>
+        <h2 id="families-title">Si eres madre, padre o tutor, esto es para ti.</h2>
+        <p class="lead">Enviar a un hijo a estudiar fuera es una decisión de toda la familia. Te explicamos el proceso con números claros y te mantenemos al día.</p>
+        <a class="btn" href="#contacto">Hablar con nosotros <svg class="icon icon-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+      <ul class="families-list" data-stagger>
+          <li>
+            <h3>Cuánto cuesta de verdad</h3>
+            <p>Matrícula de 2.694&nbsp;€ al año y un coste de vida de 900 a 1.200&nbsp;€ al mes, según la ciudad. Lo desglosamos en la <a class="text-link" href="cuanto-cuesta-estudiar-en-holanda.html">guía de costes</a>.</p>
+          </li>
+          <li>
+            <h3>Qué ayudas existen</h3>
+            <p>Un préstamo de DUO para pagar la matrícula y, si vuestro hijo trabaja 32 horas al mes, becas mensuales. Lo explicamos en la <a class="text-link" href="beca-duo-holanda.html">guía de la beca DUO</a>.</p>
+          </li>
+          <li>
+            <h3>Dónde va a vivir</h3>
+            <p>El alojamiento es lo más difícil. Empezamos la búsqueda pronto y revisamos cada anuncio y contrato para evitar estafas. Más en la <a class="text-link" href="alojamiento-estudiantes-holanda.html">guía de alojamiento</a>.</p>
+          </li>
+          <li>
+            <h3>Cómo os mantenemos informados</h3>
+            <p>Si vuestro hijo está de acuerdo, os enviamos un resumen de cada fase: qué está hecho, qué falta y qué plazo viene.</p>
+          </li>
+      </ul>
+    </div>
+  </section>
+
   <!-- 07 GUÍAS -->
   <section class="section" id="guias" aria-labelledby="guides-title">
     <div class="container">
       <header class="sh" data-reveal>
-        <p class="sh-index"><span class="n">07</span> Guías</p>
+        <p class="sh-index"><span class="n">09</span> Guías</p>
         <h2 class="sh-title" id="guides-title">Guías para preparar tu solicitud.</h2>
       </header>
       <ul class="guide-list" data-stagger>
+        <li><a href="alojamiento-estudiantes-holanda.html">
+          <span class="guide-cat">Alojamiento</span>
+          <span class="guide-title">Cómo encontrar habitación en los Países Bajos (y evitar estafas)</span>
+          <span class="guide-desc">Cuándo empezar, dónde buscar y las señales de alarma de un anuncio falso.</span>
+          <svg class="icon icon-arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a></li>
+        <li><a href="beca-duo-holanda.html">
+          <span class="guide-cat">Ayudas</span>
+          <span class="guide-title">La beca DUO para estudiantes españoles, paso a paso</span>
+          <span class="guide-desc">Quién puede pedirla, cuánto se cobra y cómo cumplir las 32 horas de trabajo.</span>
+          <svg class="icon icon-arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a></li>
         <li><a href="carta-motivacion-holanda.html">
           <span class="guide-cat">Solicitud</span>
           <span class="guide-title">Cómo escribir una carta de motivación que funcione</span>
@@ -535,7 +656,7 @@
         </a></li>
         <li><a href="cuanto-cuesta-estudiar-en-holanda.html">
           <span class="guide-cat">Costes</span>
-          <span class="guide-title">Cuánto cuesta estudiar en Holanda en 2026</span>
+          <span class="guide-title">Cuánto cuesta estudiar en los Países Bajos en 2026</span>
           <span class="guide-desc">Matrícula, alquiler, seguro médico y ayudas, con números reales.</span>
           <svg class="icon icon-arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
         </a></li>
@@ -547,6 +668,27 @@
         </a></li>
       </ul>
       <p class="guides-cta"><a class="link-arrow" href="blog.html">Ver todas las guías <svg class="icon icon-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
+      <div class="cta-band cta-band--checklist" id="checklist" data-reveal>
+        <div>
+          <p class="eyebrow">Gratis · Imprimible</p>
+          <h2>La checklist de Studielink 2027</h2>
+          <p>Todos los documentos, pasos y fechas para pedir plaza en septiembre de 2027, en una sola página. Déjanos tu correo y ábrela al momento.</p>
+        </div>
+        <form class="mini-form" action="https://formspree.io/f/mnjenpbr" method="POST" data-ajax
+              data-sending="Enviando…" data-success="¡Listo! Aquí la tienes:"
+              data-success-link="checklist-studielink-2027.html" data-success-link-text="abrir la checklist"
+              data-error="No se ha podido enviar. Inténtalo de nuevo o escríbenos por WhatsApp.">
+          <input type="hidden" name="_subject" value="Checklist Studielink (ES)">
+          <input type="hidden" name="source" value="checklist">
+          <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <label class="visually-hidden" for="ck-email-es">Tu correo electrónico</label>
+          <input id="ck-email-es" type="email" name="email" autocomplete="email" placeholder="Tu correo electrónico" required>
+          <button class="btn btn--light" type="submit">Quiero la checklist</button>
+          <label class="consent-mini"><input type="checkbox" name="privacy" required><span>Acepto la <a href="privacidad.html">política de privacidad</a> y recibir de vez en cuando avisos de plazos.</span></label>
+          <p class="form-status" role="status" aria-live="polite"></p>
+          <noscript><p class="mini-direct"><a href="checklist-studielink-2027.html">Abrir la checklist</a></p></noscript>
+        </form>
+      </div>
     </div>
   </section>
 
@@ -554,21 +696,21 @@
   <section class="section section--tint" id="faq" aria-labelledby="faq-title">
     <div class="container faq">
       <div class="faq-aside" data-reveal>
-        <p class="sh-index"><span class="n">08</span> FAQ</p>
+        <p class="sh-index"><span class="n">10</span> FAQ</p>
         <h2 id="faq-title">Preguntas frecuentes</h2>
         <p>¿No encuentras la tuya? <a class="text-link" href="https://wa.me/message/XNS5ZW5F5BIFM1" target="_blank" rel="noopener">Escríbenos por WhatsApp</a> y te respondemos.</p>
       </div>
       <div class="faq-list" data-stagger>
         <details>
-          <summary>¿Cuándo debo empezar el proceso para estudiar en Holanda?</summary>
+          <summary>¿Cuándo debo empezar el proceso para estudiar en los Países Bajos?</summary>
           <div class="faq-answer"><p>Lo ideal es empezar entre 9 y 12 meses antes del inicio del curso. Los grados con numerus fixus cierran el 15 de enero y la mayoría del resto, el 1 de mayo, para empezar en septiembre.</p></div>
         </details>
         <details>
-          <summary>¿Cuánto cuesta estudiar en Holanda?</summary>
+          <summary>¿Cuánto cuesta estudiar en los Países Bajos?</summary>
           <div class="faq-answer"><p>La matrícula oficial para estudiantes de la UE es de 2.694&nbsp;€ en el curso 2026-27. A eso se suma el coste de vida, que suele estar entre 900 y 1.200&nbsp;€ al mes según la ciudad y que la financiación DUO y la zorgtoeslag pueden reducir. Lo tienes desglosado en nuestra <a class="text-link" href="cuanto-cuesta-estudiar-en-holanda.html">guía de costes</a>.</p></div>
         </details>
         <details>
-          <summary>¿Se puede estudiar en Holanda en inglés?</summary>
+          <summary>¿Se puede estudiar en los Países Bajos en inglés?</summary>
           <div class="faq-answer"><p>Sí. Cientos de grados y másteres se imparten íntegramente en inglés. Normalmente tendrás que acreditar tu nivel con un certificado como IELTS o TOEFL; te decimos qué exige cada programa.</p></div>
         </details>
         <details>
@@ -577,7 +719,7 @@
         </details>
         <details>
           <summary>¿La asesoría tiene algún coste?</summary>
-          <div class="faq-answer"><p>La primera consulta es gratuita y sirve para evaluar tu perfil. Después te explicamos exactamente qué incluye cada plan antes de que decidas nada.</p></div>
+          <div class="faq-answer"><p>La primera consulta, de 30 minutos, es gratuita. Después puedes elegir una sesión express de 49&nbsp;€ o un plan desde 390&nbsp;€. Tienes todo lo que incluye cada uno en <a class="text-link" href="#planes">planes y precios</a>.</p></div>
         </details>
         <details>
           <summary>¿Trabajáis con todas las universidades neerlandesas?</summary>
@@ -599,7 +741,7 @@
   <section class="section" id="contacto" aria-labelledby="contact-title">
     <div class="container contact">
       <div class="contact-intro" data-reveal>
-        <p class="sh-index"><span class="n">09</span> Contacto</p>
+        <p class="sh-index"><span class="n">11</span> Contacto</p>
         <h2 id="contact-title">Cuéntanos tu caso.</h2>
         <p class="lead">La primera consulta es gratuita y sin compromiso. Te respondemos en menos de 24 horas.</p>
         <ul class="channels">
@@ -615,7 +757,7 @@
           </a></li>
           <li><a href="https://www.tiktok.com/@studexconsulting" target="_blank" rel="noopener">
             <svg class="icon" aria-hidden="true"><use href="#i-tt"/></svg>
-            <span class="ch-text"><strong>TikTok</strong><span>Vida y estudios en Holanda, contados desde dentro</span></span>
+            <span class="ch-text"><strong>TikTok</strong><span>Vida y estudios en los Países Bajos, contados desde dentro</span></span>
             <svg class="icon icon-arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
           </a></li>
         </ul>
@@ -638,21 +780,74 @@
             <label for="f-email">Correo electrónico</label>
             <input id="f-email" type="email" name="email" autocomplete="email" required>
           </div>
-          <div class="field field--full">
-            <label for="f-interest">¿En qué podemos ayudarte?</label>
-            <select id="f-interest" name="interest" required>
+          <div class="field">
+            <label for="f-who">¿Quién escribe?</label>
+            <select id="f-who" name="who" required>
               <option value="" disabled selected>Elige una opción</option>
-              <option value="asesoramiento">Asesoramiento general</option>
-              <option value="universidades">Elección de carrera y universidad</option>
-              <option value="documentos">Carta de motivación y documentos</option>
-              <option value="becas">Becas y ayudas</option>
-              <option value="vivienda">Búsqueda de alojamiento</option>
-              <option value="otros">Otro</option>
+              <option value="estudiante">Soy estudiante</option>
+              <option value="familia">Soy madre, padre o tutor</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-year">Curso actual del estudiante</label>
+            <select id="f-year" name="year" required>
+              <option value="" disabled selected>Elige una opción</option>
+              <option value="4º de ESO">4º de ESO</option>
+              <option value="1º de Bachillerato">1º de Bachillerato</option>
+              <option value="2º de Bachillerato">2º de Bachillerato</option>
+              <option value="Bachillerato terminado">Bachillerato terminado</option>
+              <option value="Bachillerato Internacional (IB)">Bachillerato Internacional (IB)</option>
+              <option value="FP de grado superior">FP de grado superior</option>
+              <option value="Ya estoy en la universidad">Ya estoy en la universidad</option>
+              <option value="Otro">Otro</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-start">Inicio de los estudios</label>
+            <select id="f-start" name="start" required>
+              <option value="" disabled selected>Elige una opción</option>
+              <option value="Septiembre de 2027">Septiembre de 2027</option>
+              <option value="Septiembre de 2028">Septiembre de 2028</option>
+              <option value="Más adelante">Más adelante</option>
+              <option value="Aún no lo sé">Aún no lo sé</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-plan">Plan que te interesa</label>
+            <select id="f-plan" name="plan" required>
+              <option value="consulta" selected>Consulta gratuita</option>
+              <option value="express">Sesión express · 49 €</option>
+              <option value="solicitud">Plan Solicitud · 390 €</option>
+              <option value="completo">Plan Completo · 690 €</option>
+              <option value="nose">Aún no lo sé</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-english">Nivel de inglés <span class="opt">(opcional)</span></label>
+            <select id="f-english" name="english">
+              <option value="" disabled selected>Elige una opción</option>
+              <option value="No lo sé">No lo sé</option>
+              <option value="B1 o inferior">B1 o inferior</option>
+              <option value="B2">B2</option>
+              <option value="C1 o superior">C1 o superior</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-source">¿Cómo nos has conocido? <span class="opt">(opcional)</span></label>
+            <select id="f-source" name="source">
+              <option value="" disabled selected>Elige una opción</option>
+              <option value="Instagram">Instagram</option>
+              <option value="TikTok">TikTok</option>
+              <option value="Google">Google</option>
+              <option value="Un amigo o familiar">Un amigo o familiar</option>
+              <option value="Mi colegio o instituto">Mi colegio o instituto</option>
+              <option value="ChatGPT u otra IA">ChatGPT u otra IA</option>
+              <option value="Otro">Otro</option>
             </select>
           </div>
           <div class="field field--full">
-            <label for="f-message">Tu situación</label>
-            <textarea id="f-message" name="message" rows="5" placeholder="Qué estudias ahora, qué te gustaría estudiar, en qué ciudad piensas, cuándo quieres empezar…" required></textarea>
+            <label for="f-message">Tu situación <span class="opt">(opcional)</span></label>
+            <textarea id="f-message" name="message" rows="5" placeholder="Qué estudias ahora, qué te gustaría estudiar, en qué ciudad piensas, cuándo quieres empezar…"></textarea>
           </div>
           <label class="consent">
             <input type="checkbox" name="privacy" required>
@@ -683,18 +878,23 @@
         <h2>Studex</h2>
         <ul>
           <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#planes">Precios</a></li>
+          <li><a href="#familias">Para familias</a></li>
           <li><a href="#proceso">Cómo trabajamos</a></li>
           <li><a href="#ayudas">Matrícula y ayudas</a></li>
           <li><a href="#contacto">Contacto</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h2>Estudiar en Holanda</h2>
+        <h2>Estudiar en los Países Bajos</h2>
         <ul>
           <li><a href="destinos.html">Universidades</a></li>
           <li><a href="carta-motivacion-holanda.html">Carta de motivación</a></li>
           <li><a href="cuanto-cuesta-estudiar-en-holanda.html">Costes y ayudas</a></li>
           <li><a href="calendario-studielink-2027.html">Plazos de Studielink</a></li>
+          <li><a href="alojamiento-estudiantes-holanda.html">Alojamiento</a></li>
+          <li><a href="beca-duo-holanda.html">Beca DUO</a></li>
+          <li><a href="checklist-studielink-2027.html">Checklist Studielink</a></li>
         </ul>
       </div>
       <div class="footer-col">
