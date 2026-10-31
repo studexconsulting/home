@@ -993,3 +993,24 @@ strong { font-weight: 600; color: var(--navy-ink); }
 
 .cost-table--wrap { min-width: 0; }
 .cost-table--wrap td:last-child { white-space: normal; min-width: 12em; }
+
+/* --- Guías con imagen (2026-10-31) ---------------------------------------- */
+.guide-card--img { padding: 0; overflow: hidden; gap: 0; }
+.guide-card-media { display: block; aspect-ratio: 16 / 10; overflow: hidden; background: var(--paper-2); }
+.guide-card-media img { width: 100%; height: 100%; object-fit: cover; transition: transform .8s var(--ease); }
+.guide-card--img:hover .guide-card-media img { transform: scale(1.04); }
+.guide-card-body { display: flex; flex-direction: column; gap: 10px; flex: 1; padding: 24px 26px 22px; }
+.guide-card-body .guide-desc { flex: 1; }
+.guide-cards--lg { margin-top: clamp(40px, 5vw, 64px); }
+
+.page-hero-media { margin: 0; align-self: stretch; }
+.page-hero-media img { width: 100%; height: 100%; min-height: 260px; max-height: 420px; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--radius-lg); }
+
+.blog-cta { padding-top: 0; }
+@media (max-width: 960px) {
+  .guide-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .page-hero-media img { max-height: 280px; aspect-ratio: 16 / 9; }
+}
+@media (max-width: 640px) {
+  .guide-cards { grid-template-columns: minmax(0, 1fr); }
+}
